@@ -37,7 +37,7 @@ export default function Hero() {
               Stop Losing Sales to a{" "}
               <span className="relative">
                 <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-pulse">
-                  Website That Doesn't Work
+                  Website That Doesn&apos;t Work
                 </span>
                 <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                   <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="3" className="text-accent/60"/>
@@ -54,7 +54,7 @@ export default function Hero() {
                 <span className="text-white font-semibold"> Stripe integration,</span> and{" "}
                 <span className="text-white font-semibold">Products backup,</span> and{" "}
                 <span className="text-white font-semibold">Custom features</span> {" "}
-                <span className="text-white ">that AI builders and templates can't deliver</span>.
+                <span className="text-white ">that AI builders and templates can&apos;t deliver</span>.
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-primary"></div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -79,11 +79,11 @@ export default function Contact() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
-              Let's Build Your <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Dream Website</span>
+              Let&apos;s Build Your <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Dream Website</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
             <p className="text-xl text-light max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your business with a custom website? Get in touch and let's discuss your project.
+              Ready to transform your business with a custom website? Get in touch and let&apos;s discuss your project.
             </p>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function Contact() {
               <div>
                 <h2 className="text-3xl font-extrabold text-white mb-6">Get In Touch</h2>
                 <p className="text-light text-lg leading-relaxed mb-8">
-                  Ready to start your project? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                  Ready to start your project? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
                 </p>
               </div>
 
@@ -153,7 +153,7 @@ export default function Contact() {
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
-                  <p className="text-green-300">Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                  <p className="text-green-300">Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.</p>
                 </div>
               )}
 

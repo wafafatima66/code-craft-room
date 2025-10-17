@@ -129,14 +129,14 @@ export default function Privacy() {
                 <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
               </div>
 
-              <h2 className="text-3xl font-extrabold text-white mb-6">Children's Privacy</h2>
+              <h2 className="text-3xl font-extrabold text-white mb-6">Children&apos;s Privacy</h2>
               <div className="text-light space-y-4 mb-8">
                 <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.</p>
               </div>
 
               <h2 className="text-3xl font-extrabold text-white mb-6">Changes to This Policy</h2>
               <div className="text-light space-y-4 mb-8">
-                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. We encourage you to review this Privacy Policy periodically for any changes.</p>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date. We encourage you to review this Privacy Policy periodically for any changes.</p>
               </div>
 
               <h2 className="text-3xl font-extrabold text-white mb-6">Contact Us</h2>

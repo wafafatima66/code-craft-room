@@ -55,7 +55,7 @@ export default function Terms() {
               
               <h2 className="text-3xl font-extrabold text-white mb-6">1. Acceptance of Terms</h2>
               <div className="text-light space-y-4 mb-8">
-                <p>By accessing and using Code Craft Room's website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                <p>By accessing and using Code Craft Room&apos;s website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
               </div>
 
               <h2 className="text-3xl font-extrabold text-white mb-6">2. Services Description</h2>
@@ -116,7 +116,7 @@ export default function Terms() {
                 <p>We warrant that our services will be performed in a professional manner. We provide a 30-day warranty on custom development work for bug fixes and issues directly related to our code.</p>
                 
                 <h3 className="text-xl font-bold text-blue-200 mb-3">Disclaimers</h3>
-                <p>Our services are provided "as is" without warranty of any kind. We do not guarantee:</p>
+                <p>Our services are provided &quot;as is&quot; without warranty of any kind. We do not guarantee:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Specific search engine rankings or traffic results</li>
                   <li>Compatibility with all future browser updates</li>

@@ -1,6 +1,5 @@
 import { 
   ShoppingCartIcon, 
-  CurrencyDollarIcon, 
   RectangleStackIcon, 
   ClockIcon, 
   BuildingOfficeIcon, 
@@ -11,7 +10,7 @@ import {
 const problems = [
   {
     number: "01",
-    title: "Etsy's Limitations Are Costing You Sales",
+    title: "Etsy&apos;s Limitations Are Costing You Sales",
     description: "Standing out among millions of sellers while paying 6.5% fees on every sale.",
     Icon: ShoppingCartIcon,
     color: "from-orange-400 to-orange-500",
@@ -51,15 +50,15 @@ const problems = [
   },
   {
     number: "06",
-    title: "You Don't Have Technical Knowledge",
-    description: "SSL, DNS, hosting configurations—you shouldn't need a CS degree to sell online.",
+    title: "You Don&apos;t Have Technical Knowledge",
+    description: "SSL, DNS, hosting configurations—you shouldn&apos;t need a CS degree to sell online.",
     Icon: CogIcon,
     color: "from-orange-500 to-orange-600",
     accentColor: "text-orange-400"
   },
   {
     number: "07",
-    title: "You Need to Start NOW, But Can't Afford Big Upfront Costs",
+    title: "You Need to Start NOW, But Can&apos;t Afford Big Upfront Costs",
     description: "Every day without a professional website means lost sales and missed opportunities.",
     Icon: ExclamationTriangleIcon,
     color: "from-orange-400 to-orange-500",
@@ -117,7 +116,7 @@ export default function ProblemSolution() {
 
         {/* Problems grid - hero-style cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {problems.map((problem, index) => (
+          {problems.map((problem) => (
             <div 
               key={problem.number}
               className="group relative bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-accent/25 transition-all duration-500 border border-white/10 hover:border-accent/40 hover:-translate-y-2 hover:scale-105"
@@ -161,13 +160,13 @@ export default function ProblemSolution() {
                 <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-pulse">
                   Sound Familiar?
                 </span>{" "}
-                You're Not Alone.
+                You&apos;re Not Alone.
               </h3>
               
               <p className="text-xl text-lightgray mb-8 leading-relaxed font-light max-w-3xl mx-auto">
                 These problems are exactly why we created{" "}
                 <span className="text-white font-semibold">Code Craft Room</span>. 
-                We've helped{" "}
+                We&apos;ve helped{" "}
                 <span className="text-3xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">200+</span>{" "}
                 businesses break free from these limitations.
               </p>

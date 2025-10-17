@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckIcon, XMarkIcon, SparklesIcon, RocketLaunchIcon, ShoppingCartIcon, CircleStackIcon, DocumentTextIcon, PaintBrushIcon, CubeIcon, BoltIcon, ShieldCheckIcon, ArrowTrendingUpIcon, BuildingOfficeIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
+import { SparklesIcon, RocketLaunchIcon, ShoppingCartIcon, PaintBrushIcon, BoltIcon, BuildingOfficeIcon } from "@heroicons/react/24/outline";
 
 export default function CustomCodeComparison() {
   const comparisonData = [
@@ -76,7 +76,7 @@ export default function CustomCodeComparison() {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-            You've seen the ads: <span className="text-blue-400">"Build a website in 5 minutes with AI!"</span>
+            You&apos;ve seen the ads: <span className="text-blue-400">&quot;Build a website in 5 minutes with AI!&quot;</span>
           </h2>
           
           <p className="text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -84,7 +84,7 @@ export default function CustomCodeComparison() {
           </p>
 
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Here's how Custom Code stacks up against AI tools like Wix ADI, 10Web, Framer AI, Durable, Shopify, and others 👇
+            Here&apos;s how Custom Code stacks up against AI tools like Wix ADI, 10Web, Framer AI, Durable, Shopify, and others 👇
           </p>
         </div>
 
@@ -172,7 +172,7 @@ export default function CustomCodeComparison() {
               Ready to Stop Losing Money to Template Limitations?
             </h3>
             <p className="text-blue-200 text-lg mb-8 leading-relaxed">
-              Your competitors are already switching to custom code. Don't get left behind with slow, generic websites that hurt your business.
+              Your competitors are already switching to custom code. Don&apos;t get left behind with slow, generic websites that hurt your business.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

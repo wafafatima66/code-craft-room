@@ -86,7 +86,7 @@ export default function WhyChoose() {
             </span>
           </h2>
           <p className="text-2xl text-blue-200 font-semibold tracking-wide">
-            We're Different From Everyone Else
+            We&apos;re Different From Everyone Else
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-accent mx-auto mt-6"></div>
         </div>

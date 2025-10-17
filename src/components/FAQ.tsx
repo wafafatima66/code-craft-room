@@ -7,7 +7,7 @@ const faqData = [
   {
     id: 1,
     question: "Why custom code instead of using AI website builders?",
-    answer: "AI builders create generic templates that can't handle real e-commerce needs. They lack proper Stripe integration, custom database management for products, professional blog systems, and personalized features specific to your business. Custom code gives you a real online store, not just a pretty template."
+    answer: "AI builders create generic templates that can&apos;t handle real e-commerce needs. They lack proper Stripe integration, custom database management for products, professional blog systems, and personalized features specific to your business. Custom code gives you a real online store, not just a pretty template."
   },
   {
     id: 2,
@@ -17,12 +17,12 @@ const faqData = [
   {
     id: 3,
     question: "What if I need changes after launch?",
-    answer: "Unlimited edits are included! Need to update text, add products, change images, or modify anything? Just tell us and we'll do it within 24-48 hours."
+    answer: "Unlimited edits are included! Need to update text, add products, change images, or modify anything? Just tell us and we&apos;ll do it within 24-48 hours."
   },
   {
     id: 4,
     question: "How do you handle product and blog uploads?",
-    answer: "Just send us your content via email or our client portal. We'll format it, optimize images, add it to your website, and let you know when it's live. No learning curve for you."
+    answer: "Just send us your content via email or our client portal. We&apos;ll format it, optimize images, add it to your website, and let you know when it&apos;s live. No learning curve for you."
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const faqData = [
   {
     id: 7,
     question: "What if I'm not happy with the design?",
-    answer: "We include two rounds of revisions during the design phase. If after that you're still not satisfied, we'll refund any payments and part ways—no hard feelings."
+    answer: "We include two rounds of revisions during the design phase. If after that you&apos;re still not satisfied, we&apos;ll refund any payments and part ways—no hard feelings."
   },
   {
     id: 8,
@@ -47,7 +47,7 @@ const faqData = [
   {
     id: 9,
     question: "What happens if I cancel?",
-    answer: "Your website will remain live for 30 days, giving you time to migrate elsewhere if desired. We'll provide you with all your content and data."
+    answer: "Your website will remain live for 30 days, giving you time to migrate elsewhere if desired. We&apos;ll provide you with all your content and data."
   },
   {
     id: 10,
@@ -178,7 +178,7 @@ export default function FAQ() {
         <div className="text-center mt-16">
           <div className="inline-block p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
             <p className="text-lg text-light mb-4">
-              Still have questions? We're here to help!
+              Still have questions? We&apos;re here to help!
             </p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-accent to-primary mx-auto mb-4"></div>
             <button className="btn btn-primary px-6 py-3 text-base font-semibold hover:scale-105 transition-transform duration-300">
