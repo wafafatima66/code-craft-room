@@ -12,24 +12,24 @@ export default function Privacy() {
           {/* Animated gradient orbs */}
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-primary/15 to-accent/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          
+
           {/* Geometric pattern */}
           <div className="absolute inset-0 opacity-3">
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="privacy-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-white/10"/>
+                <pattern id="privacy-grid" width="20" height="20" patternUnits="userspaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-white/10" />
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#privacy-grid)" />
             </svg>
           </div>
-          
+
           {/* Grain texture */}
-          <div className="absolute inset-0 opacity-20 mix-blend-overlay" 
-               style={{
-                 backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-               }}>
+          <div className="absolute inset-0 opacity-20 mix-blend-overlay"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+            }}>
           </div>
         </div>
 
@@ -52,7 +52,7 @@ export default function Privacy() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 md:p-12">
             <div className="prose prose-invert prose-lg max-w-none">
-              
+
               <h2 className="text-3xl font-extrabold text-white mb-6">Information We Collect</h2>
               <div className="text-light space-y-4 mb-8">
                 <p>We collect information you provide directly to us, such as when you:</p>
@@ -143,7 +143,7 @@ export default function Privacy() {
               <div className="text-light space-y-4">
                 <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us:</p>
                 <div className="bg-white/10 rounded-lg p-6 mt-6">
-                  <p><strong>Email:</strong> privacy@codecraftroom.com</p>
+                  <p><strong>Email:</strong> privacy@codecraftspace.com</p>
                   <p><strong>Phone:</strong> +1 (555) 123-4567</p>
                   <p><strong>Address:</strong> Texas, USA</p>
                 </div>

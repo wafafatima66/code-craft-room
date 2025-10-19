@@ -8,6 +8,7 @@ export default function WhyChoose() {
       diyPlatforms: "$15-$50/month",
       wordpress: "$500-$3,000",
       shopify: "Monthly + Transaction Fees",
+      aiBuilders: "Low cost, generic results and hidden limits",
       us: "$0 Down"
     },
     {
@@ -16,6 +17,7 @@ export default function WhyChoose() {
       diyPlatforms: "Limited support",
       wordpress: "Community forums",
       shopify: "Basic support",
+      aiBuilders: "No real human help; automated responses only",
       us: "Unlimited support"
     },
     {
@@ -24,6 +26,7 @@ export default function WhyChoose() {
       diyPlatforms: "You do everything",
       wordpress: "You do everything",
       shopify: "You do everything",
+      aiBuilders: "You manage prompts and manual fixes",
       us: "We do everything"
     },
     {
@@ -32,6 +35,7 @@ export default function WhyChoose() {
       diyPlatforms: "Template-based",
       wordpress: "Plugin dependent",
       shopify: "Template limitations",
+      aiBuilders: "Limited control; template-like output",
       us: "100% custom code"
     },
     {
@@ -40,6 +44,7 @@ export default function WhyChoose() {
       diyPlatforms: "Platform dependent",
       wordpress: "Plugin dependent",
       shopify: "2.4% - 2.9%",
+      aiBuilders: "Varies by platform; upsells for features",
       us: "No transaction fees"
     },
     {
@@ -48,6 +53,7 @@ export default function WhyChoose() {
       diyPlatforms: "Platform managed",
       wordpress: "Plugin vulnerabilities",
       shopify: "Platform managed",
+      aiBuilders: "Unverified code; potential vulnerabilities",
       us: "Enterprise security"
     }
   ];
@@ -59,13 +65,13 @@ export default function WhyChoose() {
         {/* Animated gradient orbs */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-accent/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-accent/15 to-blue-400/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        
+
         {/* Geometric pattern - subtle */}
         <div className="absolute inset-0 opacity-3">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
-              <pattern id="why-choose-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3"/>
+              <pattern id="why-choose-grid" width="20" height="20" patternUnits="userspaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" />
               </pattern>
             </defs>
             <rect width="100" height="100" fill="url(#why-choose-grid)" className="text-white/10" />
@@ -82,7 +88,7 @@ export default function WhyChoose() {
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">
             Why Choose{" "}
             <span className="bg-gradient-to-r from-blue-400 to-accent bg-clip-text text-transparent">
-              Code Craft Room?
+              Code Craft Space?
             </span>
           </h2>
           <p className="text-2xl text-blue-200 font-semibold tracking-wide">
@@ -136,11 +142,22 @@ export default function WhyChoose() {
                         </div>
                       </div>
                     </th>
+                    <th className="px-6 py-4 text-center text-base font-bold text-red-300 border-b border-blue-500/20">
+                      <div className="flex flex-col items-center justify-center">
+                        <div className="flex items-center">
+                          <XMarkIcon className="w-4 h-4 mr-2" />
+                          AI Builders
+                        </div>
+                        <div className="text-xs text-red-200/70 mt-1 font-normal">
+                          (AI site generators)
+                        </div>
+                      </div>
+                    </th>
                     <th className="px-6 py-4 text-center text-base font-bold text-blue-200 border-b border-blue-500/20 bg-gradient-to-r from-blue-500/20 to-accent/20">
                       <div className="flex flex-col items-center justify-center">
                         <div className="flex items-center">
                           <CheckIcon className="w-4 h-4 mr-2" />
-                          Code Craft Room
+                          Code Craft Space
                         </div>
                       </div>
                     </th>
@@ -164,6 +181,9 @@ export default function WhyChoose() {
                       <td className="px-6 py-4 text-red-200 text-center border-b border-blue-500/10">
                         {row.shopify}
                       </td>
+                      <td className="px-6 py-4 text-red-200 text-center border-b border-blue-500/10">
+                        {row.aiBuilders}
+                      </td>
                       <td className="px-6 py-4 text-blue-200 font-semibold text-center border-b border-blue-500/10 bg-gradient-to-r from-blue-500/10 to-accent/10">
                         {row.us}
                       </td>
@@ -179,10 +199,10 @@ export default function WhyChoose() {
         <div className="text-center mt-20">
           <div className="inline-block bg-gradient-to-r from-blue-500/10 to-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20">
             <p className="text-xl text-blue-200 mb-6 font-semibold">
-              Ready to experience the Code Craft Room difference?
+              Ready to experience the Code Craft Space difference?
             </p>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="group btn btn-primary px-8 py-4 text-lg font-bold shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
             >
               Get Your Free Consultation

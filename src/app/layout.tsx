@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Code Craft Room — Hand-Crafted Websites, Built for Your Success",
+  title: "Code Craft Space — Hand-Crafted Websites, Built for Your Success",
   description:
-    "Code Craft Room builds custom e-commerce websites for Texas small businesses and Etsy sellers — professional, approachable, and results-focused.",
+    "Code Craft Space builds custom e-commerce websites for Texas small businesses and Etsy sellers — professional, approachable, and results-focused.",
 };
 
 export default function RootLayout({

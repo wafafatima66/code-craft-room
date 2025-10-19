@@ -8,10 +8,8 @@ const packages = [
     monthlyPrice: "",
     highlight: "",
     features: [
-      "5-page website (Home, About, Products, Contact, + 1 custom page)",
+      "5-static page website (Home, About, Services, Testimonial, Contact)",
       "Custom domain included",
-      "Basic Stripe integration",
-      "Up to 20 products",
       "Mobile responsive design",
       "SSL certificate"
     ],
@@ -26,37 +24,57 @@ const packages = [
     highlight: "",
     features: [
       "Unlimited pages & products",
-      "Complete Stripe integration",
-      "Professional blog system",
-      "Custom domain + premium hosting",
+      "Complete Payment integration",
+      "Manage Business Hosting, Domain and Emails",
       "Mobile-responsive design",
-      "Unlimited edits & updates (24-48hr turnaround)",
-      "Product uploads - just send us details",
-      "Monthly performance reports",
-      "Email & phone support"
+      "Unlimited Features edits & updates (24-48hr turnaround)",
+      "Manage Product, Blogs & Discount codes",
+      "Provide Monthly performance reports",
+      "Develop custom features for your business model",
+      "Backups & version control"
     ],
     commitment: "Cancel anytime after 3 months",
     isPopular: true
   },
+  // {
+  //   name: "Advanced E-Commerce",
+  //   subtitle: "Enterprise-level features for scaling businesses",
+  //   setupPrice: "$200/month",
+  //   monthlyPrice: "",
+  //   highlight: "",
+  //   features: [
+  //     "Everything from Professional Growth package",
+  //     "Subscription products & recurring billing",
+  //     "Digital downloads with secure delivery",
+  //     "Gift cards & store credits",
+  //     "Multi-currency support",
+  //     "Advanced shipping rules",
+  //     "Wholesale pricing tiers",
+  //     "Customer portals"
+  //   ],
+  //   commitment: "Cancel anytime after 3 months",
+  //   isPopular: false
+  // }
   {
-    name: "Advanced E-Commerce",
-    subtitle: "Enterprise-level features for scaling businesses",
-    setupPrice: "$200/month",
+    name: "SEO Growth",
+    subtitle: "Professional Growth + Monthly SEO & Marketing Support",
+    setupPrice: "$289/month",
     monthlyPrice: "",
-    highlight: "",
+    highlight: "Boost your visibility and traffic",
     features: [
       "Everything from Professional Growth package",
-      "Subscription products & recurring billing",
-      "Digital downloads with secure delivery",
-      "Gift cards & store credits",
-      "Multi-currency support",
-      "Advanced shipping rules",
-      "Wholesale pricing tiers",
-      "Customer portals"
+      "Monthly SEO optimization for all pages and products",
+      "Keyword research and strategy",
+      "On-page and technical SEO improvements",
+      "Backlink and content strategy guidance",
+      "Monthly SEO performance report and recommendations",
+      "Integration with Google Analytics & Search Console",
+      "Ongoing marketing consultation and support"
     ],
     commitment: "Cancel anytime after 3 months",
     isPopular: false
   }
+
 ];
 
 export default function Pricing() {
@@ -67,13 +85,13 @@ export default function Pricing() {
         {/* Animated gradient orbs */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-accent/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-accent/15 to-blue-400/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        
+
         {/* Geometric pattern - subtle */}
         <div className="absolute inset-0 opacity-3">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
-              <pattern id="pricing-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3"/>
+              <pattern id="pricing-grid" width="20" height="20" patternUnits="userspaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" />
               </pattern>
             </defs>
             <rect width="100" height="100" fill="url(#pricing-grid)" className="text-white/10" />
@@ -99,13 +117,12 @@ export default function Pricing() {
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {packages.map((pkg, index) => (
-            <div 
+            <div
               key={index}
-              className={`relative bg-charcoal/80 backdrop-blur-sm border rounded-2xl p-8 ${
-                pkg.isPopular 
-                  ? 'border-blue-400/40 bg-gradient-to-br from-blue-500/10 to-accent/10' 
-                  : 'border-blue-500/20'
-              }`}
+              className={`relative bg-charcoal/80 backdrop-blur-sm border rounded-2xl p-8 ${pkg.isPopular
+                ? 'border-blue-400/40 bg-gradient-to-br from-blue-500/10 to-accent/10'
+                : 'border-blue-500/20'
+                }`}
             >
               {pkg.isPopular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -154,13 +171,12 @@ export default function Pricing() {
               )}
 
               <div className="text-center">
-                <a 
-                  href="/contact" 
-                  className={`btn px-8 py-4 text-lg font-bold transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 ${
-                    pkg.isPopular 
-                      ? 'btn-primary shadow-2xl hover:shadow-accent/25' 
-                      : 'bg-blue-500/20 text-blue-200 border-2 border-blue-500/40 hover:bg-blue-500/30 hover:border-blue-400/60'
-                  }`}
+                <a
+                  href="/contact"
+                  className={`btn px-8 py-4 text-lg font-bold transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 ${pkg.isPopular
+                    ? 'btn-primary shadow-2xl hover:shadow-accent/25'
+                    : 'bg-blue-500/20 text-blue-200 border-2 border-blue-500/40 hover:bg-blue-500/30 hover:border-blue-400/60'
+                    }`}
                 >
                   Get Started Today
                 </a>
@@ -192,26 +208,26 @@ export default function Pricing() {
             </p>
 
             {/* Simple Grid */}
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-               {[
-                 { name: "Email Marketing", example: "Mailchimp, Constant Contact" },
-                 { name: "Social Media Feeds", example: "Instagram, Facebook" },
-                 { name: "Shipping Calculators", example: "UPS, FedEx" },
-                 { name: "Inventory Management", example: "Stock tracking systems" },
-                 { name: "Analytics Tools", example: "Google Analytics, Facebook Pixel" },
-                 { name: "CRM Systems", example: "Salesforce, HubSpot" }
-               ].map((service, index) => (
-                 <div 
-                   key={index}
-                   className="bg-slate-700/30 rounded-lg p-4 border border-slate-600/20 hover:border-blue-400/40 transition-colors duration-300"
-                 >
-                   <div className="text-center">
-                     <h5 className="text-blue-200 font-medium mb-1">{service.name}</h5>
-                     <p className="text-blue-200/70 text-sm">{service.example}</p>
-                   </div>
-                 </div>
-               ))}
-             </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                { name: "Email Marketing", example: "Mailchimp, Constant Contact" },
+                { name: "Social Media Feeds", example: "Instagram, Facebook" },
+                { name: "Shipping Calculators", example: "UPS, FedEx" },
+                { name: "Inventory Management", example: "Stock tracking systems" },
+                { name: "Analytics Tools", example: "Google Analytics, Facebook Pixel" },
+                { name: "CRM Systems", example: "Salesforce, HubSpot" }
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-slate-700/30 rounded-lg p-4 border border-slate-600/20 hover:border-blue-400/40 transition-colors duration-300"
+                >
+                  <div className="text-center">
+                    <h5 className="text-blue-200 font-medium mb-1">{service.name}</h5>
+                    <p className="text-blue-200/70 text-sm">{service.example}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
             {/* Footer */}
             <div className="mt-6 text-center">
@@ -228,8 +244,8 @@ export default function Pricing() {
             <p className="text-xl text-blue-200 mb-6 font-semibold">
               Ready to transform your business with a professional website?
             </p>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="group btn btn-primary px-8 py-4 text-lg font-bold shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
             >
               Start Your Project Today

@@ -18,7 +18,7 @@ export default function Home() {
         <Hero />
         <ProblemSolution />
         <WhyChoose />
-        <CustomCodeComparison />
+        {/* <CustomCodeComparison /> */}
         <WhoWeHelp />
         <Services />
         <Pricing />
