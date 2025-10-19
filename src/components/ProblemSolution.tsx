@@ -1,6 +1,6 @@
 import {
   ShoppingCartIcon,
-  RectangleStackIcon,
+  // RectangleStackIcon,
   ClockIcon,
   BuildingOfficeIcon,
   CogIcon,

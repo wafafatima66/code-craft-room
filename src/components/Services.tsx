@@ -1,8 +1,8 @@
 import {
   CheckIcon,
   ShoppingCartIcon,
-  CircleStackIcon,
-  DocumentTextIcon,
+  // CircleStackIcon,
+  // DocumentTextIcon,
   DevicePhoneMobileIcon,
   TagIcon,
   CogIcon,
