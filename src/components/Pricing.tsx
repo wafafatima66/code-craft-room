@@ -19,7 +19,7 @@ const packages = [
   {
     name: "Professional Growth",
     subtitle: "Everything you need to run a successful online business",
-    setupPrice: "$15/month",
+    setupPrice: "$25/month",
     monthlyPrice: "",
     highlight: "",
     features: [
@@ -33,7 +33,7 @@ const packages = [
       "Develop custom features for your business model",
       "Backups & version control"
     ],
-    commitment: "Cancel anytime after 3 months",
+    commitment: "No Commitment",
     isPopular: true
   },
   // {
@@ -58,7 +58,7 @@ const packages = [
   {
     name: "SEO Growth",
     subtitle: "Professional Growth + Monthly SEO & Marketing Support",
-    setupPrice: "$30/month",
+    setupPrice: "$35/month",
     monthlyPrice: "",
     highlight: "Boost your visibility and traffic",
     features: [
@@ -199,7 +199,7 @@ export default function Pricing() {
             {/* Header */}
             <div className="text-center mb-6">
               <h4 className="text-xl font-semibold text-white mb-2">Third-Party Integrations</h4>
-              <p className="text-2xl font-bold text-blue-400">$50 each</p>
+              <p className="text-2xl font-bold text-blue-400">$20 each</p>
             </div>
 
             {/* Description */}
