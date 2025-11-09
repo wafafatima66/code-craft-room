@@ -51,10 +51,10 @@ export default function About() {
             <div className="prose prose-invert prose-lg max-w-none">
               <h2 className="text-3xl font-extrabold text-white mb-6">About Code Craft Space</h2>
               <div className="space-y-6 text-light leading-relaxed">
-                <p>I'm a software engineer with 4+ years of professional experience building production systems that scale. Code Craft Space exists because I've seen how broken most website solutions are for small business owners—overpriced, overcomplicated, and abandoned after launch.</p>
+                <p>I&#39;m a software engineer with 4+ years of professional experience building production systems that scale. Code Craft Space exists because I&#39;ve seen how broken most website solutions are for small business owners—overpriced, overcomplicated, and abandoned after launch.</p>
                 <p>I bring three disciplines to every project: the technical rigor of a software engineer, the systematic thinking of a researcher, and the accountability of a project manager. That means you get custom-built solutions that are maintainable, performant, and actually solve your problems.</p>
                 <p>My mission is straightforward: help ambitious small business owners escape the constraints of templates and platforms, and build online presences that work as hard as they do. I focus on three things—clarity about what you need, reliability in execution, and measurable outcomes that matter to your bottom line.</p>
-                <p>I work end-to-end with each client. From discovery and planning through design, development, deployment, and ongoing support, I'm invested in your success. Whether you're an Etsy seller ready to build your own store, an e-commerce owner drowning in plugin management, or a service business needing a modern web presence, I partner with you to build something that actually works.</p>
+                <p>I work end-to-end with each client. From discovery and planning through design, development, deployment, and ongoing support, I&#39;m invested in your success. Whether you&#39;re an Etsy seller ready to build your own store, an e-commerce owner drowning in plugin management, or a service business needing a modern web presence, I partner with you to build something that actually works.</p>
                 <p>No agencies. No handoffs. No disappearing after launch. Just straightforward, honest work.</p>
               </div>
 

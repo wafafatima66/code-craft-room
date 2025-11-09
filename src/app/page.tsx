@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import ProblemSolution from "@/components/ProblemSolution";
 import WhyChoose from "@/components/WhyChoose";
-import CustomCodeComparison from "@/components/CustomCodeComparison";
 import WhoWeHelp from "@/components/WhoWeHelp";
 import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
@@ -16,7 +15,9 @@ export default function Home() {
         <Hero />
         <ProblemSolution />
         <WhyChoose />
-        {/* <CustomCodeComparison /> */}
+        {/* Uncomment to include comparison
+        <CustomCodeComparison />
+        */}
         <WhoWeHelp />
         <Services />
         <Pricing />
