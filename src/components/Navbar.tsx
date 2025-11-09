@@ -18,13 +18,20 @@ export default function Navbar() {
         {isMinimal ? (
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <Link href="/" className="hover:text-accent transition-colors">Home</Link>
+            <Link href="/#services" className="hover:text-accent transition-colors">Services</Link>
+            <Link href="/#pricing" className="hover:text-accent transition-colors">Pricing</Link>
+            <Link href="/#testimonials" className="hover:text-accent transition-colors">Testimonials</Link>
+            <Link href="/blog" className="hover:text-accent transition-colors">Blog</Link>
+            <Link href="/about" className="hover:text-accent transition-colors">About</Link>
+            <Link href="/contact" className="btn btn-primary px-4 py-2">Get a Quote</Link>
           </nav>
         ) : (
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link href="#services" className="hover:text-accent transition-colors">Services</Link>
-            <Link href="#pricing" className="hover:text-accent transition-colors">Pricing</Link>
-            <Link href="#testimonials" className="hover:text-accent transition-colors">Testimonials</Link>
-            <Link href="#about" className="hover:text-accent transition-colors">About</Link>
+            <Link href="/#services" className="hover:text-accent transition-colors">Services</Link>
+            <Link href="/#pricing" className="hover:text-accent transition-colors">Pricing</Link>
+            <Link href="/#testimonials" className="hover:text-accent transition-colors">Testimonials</Link>
+            <Link href="/blog" className="hover:text-accent transition-colors">Blog</Link>
+            <Link href="/about" className="hover:text-accent transition-colors">About</Link>
             <Link href="/contact" className="btn btn-primary px-4 py-2">Get a Quote</Link>
           </nav>
         )}

@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import { EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+// Navbar and Footer are provided globally via layout
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -100,7 +99,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-charcoal">
-      <Navbar />
+      
       <section className="relative py-24 bg-charcoal overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0">
@@ -329,7 +328,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <Footer />
+      
     </div>
   );
 }

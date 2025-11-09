@@ -34,3 +34,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Supabase Debug Endpoint
+
+Use the local debug endpoint to confirm Supabase connectivity and data availability:
+
+- Endpoint: `http://localhost:3000/api/debug-supabase`
+- Purpose: Verifies environment variables and attempts a read from the `blog_posts` table.
+- Response fields:
+  - `ok`: boolean indicating success
+  - `message`/`code`: present if an error occurs
+  - `env.urlPresent` and `env.keyPresent`: whether `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are set
+  - `count`: number of rows returned
+  - `sample`: up to 5 posts (subset of columns)
+
+If `ok` is false or `count` is 0:
+
+- Ensure `.env.local` includes:
+  - `NEXT_PUBLIC_SUPABASE_URL=https://YOUR-PROJECT-REF.supabase.co`
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR-ANON-KEY`
+- Restart the dev server after editing env vars.
+- Confirm table name and columns match: `blog_posts(slug,title,description,keywords,author,ogImage,date,readTime,content)`.
+- Check Row Level Security (RLS) policies allow `SELECT` for the anonymous role.

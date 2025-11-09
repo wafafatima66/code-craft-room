@@ -1,10 +1,9 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+// Navbar and Footer are provided globally via layout
 
 export default function Terms() {
   return (
     <div className="min-h-screen bg-charcoal">
-      <Navbar />
+      
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         {/* Background elements */}
@@ -166,8 +165,7 @@ export default function Terms() {
               <div className="text-light space-y-4">
                 <p>If you have any questions about these Terms of Service, please contact us:</p>
                 <div className="bg-white/10 rounded-lg p-6 mt-6">
-                  <p><strong>Email:</strong> legal@codecraftspace.com</p>
-                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                  <p><strong>Email:</strong> hello@codecraftspace.com</p>
                   <p><strong>Address:</strong> Texas, USA</p>
                 </div>
               </div>
@@ -176,7 +174,7 @@ export default function Terms() {
           </div>
         </div>
       </section>
-      <Footer />
+      
     </div>
   );
 }

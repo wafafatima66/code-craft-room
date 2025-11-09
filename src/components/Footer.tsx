@@ -15,7 +15,7 @@ export default function Footer() {
           </div>
           <div className="text-sm">
         
-                  <Link href="https://fatima-amir.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-accent text-white">Meet the Developer</Link>
+                  
 
           </div>
         </div>
@@ -36,10 +36,11 @@ export default function Footer() {
           <a href="mailto:hello@codecraftspace.com" className="mt-1 inline-block text-sm text-accent">hello@codecraftspace.com</a>
         </div>
         <div className="text-sm flex flex-col gap-2">
-          <Link href="#services" className="hover:text-accent">Services</Link>
-          <Link href="#pricing" className="hover:text-accent">Pricing</Link>
-          <Link href="#testimonials" className="hover:text-accent">Testimonials</Link>
-          <Link href="#about" className="hover:text-accent">About</Link>
+          <Link href="/#services" className="hover:text-accent">Services</Link>
+          <Link href="/#pricing" className="hover:text-accent">Pricing</Link>
+          <Link href="/#testimonials" className="hover:text-accent">Testimonials</Link>
+          <Link href="/blog" className="hover:text-accent">Blog</Link>
+          <Link href="/about" className="hover:text-accent">About</Link>
           <Link href="/contact" className="hover:text-accent">Contact</Link>
         </div>
         <div className="text-sm text-white/70">
@@ -49,9 +50,7 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-accent">Terms</Link>
             {/* <Link href="https://fatima-amir.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-accent block text-white">Meet the Developer</Link> */}
           </div>
-          <div className="mt-2">
-            <Link href="https://fatima-amir.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-accent text-white">Meet the Developer</Link>
-          </div>
+          
         </div>
       </div>
     </footer>
