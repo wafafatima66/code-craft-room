@@ -19,7 +19,7 @@ const packages = [
   {
     name: "Professional Growth",
     subtitle: "Everything you need to run a successful online business",
-    setupPrice: "$25/month",
+    setupPrice: "$75/month",
     monthlyPrice: "",
     highlight: "",
     features: [
@@ -58,7 +58,7 @@ const packages = [
   {
     name: "SEO Growth",
     subtitle: "Professional Growth + Monthly SEO & Marketing Support",
-    setupPrice: "$35/month",
+    setupPrice: "$99/month",
     monthlyPrice: "",
     highlight: "Boost your visibility and traffic",
     features: [

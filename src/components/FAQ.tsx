@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ChevronDownIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from "next/link";
 
 const faqData = [
   {
@@ -201,9 +202,9 @@ export default function FAQ() {
               Still have questions? We&apos;re here to help!
             </p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-accent to-primary mx-auto mb-4"></div>
-            <button className="btn btn-primary px-6 py-3 text-base font-semibold hover:scale-105 transition-transform duration-300">
+            <Link href="/contact" className="btn btn-primary px-6 py-3 text-base font-semibold hover:scale-105 transition-transform duration-300">
               Contact Us Today
-            </button>
+            </Link>
           </div>
         </div>
       </div>

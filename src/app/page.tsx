@@ -7,6 +7,7 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
 // Navbar and Footer are provided globally via layout
+import PreviousWork from "@/components/PreviousWork";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <CustomCodeComparison />
         */}
         <WhoWeHelp />
+        <PreviousWork />
         <Services />
         <Pricing />
         <FAQ />

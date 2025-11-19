@@ -4,24 +4,24 @@ import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
-  const isMinimal = pathname === "/contact" || pathname === "/privacy" || pathname === "/terms";
+  // const isMinimal = pathname === "/contact" || pathname === "/privacy" || pathname === "/terms";
 
-  if (isMinimal) {
-    return (
-      <footer className="bg-charcoal text-white">
-        <div className="mx-auto max-w-7xl px-6 py-12 flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-bold">Code Craft Space</h3>
-          </div>
-          <div className="text-sm">
+  // if (isMinimal) {
+  //   return (
+  //     <footer className="bg-charcoal text-white">
+  //       <div className="mx-auto max-w-7xl px-6 py-12 flex items-center justify-between">
+  //         <div>
+  //           <h3 className="text-lg font-bold">Code Craft Space</h3>
+  //         </div>
+  //         <div className="text-sm">
         
                   
 
-          </div>
-        </div>
-      </footer>
-    );
-  }
+  //         </div>
+  //       </div>
+  //     </footer>
+  //   );
+  // }
 
   return (
     <footer className="bg-charcoal text-white">

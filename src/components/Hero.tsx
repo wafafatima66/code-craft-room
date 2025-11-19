@@ -74,7 +74,7 @@ export default function Hero() {
                 <CursorArrowRaysIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="#portfolio"
+                href="#previous-work"
                 className="btn bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:border-accent hover:bg-accent/10 px-8 py-4 text-lg font-semibold transition-all duration-300"
               >
                 View Our Work
