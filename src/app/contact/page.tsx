@@ -10,6 +10,7 @@ export default function Contact() {
     email: '',
     phone: '',
     company: '',
+    package: '',
     projectType: '',
     message: '',
     timeline: ''
@@ -67,39 +68,40 @@ export default function Contact() {
   // };
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-    if (res.ok) setSubmitStatus('success');
-    else setSubmitStatus('error');
+      if (res.ok) setSubmitStatus('success');
+      else setSubmitStatus('error');
 
-    // Clear form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      projectType: '',
-      message: '',
-      timeline: ''
-    });
-  } catch {
-    setSubmitStatus('error');
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+      // Clear form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        package: '',
+        projectType: '',
+        message: '',
+        timeline: ''
+      });
+    } catch {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-charcoal">
-      
+
       <section className="relative py-24 bg-charcoal overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0">
@@ -151,7 +153,7 @@ export default function Contact() {
                 <h2 className="text-3xl font-extrabold text-white mb-6">Get In Touch</h2>
                 <p className="text-light text-lg leading-relaxed mb-8">
                   Ready to start your project?  We&apos;ll discuss your project requirements back and forth to understand your needs clearly.
-  Once everything is finalized, we&apos;ll set up a personalized price for you and send an invoice before starting the project.
+                  Once everything is finalized, we&apos;ll set up a personalized price for you and send an invoice before starting the project.
                 </p>
               </div>
 
@@ -266,6 +268,23 @@ export default function Contact() {
                 </div>
 
                 <div>
+                  <label htmlFor="package" className="block text-white font-medium mb-2">Interested Package</label>
+                  <select
+                    id="package"
+                    name="package"
+                    value={formData.package}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                  >
+                    <option value="" className="bg-charcoal text-white">Select a package</option>
+                    <option value="landing-page" className="bg-charcoal text-white">Landing Page ($200)</option>
+                    <option value="portfolio" className="bg-charcoal text-white">Portfolio Website ($500)</option>
+                    <option value="small-business" className="bg-charcoal text-white">Small Business Website ($800)</option>
+                    <option value="custom" className="bg-charcoal text-white">Custom / Not Sure</option>
+                  </select>
+                </div>
+
+                <div>
                   <label htmlFor="projectType" className="block text-white font-medium mb-2">Project Type</label>
                   <select
                     id="projectType"
@@ -275,12 +294,13 @@ export default function Contact() {
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                   >
                     <option value="" className="bg-charcoal text-white">Select project type</option>
-                    <option value="ecommerce" className="bg-charcoal text-white">E-commerce Website</option>
+                    {/* <option value="ecommerce" className="bg-charcoal text-white">E-commerce Website</option> */}
                     <option value="business" className="bg-charcoal text-white">Business Website</option>
                     <option value="portfolio" className="bg-charcoal text-white">Portfolio Website</option>
                     <option value="blog" className="bg-charcoal text-white">Blog/Content Site</option>
                     <option value="custom" className="bg-charcoal text-white">Custom Application</option>
                     <option value="redesign" className="bg-charcoal text-white">Website Redesign</option>
+                    <option value="other" className="bg-charcoal text-white">Other</option>
                   </select>
                 </div>
 
@@ -328,7 +348,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      
+
     </div>
   );
 }

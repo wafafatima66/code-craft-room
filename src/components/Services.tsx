@@ -23,11 +23,11 @@ const serviceFeatures = [
     icon: ShieldCheckIcon,
     highlight: "Hands-Free Support"
   },
-  {
-    title: "E-commerce functionality with payment integration",
-    icon: ShoppingCartIcon,
-    highlight: "Full E-Commerce"
-  },
+  // {
+  //   title: "E-commerce functionality with payment integration",
+  //   icon: ShoppingCartIcon,
+  //   highlight: "Full E-Commerce"
+  // },
   // {
   //   title: "Custom Database & Product Management",
   //   icon: CircleStackIcon,
@@ -43,21 +43,21 @@ const serviceFeatures = [
     icon: DevicePhoneMobileIcon,
     highlight: "Optimized for Every Device"
   },
-  {
-    title: "Unlimited Products and Blogs Uploads",
-    icon: TagIcon,
-    highlight: "Flexible Structure"
-  },
+  // {
+  //   title: "Unlimited Products and Blogs Uploads",
+  //   icon: TagIcon,
+  //   highlight: "Flexible Structure"
+  // },
   // {
   //   title: "Tailored Features for Your Business",
   //   icon: CogIcon,
   //   highlight: "Made Just for You"
   // },
-  {
-    title: "Managing Coupons, Sales & Promotions",
-    icon: ReceiptPercentIcon,
-    highlight: "Built-In Marketing Tools"
-  },
+  // {
+  //   title: "Managing Coupons, Sales & Promotions",
+  //   icon: ReceiptPercentIcon,
+  //   highlight: "Built-In Marketing Tools"
+  // },
 
   {
     title: "Unlimited Features Updates & Revisions",

@@ -2,79 +2,67 @@ import { CheckIcon } from "@heroicons/react/24/outline";
 
 const packages = [
   {
-    name: "Quick Launch",
-    subtitle: "Perfect for testing the waters",
-    setupPrice: "$0",
-    monthlyPrice: "",
-    highlight: "",
+    name: "Landing Page",
+    subtitle: "High-conversion single page site",
+    price: "$200",
+    period: "one-time",
     features: [
-      "5-static page website (Home, About, Services, Testimonial, Contact)",
-      "Custom domain included",
-      "Mobile responsive design",
-      "SSL certificate"
+      "Single page website",
+      "Contact form",
+      "Mobile responsive",
+      "Fast loading",
+      "2 months of free edits and maintenance"
     ],
-    afterSetup: "",
+    perfectFor: [
+      "Consultants",
+      "Freelancers",
+      "Local services (plumbers, lawyers, coaches)",
+      "Event planners",
+      "Real estate agents"
+    ],
     isPopular: false
   },
   {
-    name: "Professional Growth",
-    subtitle: "Everything you need to run a successful online business",
-    setupPrice: "$75/month",
-    monthlyPrice: "",
-    highlight: "",
+    name: "Portfolio Website",
+    subtitle: "Showcase your work professionally",
+    price: "$500",
+    period: "one-time",
     features: [
-      "Unlimited pages & products",
-      "Complete Payment integration",
-      "Manage Business Hosting, Domain and Emails",
-      "Mobile-responsive design",
-      "Unlimited Features edits & updates (24-48hr turnaround)",
-      "Manage Product, Blogs & Discount codes",
-      "Provide Monthly performance reports",
-      "Develop custom features for your business model",
-      "Backups & version control"
+      "5 pages (Home, About, Portfolio, Services, Contact)",
+      "Gallery/portfolio section",
+      "Contact form",
+      "Mobile responsive",
+      "2 months of free edits and maintenance"
     ],
-    commitment: "No Commitment",
+    perfectFor: [
+      "Photographers",
+      "Designers",
+      "Artists",
+      "Architects",
+      "Creative professionals"
+    ],
     isPopular: true
   },
-  // {
-  //   name: "Advanced E-Commerce",
-  //   subtitle: "Enterprise-level features for scaling businesses",
-  //   setupPrice: "$200/month",
-  //   monthlyPrice: "",
-  //   highlight: "",
-  //   features: [
-  //     "Everything from Professional Growth package",
-  //     "Subscription products & recurring billing",
-  //     "Digital downloads with secure delivery",
-  //     "Gift cards & store credits",
-  //     "Multi-currency support",
-  //     "Advanced shipping rules",
-  //     "Wholesale pricing tiers",
-  //     "Customer portals"
-  //   ],
-  //   commitment: "Cancel anytime after 3 months",
-  //   isPopular: false
-  // }
   {
-    name: "SEO Growth",
-    subtitle: "Professional Growth + Monthly SEO & Marketing Support",
-    setupPrice: "$99/month",
-    monthlyPrice: "",
-    highlight: "Boost your visibility and traffic",
+    name: "Small Business Website",
+    subtitle: "Complete digital presence",
+    price: "$800",
+    period: "one-time",
     features: [
-      "Everything from Professional Growth package",
-      "Monthly SEO optimization for all pages and products",
-      "Keyword research and strategy",
-      "On-page and technical SEO improvements",
-      "Backlink and content strategy guidance",
-      "Monthly SEO performance report and recommendations",
-      "Integration with Google Analytics & Search Console",
-      "Ongoing marketing consultation and support"
+      "7+ pages",
+      "Blog section (5 blogs written included with SEO basics)",
+      "SEO basics",
+      "Google Analytics",
+      "2 months of free edits and maintenance"
     ],
-    commitment: "Cancel anytime after 3 months",
+    perfectFor: [
+      "Local businesses",
+      "Professional services",
+      "Agencies",
+      "B2B companies"
+    ],
     isPopular: false
   }
-
 ];
 
 export default function Pricing() {
@@ -109,7 +97,7 @@ export default function Pricing() {
             Pricing
           </h2>
           <p className="text-2xl text-blue-200 font-semibold tracking-wide mb-6">
-            Simple, Transparent, No Surprises
+            Simple One-Time Investment
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-accent mx-auto"></div>
         </div>
@@ -119,7 +107,7 @@ export default function Pricing() {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`relative bg-charcoal/80 backdrop-blur-sm border rounded-2xl p-8 ${pkg.isPopular
+              className={`relative bg-charcoal/80 backdrop-blur-sm border rounded-2xl p-8 flex flex-col ${pkg.isPopular
                 ? 'border-blue-400/40 bg-gradient-to-br from-blue-500/10 to-accent/10'
                 : 'border-blue-500/20'
                 }`}
@@ -136,56 +124,55 @@ export default function Pricing() {
                 <h3 className="text-2xl font-extrabold text-white mb-2">
                   {pkg.name}
                 </h3>
-                <p className="text-blue-200 text-lg mb-4">{pkg.subtitle}</p>
-                <div className="text-4xl font-bold text-accent mb-2">{pkg.setupPrice}</div>
-                <p className="text-blue-300">{pkg.monthlyPrice}</p>
-                <p className="text-accent font-semibold mt-2">{pkg.highlight}</p>
+                {/* <p className="text-blue-200 text-lg mb-4">{pkg.subtitle}</p> */}
+                <div className="text-4xl font-bold text-accent mb-2">{pkg.price}</div>
+                <p className="text-blue-300 uppercase tracking-wider text-sm font-semibold">{pkg.period}</p>
               </div>
 
-              <div className="space-y-4 mb-8">
-                <h4 className="text-xl font-bold text-blue-200 mb-4">
-                  Included:
+              <div className="space-y-4 mb-8 flex-grow">
+                <h4 className="text-lg font-bold text-blue-200 mb-4 border-b border-blue-500/20 pb-2">
+                  Includes:
                 </h4>
                 <ul className="space-y-3">
                   {pkg.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
                       <CheckIcon className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-blue-200">{feature}</span>
+                      <span className="text-blue-100 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-8">
+                  <h4 className="text-lg font-bold text-blue-200 mb-4 border-b border-blue-500/20 pb-2">
+                    Perfect for:
+                  </h4>
+                  <ul className="space-y-2">
+                    {pkg.perfectFor.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
+                        <span className="text-blue-200/80 text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              {pkg.afterSetup && (
-                <div className="mb-6 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
-                  <p className="text-blue-200 font-semibold">After Setup:</p>
-                  <p className="text-blue-300">{pkg.afterSetup}</p>
-                </div>
-              )}
-
-              {pkg.commitment && (
-                <div className="mb-6 p-4 bg-accent/10 rounded-lg border border-accent/20">
-                  {/* <p className="text-blue-200 font-semibold">Commitment:</p> */}
-                  <p className="text-blue-300">{pkg.commitment}</p>
-                </div>
-              )}
-
-              <div className="text-center">
+              <div className="text-center mt-auto">
                 <a
                   href="/contact"
-                  className={`btn px-8 py-4 text-lg font-bold transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 ${pkg.isPopular
+                  className={`btn px-8 py-4 text-lg font-bold w-full transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 ${pkg.isPopular
                     ? 'btn-primary shadow-2xl hover:shadow-accent/25'
                     : 'bg-blue-500/20 text-blue-200 border-2 border-blue-500/40 hover:bg-blue-500/30 hover:border-blue-400/60'
                     }`}
                 >
-                  Get Started Today
+                  Get Started
                 </a>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Add-On Services */}
+        {/* Add-On Services (Monthly Maintenance) */}
         <div className="mt-16 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -195,45 +182,31 @@ export default function Pricing() {
             </h3>
           </div>
 
-          <div className="bg-slate-800/40 backdrop-blur-sm border border-slate-600/30 rounded-xl p-8 max-w-4xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-6">
-              <h4 className="text-xl font-semibold text-white mb-2">Third-Party Integrations</h4>
-              <p className="text-2xl font-bold text-blue-400">$20 each</p>
+          <div className="bg-slate-800/40 backdrop-blur-sm border border-slate-600/30 rounded-xl p-8 max-w-2xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="text-center md:text-left">
+                <h4 className="text-2xl font-bold text-white mb-2">Monthly Maintenance</h4>
+                <p className="text-blue-200">Keep your site secure and up-to-date.</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-accent mb-1">$50<span className="text-lg text-blue-300 font-normal">/month</span></div>
+                <div className="text-sm text-blue-300/80">(Optional)</div>
+              </div>
             </div>
 
-            {/* Description */}
-            <p className="text-blue-200 text-center mb-8 leading-relaxed">
-              Enhance your website with professional integrations that streamline your business operations.
-            </p>
-
-            {/* Simple Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[
-                { name: "Email Marketing", example: "Mailchimp, Constant Contact" },
-                { name: "Social Media Feeds", example: "Instagram, Facebook" },
-                { name: "Shipping Calculators", example: "UPS, FedEx" },
-                { name: "Inventory Management", example: "Stock tracking systems" },
-                { name: "Analytics Tools", example: "Google Analytics, Facebook Pixel" },
-                { name: "CRM Systems", example: "Salesforce, HubSpot" }
-              ].map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-slate-700/30 rounded-lg p-4 border border-slate-600/20 hover:border-blue-400/40 transition-colors duration-300"
-                >
-                  <div className="text-center">
-                    <h5 className="text-blue-200 font-medium mb-1">{service.name}</h5>
-                    <p className="text-blue-200/70 text-sm">{service.example}</p>
+            <div className="mt-8 pt-8 border-t border-slate-600/30">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  "Updates/Edits",
+                  "Security Monitoring",
+                  "Content Changes"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center justify-center md:justify-start gap-2 bg-slate-700/30 rounded-lg p-3">
+                    <CheckIcon className="w-5 h-5 text-green-400" />
+                    <span className="text-blue-100 font-medium">{item}</span>
                   </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Footer */}
-            <div className="mt-6 text-center">
-              <p className="text-blue-200/80 text-sm">
-                Professional setup and testing included with each integration
-              </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -242,17 +215,26 @@ export default function Pricing() {
         <div className="text-center">
           <div className="inline-block bg-gradient-to-r from-blue-500/10 to-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20">
             <p className="text-xl text-blue-200 mb-6 font-semibold">
-              Ready to transform your business with a professional website?
+              Interested in acquiring CodeCraftSpace?
             </p>
-            <a
-              href="/contact"
-              className="group btn btn-primary px-8 py-4 text-lg font-bold shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
-            >
-              Start Your Project Today
-              <CheckIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#acquisition"
+                className="group btn btn-primary px-8 py-4 text-lg font-bold shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+              >
+                Make an Offer
+                <CheckIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="#acquisition"
+                className="btn bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:border-accent hover:bg-accent/10 px-8 py-4 text-lg font-semibold transition-all duration-300"
+              >
+                View Source Code Specs
+              </a>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );

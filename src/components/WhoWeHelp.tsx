@@ -1,47 +1,71 @@
 import { CheckIcon } from "@heroicons/react/24/outline";
 
 const idealClients = [
+  // {
+  //   title: "Etsy Sellers Ready to Scale",
+  //   description:
+  //     "Your products already sell — now it’s time to build your own branded store, keep more profit, and grow beyond Etsy with a custom website built for you.",
+  //   gradient: "from-blue-500 to-blue-600"
+  // },
+  // {
+  //   title: "Print-on-Demand Creators",
+  //   description:
+  //     "You design. We build the website that brings your art to life. Launch your custom t-shirt, mug, or poster business with a professional e-commerce setup that runs smoothly.",
+  //   gradient: "from-purple-500 to-purple-600"
+  // },
+  // {
+  //   title: "Busy E-Commerce Owners",
+  //   description:
+  //     "Managing products, inventory, and plugins shouldn’t take all your time. We streamline your store so you can focus on running your business — not fixing your website.",
+  //   gradient: "from-orange-500 to-red-500"
+  // },
+  // {
+  //   title: "Local Business Owners",
+  //   description:
+  //     "Whether you’re a boutique, bakery, or home service provider, we help small businesses build modern websites that attract customers beyond the neighborhood.",
+  //   gradient: "from-blue-600 to-blue-700"
+  // },
+  // {
+  //   title: "First-Time Entrepreneurs",
+  //   description:
+  //     "You have a great product or idea but feel lost in the tech. We handle everything — from design to setup — so you can launch confidently and focus on growth.",
+  //   gradient: "from-sky-500 to-sky-600"
+  // },
+  // {
+  //   title: "Frustrated DIY Builders",
+  //   description:
+  //     "You’ve tried Wix, Squarespace, or WordPress and hit a wall. We replace the frustration with a clean, custom-coded site that finally works the way you want.",
+  //   gradient: "from-indigo-500 to-indigo-600"
+  // },
+  // {
+  //   title: "Owners with Outdated or Underperforming Sites",
+  //   description:
+  //     "If your website is slow, messy, or not bringing in sales, it’s time for a rebuild. We’ll transform it into a high-performing asset that drives real results.",
+  //   gradient: "from-fuchsia-500 to-pink-600"
+  // }
   {
-    title: "Etsy Sellers Ready to Scale",
+    title: "Photographers",
     description:
-      "Your products already sell — now it’s time to build your own branded store, keep more profit, and grow beyond Etsy with a custom website built for you.",
-    gradient: "from-blue-500 to-blue-600"
+      "Showcase your best shots with a stunning, fast-loading portfolio. We build galleries that highlight your creativity and help you book more clients.",
+    gradient: "from-purple-500 to-pink-600"
   },
   {
-    title: "Print-on-Demand Creators",
+    title: "Real Estate Agents",
     description:
-      "You design. We build the website that brings your art to life. Launch your custom t-shirt, mug, or poster business with a professional e-commerce setup that runs smoothly.",
-    gradient: "from-purple-500 to-purple-600"
+      "Stand out in a crowded market with a professional site. Feature your listings, capture leads, and build trust with homebuyers and sellers.",
+    gradient: "from-blue-500 to-cyan-500"
   },
   {
-    title: "Busy E-Commerce Owners",
+    title: "Local Services (Plumbers/Electricians)",
     description:
-      "Managing products, inventory, and plugins shouldn’t take all your time. We streamline your store so you can focus on running your business — not fixing your website.",
+      "Get found by locals who need your help. We create simple, effective sites that turn visitors into phone calls and scheduled appointments.",
     gradient: "from-orange-500 to-red-500"
   },
   {
-    title: "Local Business Owners",
+    title: "Coaches & Consultants",
     description:
-      "Whether you’re a boutique, bakery, or home service provider, we help small businesses build modern websites that attract customers beyond the neighborhood.",
-    gradient: "from-blue-600 to-blue-700"
-  },
-  {
-    title: "First-Time Entrepreneurs",
-    description:
-      "You have a great product or idea but feel lost in the tech. We handle everything — from design to setup — so you can launch confidently and focus on growth.",
-    gradient: "from-sky-500 to-sky-600"
-  },
-  {
-    title: "Frustrated DIY Builders",
-    description:
-      "You’ve tried Wix, Squarespace, or WordPress and hit a wall. We replace the frustration with a clean, custom-coded site that finally works the way you want.",
-    gradient: "from-indigo-500 to-indigo-600"
-  },
-  {
-    title: "Owners with Outdated or Underperforming Sites",
-    description:
-      "If your website is slow, messy, or not bringing in sales, it’s time for a rebuild. We’ll transform it into a high-performing asset that drives real results.",
-    gradient: "from-fuchsia-500 to-pink-600"
+      "Establish authority and grow your practice. We build platforms that share your expertise, collect leads, and help you sell your services or courses.",
+    gradient: "from-emerald-500 to-teal-600"
   }
 ];
 

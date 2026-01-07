@@ -43,7 +43,7 @@ export default function Hero() {
                   <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="3" className="text-accent/60" />
                 </svg>
               </span>{" "}
-              for Small Businesses
+              for Your Businesses
             </h1>
 
             {/* Enhanced subheading */}

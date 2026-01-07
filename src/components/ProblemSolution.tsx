@@ -8,22 +8,22 @@ import {
 } from "@heroicons/react/24/outline";
 
 const problems = [
-  {
-    number: "01",
-    title: "Etsy Business Are Costing You Sales",
-    description: "Standing out among millions of sellers while paying 6.5% fees on every sale.",
-    Icon: ShoppingCartIcon,
-    color: "from-orange-400 to-orange-500",
-    accentColor: "text-orange-400"
-  },
   // {
-  //   number: "02",
-  //   title: "You're Losing Money on Platform Fees",
-  //   description: "Platform fees, processing costs, and ads eat 15-20% of every sale.",
-  //   Icon: CurrencyDollarIcon,
-  //   color: "from-orange-500 to-orange-600",
+  //   number: "01",
+  //   title: "Etsy Business Are Costing You Sales",
+  //   description: "Standing out among millions of sellers while paying 6.5% fees on every sale.",
+  //   Icon: ShoppingCartIcon,
+  //   color: "from-orange-400 to-orange-500",
   //   accentColor: "text-orange-400"
   // },
+  {
+    number: "02",
+    title: "You're Losing Money on Platform Fees",
+    description: "Platform fees, processing costs, and ads eat 15-20% of every sale.",
+    Icon: ShoppingCartIcon,
+    color: "from-orange-500 to-orange-600",
+    accentColor: "text-orange-400"
+  },
   // {
   //   number: "03",
   //   title: "Your Products Deserve Better Organization",

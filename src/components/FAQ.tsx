@@ -11,21 +11,21 @@ const faqData = [
     question: "Why custom code instead of using AI website builders?",
     answer: "AI builders create generic templates that can't handle real e-commerce needs. They lack proper Stripe integration, custom database management for products, professional blog systems, and personalized features specific to your business. Custom code gives you a real online store, not just a pretty template."
   },
-  {
-    id: 2,
-    question: "Why $0 down instead of charging upfront?",
-    answer: "We believe your business deserves a chance to succeed without massive upfront costs. Our monthly model lets you invest in inventory, marketing, and growth instead of a huge website bill."
-  },
+  // {
+  //   id: 2,
+  //   question: "Why $0 down instead of charging upfront?",
+  //   answer: "We believe your business deserves a chance to succeed without massive upfront costs. Our monthly model lets you invest in inventory, marketing, and growth instead of a huge website bill."
+  // },
   {
     id: 3,
     question: "What if I need changes after launch?",
-    answer: "Unlimited edits are included! Need to update text, add products, change images, or modify anything? Just tell us and we'll do it within 24-48 hours."
+    answer: "Unlimited edits are included! Need to update text,  change images, or modify anything? Just tell us and we'll do it within 24-48 hours."
   },
-  {
-    id: 4,
-    question: "How do you handle product and blog uploads?",
-    answer: "Just send us your content via email or our client portal. We'll format it, optimize images, add it to your website, and let you know when it's live. No learning curve for you."
-  },
+  // {
+  //   id: 4,
+  //   question: "How do you handle product and blog uploads?",
+  //   answer: "Just send us your content via email or our client portal. We'll format it, optimize images, add it to your website, and let you know when it's live. No learning curve for you."
+  // },
   {
     id: 5,
     question: "Do I own the website?",
@@ -41,21 +41,21 @@ const faqData = [
     question: "What if I'm not happy with the design?",
     answer: "We include two rounds of revisions during the design phase. If after that you're still not satisfied, we'll refund any payments and part ways—no hard feelings."
   },
-  {
-    id: 8,
-    question: "Can I cancel anytime?",
-    answer: "After your initial 3-month commitment, you can cancel anytime with 30 days' notice."
-  },
+  // {
+  //   id: 8,
+  //   question: "Can I cancel anytime?",
+  //   answer: "After your initial 3-month commitment, you can cancel anytime with 30 days' notice."
+  // },
   {
     id: 9,
     question: "What happens if I cancel?",
     answer: "Your website will remain live for 30 days, giving you time to migrate elsewhere if desired. We'll provide you with all your content and data."
   },
-  {
-    id: 10,
-    question: "Can you integrate with my Etsy shop?",
-    answer: "Yes! We can display your Etsy products on your website, or help you transition completely away from Etsy."
-  },
+  // {
+  //   id: 10,
+  //   question: "Can you integrate with my Etsy shop?",
+  //   answer: "Yes! We can display your Etsy products on your website, or help you transition completely away from Etsy."
+  // },
   {
     id: 11,
     question: "How is this different from Shopify?",
@@ -69,7 +69,7 @@ const faqData = [
   {
     id: 13,
     question: "Do you provide ongoing SEO support?",
-    answer: "Yes! All websites are SEO-ready and we offer optional monthly SEO services to help you rank higher on Google."
+    answer: "Yes! All websites are Basic SEO-ready to help you rank higher on Google."
   },
   {
     id: 14,
@@ -81,11 +81,11 @@ const faqData = [
     question: "Can I integrate other tools like Mailchimp or Google Analytics?",
     answer: "Yes! We can integrate most third-party tools to streamline marketing, analytics, and customer engagement, with additional cost."
   },
-  {
-    id: 16,
-    question: "Can I create my own discount codes or promotions?",
-    answer: "Absolutely! Just tell us what kind of discounts or promotions you want to offer—percentage off, buy-one-get-one, seasonal deals, or special bundles—and we'll set everything up and manage it for you. No technical work required on your end."
-  },
+  // {
+  //   id: 16,
+  //   question: "Can I create my own discount codes or promotions?",
+  //   answer: "Absolutely! Just tell us what kind of discounts or promotions you want to offer—percentage off, buy-one-get-one, seasonal deals, or special bundles—and we'll set everything up and manage it for you. No technical work required on your end."
+  // },
     {
     id: 17,
     question: "What happens after I submit my project request?",
