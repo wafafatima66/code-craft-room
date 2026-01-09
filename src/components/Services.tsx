@@ -1,12 +1,9 @@
 import {
   CheckIcon,
-  ShoppingCartIcon,
   // CircleStackIcon,
   // DocumentTextIcon,
   DevicePhoneMobileIcon,
-  TagIcon,
   CogIcon,
-  ReceiptPercentIcon,
   ShieldCheckIcon,
   PencilSquareIcon,
   BoltIcon
@@ -85,7 +82,7 @@ const serviceFeatures = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 bg-charcoal overflow-hidden">
+    <section id="services" className="relative py-24 bg-white overflow-hidden">
       {/* Background elements - consistent with WhoWeHelp section */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
@@ -97,7 +94,7 @@ export default function Services() {
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="services-grid" width="20" height="20" patternUnits="userspaceOnUse">
-                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-white/10" />
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-charcoal/10" />
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#services-grid)" />
@@ -115,7 +112,7 @@ export default function Services() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-charcoal mb-6 tracking-tight leading-tight">
             Services We <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Provide</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
@@ -130,16 +127,16 @@ export default function Services() {
             {serviceFeatures.map((service, index) => (
               <div
                 key={index}
-                className="group flex items-start gap-4 p-6 hover:bg-white/5 rounded-xl transition-all duration-500 ease-out"
+                className="group flex items-start gap-4 p-6 hover:bg-pink-50 rounded-xl transition-all duration-500 ease-out border border-transparent hover:border-pink-200"
               >
                 {/* Check icon */}
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-500 ease-out">
-                  {/* <CheckIcon className="w-5 h-5 text-white" /> */} <span>{index + 1}</span>
+                  <span className="text-white font-bold">{index + 1}</span>
                 </div>
 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-xl font-black text-transparent bg-gradient-to-r from-blue-200 via-white to-blue-100 bg-clip-text group-hover:from-accent group-hover:via-primary group-hover:to-accent transition-all duration-500 ease-out leading-tight tracking-tight">
+                  <h3 className="text-xl md:text-xl font-black text-charcoal group-hover:text-accent transition-colors duration-300 leading-tight tracking-tight">
                     {service.title}
                   </h3>
                 </div>
@@ -150,11 +147,11 @@ export default function Services() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="inline-block p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="inline-block p-6 bg-pink-50/60 backdrop-blur-sm rounded-2xl border border-pink-200">
+            <h3 className="text-2xl font-bold text-charcoal mb-4">
               Ready to Get All These Features?
             </h3>
-            <p className="text-light mb-6 text-lg">
+            <p className="text-secondary mb-6 text-lg">
               Stop settling for basic templates. Get a professional e-commerce website that actually works.
             </p>
             <a

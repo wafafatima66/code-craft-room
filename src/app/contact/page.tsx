@@ -100,9 +100,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-charcoal">
+    <div className="min-h-screen bg-white">
 
-      <section className="relative py-24 bg-charcoal overflow-hidden">
+      <section className="relative py-24 overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0">
           {/* Animated gradient orbs */}
@@ -114,7 +114,7 @@ export default function Contact() {
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern id="contact-grid" width="20" height="20" patternUnits="userspaceOnUse">
-                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-white/10" />
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-charcoal/10" />
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#contact-grid)" />
@@ -131,11 +131,11 @@ export default function Contact() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-charcoal mb-6 tracking-tight leading-tight">
               Let&apos;s Build Your <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Dream Website</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
-            <p className="text-xl text-light max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
               Ready to transform your business with a custom website? Get in touch and let&apos;s discuss your project.
             </p>
           </div>
@@ -150,8 +150,8 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-extrabold text-white mb-6">Get In Touch</h2>
-                <p className="text-light text-lg leading-relaxed mb-8">
+                <h2 className="text-3xl font-extrabold text-charcoal mb-6">Get In Touch</h2>
+                <p className="text-secondary text-lg leading-relaxed mb-8">
                   Ready to start your project?  We&apos;ll discuss your project requirements back and forth to understand your needs clearly.
                   Once everything is finalized, we&apos;ll set up a personalized price for you and send an invoice before starting the project.
                 </p>
@@ -159,13 +159,13 @@ export default function Contact() {
 
               {/* Contact Details */}
               <div className="space-y-6">
-                <div className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center gap-4 p-4 bg-pink-50/60 backdrop-blur-sm rounded-xl border border-pink-200 hover:bg-pink-50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
                     <EnvelopeIcon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Email</h3>
-                    <p className="text-light">hello@codecraftspace.com</p>
+                    <h3 className="text-charcoal font-semibold">Email</h3>
+                    <p className="text-secondary">hello@codecraftspace.com</p>
                   </div>
                 </div>
 
@@ -179,54 +179,54 @@ export default function Contact() {
                   </div>
                 </div> */}
 
-                <div className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center gap-4 p-4 bg-pink-50/60 backdrop-blur-sm rounded-xl border border-pink-200 hover:bg-pink-50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
                     <MapPinIcon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Location</h3>
-                    <p className="text-light">Texas, USA</p>
+                    <h3 className="text-charcoal font-semibold">Location</h3>
+                    <p className="text-secondary">Texas, USA</p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center gap-4 p-4 bg-pink-50/60 backdrop-blur-sm rounded-xl border border-pink-200 hover:bg-pink-50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
                     <ClockIcon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Response Time</h3>
-                    <p className="text-light">Within 24 hours</p>
+                    <h3 className="text-charcoal font-semibold">Response Time</h3>
+                    <p className="text-secondary">Within 24 hours</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
-              <h3 className="text-2xl font-extrabold text-white mb-6">Send us a message</h3>
+            <div className="bg-pink-50/60 backdrop-blur-sm rounded-2xl border border-pink-200 p-8">
+              <h3 className="text-2xl font-extrabold text-charcoal mb-6">Send us a message</h3>
 
               {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
-                  <p className="text-green-300">Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.</p>
+                <div className="mb-6 p-4 bg-pink-500/10 border border-pink-200 rounded-lg">
+                  <p className="text-charcoal">Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.</p>
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-white font-medium mb-2">Name</label>
+                    <label htmlFor="name" className="block text-charcoal font-medium mb-2">Name</label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-pink-200 rounded-lg text-charcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-white font-medium mb-2">Email *</label>
+                    <label htmlFor="email" className="block text-charcoal font-medium mb-2">Email *</label>
                     <input
                       type="email"
                       id="email"
@@ -234,7 +234,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-pink-200 rounded-lg text-charcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -242,88 +242,88 @@ export default function Contact() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-white font-medium mb-2">Phone</label>
+                    <label htmlFor="phone" className="block text-charcoal font-medium mb-2">Phone</label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-pink-200 rounded-lg text-charcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="(555) 123-4567"
                     />
                   </div>
                   <div>
-                    <label htmlFor="company" className="block text-white font-medium mb-2">Company</label>
+                    <label htmlFor="company" className="block text-charcoal font-medium mb-2">Company</label>
                     <input
                       type="text"
                       id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-pink-200 rounded-lg text-charcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="Your company name"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="package" className="block text-white font-medium mb-2">Interested Package</label>
+                  <label htmlFor="package" className="block text-charcoal font-medium mb-2">Interested Package</label>
                   <select
                     id="package"
                     name="package"
                     value={formData.package}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white border border-pink-200 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                   >
-                    <option value="" className="bg-charcoal text-white">Select a package</option>
-                    <option value="landing-page" className="bg-charcoal text-white">Landing Page ($200)</option>
-                    <option value="portfolio" className="bg-charcoal text-white">Portfolio Website ($500)</option>
-                    <option value="small-business" className="bg-charcoal text-white">Small Business Website ($800)</option>
-                    <option value="custom" className="bg-charcoal text-white">Custom / Not Sure</option>
+                    <option value="" className="bg-white text-charcoal">Select a package</option>
+                    <option value="landing-page" className="bg-white text-charcoal">Landing Page ($200)</option>
+                    <option value="portfolio" className="bg-white text-charcoal">Portfolio Website ($500)</option>
+                    <option value="small-business" className="bg-white text-charcoal">Small Business Website ($800)</option>
+                    <option value="custom" className="bg-white text-charcoal">Custom / Not Sure</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="projectType" className="block text-white font-medium mb-2">Project Type</label>
+                  <label htmlFor="projectType" className="block text-charcoal font-medium mb-2">Project Type</label>
                   <select
                     id="projectType"
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white border border-pink-200 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                   >
-                    <option value="" className="bg-charcoal text-white">Select project type</option>
+                    <option value="" className="bg-white text-charcoal">Select project type</option>
                     {/* <option value="ecommerce" className="bg-charcoal text-white">E-commerce Website</option> */}
-                    <option value="business" className="bg-charcoal text-white">Business Website</option>
-                    <option value="portfolio" className="bg-charcoal text-white">Portfolio Website</option>
-                    <option value="blog" className="bg-charcoal text-white">Blog/Content Site</option>
-                    <option value="custom" className="bg-charcoal text-white">Custom Application</option>
-                    <option value="redesign" className="bg-charcoal text-white">Website Redesign</option>
-                    <option value="other" className="bg-charcoal text-white">Other</option>
+                    <option value="business" className="bg-white text-charcoal">Business Website</option>
+                    <option value="portfolio" className="bg-white text-charcoal">Portfolio Website</option>
+                    <option value="blog" className="bg-white text-charcoal">Blog/Content Site</option>
+                    <option value="custom" className="bg-white text-charcoal">Custom Application</option>
+                    <option value="redesign" className="bg-white text-charcoal">Website Redesign</option>
+                    <option value="other" className="bg-white text-charcoal">Other</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="timeline" className="block text-white font-medium mb-2">Timeline</label>
+                  <label htmlFor="timeline" className="block text-charcoal font-medium mb-2">Timeline</label>
                   <select
                     id="timeline"
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white border border-pink-200 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                   >
-                    <option value="" className="bg-charcoal text-white">Select timeline</option>
-                    <option value="asap" className="bg-charcoal text-white">ASAP</option>
-                    <option value="1-month" className="bg-charcoal text-white">Within 1 month</option>
-                    <option value="2-3-months" className="bg-charcoal text-white">2-3 months</option>
-                    <option value="3-6-months" className="bg-charcoal text-white">3-6 months</option>
-                    <option value="flexible" className="bg-charcoal text-white">Flexible</option>
+                    <option value="" className="bg-white text-charcoal">Select timeline</option>
+                    <option value="asap" className="bg-white text-charcoal">ASAP</option>
+                    <option value="1-month" className="bg-white text-charcoal">Within 1 month</option>
+                    <option value="2-3-months" className="bg-white text-charcoal">2-3 months</option>
+                    <option value="3-6-months" className="bg-white text-charcoal">3-6 months</option>
+                    <option value="flexible" className="bg-white text-charcoal">Flexible</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white font-medium mb-2">Message *</label>
+                  <label htmlFor="message" className="block text-charcoal font-medium mb-2">Message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -331,7 +331,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-white border border-pink-200 rounded-lg text-charcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 resize-none"
                     placeholder="Tell us about your project, goals, and any specific requirements..."
                   />
                 </div>

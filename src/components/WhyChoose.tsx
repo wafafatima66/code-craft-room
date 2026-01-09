@@ -59,12 +59,12 @@ export default function WhyChoose() {
   ];
 
   return (
-    <section className="relative py-24 bg-charcoal overflow-hidden">
+    <section className="relative py-24 bg-white overflow-hidden">
       {/* Background elements matching hero/problem theme */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-accent/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-accent/15 to-blue-400/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-pink-500/15 to-accent/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-accent/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
         {/* Geometric pattern - subtle */}
         <div className="absolute inset-0 opacity-3">
@@ -74,7 +74,7 @@ export default function WhyChoose() {
                 <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" />
               </pattern>
             </defs>
-            <rect width="100" height="100" fill="url(#why-choose-grid)" className="text-white/10" />
+            <rect width="100" height="100" fill="url(#why-choose-grid)" className="text-charcoal/10" />
           </svg>
         </div>
 
@@ -85,29 +85,29 @@ export default function WhyChoose() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-charcoal mb-6 leading-tight tracking-tight">
             Why Choose{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
               Code Craft Space?
             </span>
           </h2>
-          <p className="text-2xl text-blue-200 font-semibold tracking-wide">
+          <p className="text-2xl text-secondary font-semibold tracking-wide">
             We&apos;re Different From Everyone Else
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-accent mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mt-6"></div>
         </div>
 
         {/* Comparison Table */}
         <div className="mb-16">
-          <div className="bg-charcoal/80 backdrop-blur-sm border border-blue-500/20 rounded-2xl overflow-hidden">
+          <div className="bg-white/80 backdrop-blur-sm border border-pink-200 rounded-2xl overflow-hidden shadow-xl">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-blue-500/10 to-accent/10">
-                    <th className="px-6 py-4 text-left text-base font-bold text-blue-200 border-b border-blue-500/20">
+                  <tr className="bg-gradient-to-r from-pink-500/10 to-accent/10">
+                    <th className="px-6 py-4 text-left text-base font-bold text-charcoal border-b border-pink-200">
                       Feature
                     </th>
-                    <th className="px-6 py-4 text-center text-base font-bold text-red-300 border-b border-blue-500/20">
+                    <th className="px-6 py-4 text-center text-base font-bold text-secondary border-b border-pink-200">
                       <div className="flex flex-col items-center justify-center">
                         <div className="flex items-center">
                           <XMarkIcon className="w-4 h-4 mr-2" />
@@ -115,18 +115,18 @@ export default function WhyChoose() {
                         </div>
                       </div>
                     </th>
-                    <th className="px-6 py-4 text-center text-base font-bold text-red-300 border-b border-blue-500/20">
+                    <th className="px-6 py-4 text-center text-base font-bold text-secondary border-b border-pink-200">
                       <div className="flex flex-col items-center justify-center">
                         <div className="flex items-center">
                           <XMarkIcon className="w-4 h-4 mr-2" />
                           DIY Platforms
                         </div>
-                        <div className="text-xs text-red-200/70 mt-1 font-normal">
+                        <div className="text-xs text-secondary/80 mt-1 font-normal">
                           (Wix, Squarespace, Weebly, GoDaddy)
                         </div>
                       </div>
                     </th>
-                    <th className="px-6 py-4 text-center text-base font-bold text-red-300 border-b border-blue-500/20">
+                    <th className="px-6 py-4 text-center text-base font-bold text-secondary border-b border-pink-200">
                       <div className="flex flex-col items-center justify-center">
                         <div className="flex items-center">
                           <XMarkIcon className="w-4 h-4 mr-2" />
@@ -134,7 +134,7 @@ export default function WhyChoose() {
                         </div>
                       </div>
                     </th>
-                    <th className="px-6 py-4 text-center text-base font-bold text-red-300 border-b border-blue-500/20">
+                    <th className="px-6 py-4 text-center text-base font-bold text-secondary border-b border-pink-200">
                       <div className="flex flex-col items-center justify-center">
                         <div className="flex items-center">
                           <XMarkIcon className="w-4 h-4 mr-2" />
@@ -142,18 +142,18 @@ export default function WhyChoose() {
                         </div>
                       </div>
                     </th>
-                    <th className="px-6 py-4 text-center text-base font-bold text-red-300 border-b border-blue-500/20">
+                    <th className="px-6 py-4 text-center text-base font-bold text-secondary border-b border-pink-200">
                       <div className="flex flex-col items-center justify-center">
                         <div className="flex items-center">
                           <XMarkIcon className="w-4 h-4 mr-2" />
                           AI Builders
                         </div>
-                        <div className="text-xs text-red-200/70 mt-1 font-normal">
+                        <div className="text-xs text-secondary/80 mt-1 font-normal">
                           (AI site generators)
                         </div>
                       </div>
                     </th>
-                    <th className="px-6 py-4 text-center text-base font-bold text-blue-200 border-b border-blue-500/20 bg-gradient-to-r from-blue-500/20 to-accent/20">
+                    <th className="px-6 py-4 text-center text-base font-bold text-charcoal border-b border-pink-200 bg-gradient-to-r from-pink-500/15 to-accent/15">
                       <div className="flex flex-col items-center justify-center">
                         <div className="flex items-center">
                           <CheckIcon className="w-4 h-4 mr-2" />
@@ -165,26 +165,26 @@ export default function WhyChoose() {
                 </thead>
                 <tbody>
                   {tableData.map((row, index) => (
-                    <tr key={index} className="hover:bg-blue-500/5 transition-colors duration-300">
-                      <td className="px-6 py-4 text-blue-200 font-semibold border-b border-blue-500/10">
+                    <tr key={index} className="hover:bg-pink-50 transition-colors duration-300">
+                      <td className="px-6 py-4 text-charcoal font-semibold border-b border-pink-200/60">
                         {row.feature}
                       </td>
-                      <td className="px-6 py-4 text-red-200 text-center border-b border-blue-500/10">
+                      <td className="px-6 py-4 text-secondary text-center border-b border-pink-200/60">
                         {row.localAgencies}
                       </td>
-                      <td className="px-6 py-4 text-red-200 text-center border-b border-blue-500/10">
+                      <td className="px-6 py-4 text-secondary text-center border-b border-pink-200/60">
                         {row.diyPlatforms}
                       </td>
-                      <td className="px-6 py-4 text-red-200 text-center border-b border-blue-500/10">
+                      <td className="px-6 py-4 text-secondary text-center border-b border-pink-200/60">
                         {row.wordpress}
                       </td>
-                      <td className="px-6 py-4 text-red-200 text-center border-b border-blue-500/10">
+                      <td className="px-6 py-4 text-secondary text-center border-b border-pink-200/60">
                         {row.shopify}
                       </td>
-                      <td className="px-6 py-4 text-red-200 text-center border-b border-blue-500/10">
+                      <td className="px-6 py-4 text-secondary text-center border-b border-pink-200/60">
                         {row.aiBuilders}
                       </td>
-                      <td className="px-6 py-4 text-blue-200 font-semibold text-center border-b border-blue-500/10 bg-gradient-to-r from-blue-500/10 to-accent/10">
+                      <td className="px-6 py-4 text-charcoal font-semibold text-center border-b border-pink-200/60 bg-gradient-to-r from-pink-500/10 to-accent/10">
                         {row.us}
                       </td>
                     </tr>
@@ -197,8 +197,8 @@ export default function WhyChoose() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-20">
-          <div className="inline-block bg-gradient-to-r from-blue-500/10 to-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20">
-            <p className="text-xl text-blue-200 mb-6 font-semibold">
+          <div className="inline-block bg-gradient-to-r from-pink-500/10 to-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-pink-200">
+            <p className="text-xl text-charcoal mb-6 font-semibold">
               Ready to experience the Code Craft Space difference?
             </p>
             <a

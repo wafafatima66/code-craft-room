@@ -22,7 +22,7 @@ function isExternalUrl(url?: string): boolean {
 
 
 const defaultProjects: Project[] = [
-{
+  {
     title: "Blueberry IT Sky - Digital Agency",
     summary:
       "Comprehensive digital agency website showcasing web/mobile development, cloud infrastructure, AI automation, and managed services.",
@@ -53,13 +53,13 @@ const defaultProjects: Project[] = [
 
 export default function PreviousWork({ projects = defaultProjects }: { projects?: Project[] }) {
   return (
-    <section id="previous-work" className="relative py-20">
+    <section id="previous-work" className="relative py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-charcoal tracking-tight">
             Previous <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Work</span>
           </h2>
-          <p className="mt-4 text-light max-w-2xl mx-auto">
+          <p className="mt-4 text-secondary max-w-2xl mx-auto">
             Recent projects that reflect pragmatic, well-crafted results.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mt-6"></div>
@@ -78,7 +78,7 @@ export default function PreviousWork({ projects = defaultProjects }: { projects?
             return (
               <div
                 key={p.title}
-                className="group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-accent/40 transition-colors"
+                className="group rounded-2xl border border-pink-200 bg-white overflow-hidden hover:border-accent/50 hover:shadow-xl transition-all"
               >
                 <div className="relative h-55">
                   {imageSrc ? (
@@ -91,11 +91,11 @@ export default function PreviousWork({ projects = defaultProjects }: { projects?
                       priority={false}
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-charcoal/60 text-white/80">
+                    <div className="absolute inset-0 flex items-center justify-center bg-pink-100 text-charcoal">
                       <span className="text-sm">No thumbnail available</span>
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent opacity-90"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-charcoal/10 to-transparent opacity-90"></div>
                   {p.tags && p.tags.length > 0 && (
                     <div className="absolute top-3 left-3 flex flex-wrap gap-2">
                       {p.tags.map((t) => (
@@ -109,22 +109,22 @@ export default function PreviousWork({ projects = defaultProjects }: { projects?
                     </div>
                   )}
                   {p.year && (
-                    <span className="absolute bottom-3 right-3 rounded-md bg-white/15 border border-white/20 text-white/90 px-2 py-1 text-xs">
+                    <span className="absolute bottom-3 right-3 rounded-md bg-white/90 border border-pink-200 text-charcoal px-2 py-1 text-xs">
                       {p.year}
                     </span>
                   )}
                 </div>
 
                 <div className="p-5">
-                  <h3 className="text-lg font-bold text-white group-hover:text-accent transition-colors">{p.title}</h3>
-                  <p className="mt-2 text-sm text-white/80">{p.summary}</p>
+                  <h3 className="text-lg font-bold text-charcoal group-hover:text-accent transition-colors">{p.title}</h3>
+                  <p className="mt-2 text-sm text-secondary">{p.summary}</p>
 
                   {p.href && (
                     <div className="mt-4">
 
                       <CardLink
                         {...linkProps}
-                        className="inline-flex items-center gap-2 rounded-md border border-white/20 px-3 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+                        className="inline-flex items-center gap-2 rounded-md border border-pink-200 px-3 py-2 text-sm font-semibold text-charcoal hover:bg-pink-50 transition-colors"
                       >
                         View Project
                         <svg
