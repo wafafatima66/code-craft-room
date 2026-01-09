@@ -76,7 +76,7 @@ const problems = [
 
 export default function ProblemSolution() {
   return (
-    <section className="relative bg-charcoal/95 overflow-hidden">
+    <section className="relative bg-white overflow-hidden">
       {/* Background decorative elements - matching hero style */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs like hero */}
@@ -93,19 +93,19 @@ export default function ProblemSolution() {
               <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" />
             </pattern>
           </defs>
-          <rect width="100" height="100" fill="url(#problems-grid)" className="text-white/10" />
+          <rect width="100" height="100" fill="url(#problems-grid)" className="text-charcoal/10" />
         </svg>
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 sm:py-24">
         {/* Section header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-accent/30">
+          <div className="inline-flex items-center gap-2 bg-pink-50/60 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-pink-200">
             <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-white tracking-wide">Pain Points We Solve</span>
+            <span className="text-sm font-medium text-charcoal tracking-wide">Pain Points We Solve</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal mb-6 tracking-tight leading-tight">
             Problems We{" "}
             <span className="relative">
               <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-pulse">
@@ -117,9 +117,9 @@ export default function ProblemSolution() {
             </span>
           </h2>
           <div className="w-16 h-0.5 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
-          <p className="text-xl text-lightgray max-w-3xl mx-auto leading-relaxed font-light">
-            For <span className="text-white font-semibold">Etsy Sellers</span> & <span className="text-white font-semibold">Small Business Owners</span>
-          </p>
+          {/* <p className="text-xl text-lightgray max-w-3xl mx-auto leading-relaxed font-light">
+            For <span className="text-black font-semibold">Etsy Sellers</span> & <span className="text-black font-semibold">Small Business Owners</span>
+          </p> */}
         </div>
 
         {/* Problems grid - hero-style cards */}
@@ -127,26 +127,26 @@ export default function ProblemSolution() {
           {problems.map((problem) => (
             <div
               key={problem.number}
-              className="group relative bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-accent/25 transition-all duration-500 border border-white/10 hover:border-accent/40 hover:-translate-y-2 hover:scale-105"
+              className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-accent/20 transition-all duration-500 border border-pink-200 hover:border-accent/40 hover:-translate-y-2 hover:scale-105"
             >
               {/* Problem number - hero style */}
               {/* <div className="absolute -top-4 -left-4">
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-2xl border-2 border-white/20 group-hover:scale-110 transition-transform duration-500`}>
-                  <span className="text-white font-bold text-lg">{problem.number}</span>
+                  <span className="text-black font-bold text-lg">{problem.number}</span>
                 </div>
               </div> */}
 
               {/* Icon - hero style */}
               <div className="inline-flex p-4 rounded-2xl  backdrop-blur-sm mb-6  group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                <problem.Icon className="w-8 h-8 text-accent group-hover:text-white transition-colors duration-500" />
+                <problem.Icon className="w-8 h-8 text-accent group-hover:text-charcoal transition-colors duration-500" />
               </div>
 
               {/* Content - properly highlighted heading */}
-              <h3 className="text-2xl font-extrabold text-blue-200 mb-4 leading-tight tracking-tight group-hover:text-blue-100 transition-colors duration-300">
+              <h3 className="text-2xl font-extrabold text-charcoal mb-4 leading-tight tracking-tight group-hover:text-accent transition-colors duration-300">
                 {problem.title}
               </h3>
 
-              <p className="text-sm text-light leading-relaxed">
+              <p className="text-sm text-secondary leading-relaxed">
                 {problem.description}
               </p>
 
@@ -158,22 +158,22 @@ export default function ProblemSolution() {
 
         {/* Call to action - hero style */}
         <div className="text-center mt-20">
-          <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-12 shadow-2xl border border-white/20 max-w-4xl mx-auto overflow-hidden">
+          <div className="relative bg-pink-50/60 backdrop-blur-sm rounded-2xl p-12 shadow-xl border border-pink-200 max-w-4xl mx-auto overflow-hidden">
             {/* Background decoration like hero */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-accent/20 rounded-full blur-2xl"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/15 rounded-full blur-2xl"></div>
 
             <div className="relative z-10">
-              <h3 className="text-3xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+              <h3 className="text-3xl font-extrabold text-charcoal mb-6 tracking-tight leading-tight">
                 <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-pulse">
                   Sound Familiar?
                 </span>{" "}
                 You&apos;re Not Alone.
               </h3>
 
-              <p className="text-xl text-lightgray mb-8 leading-relaxed font-light max-w-3xl mx-auto">
+              <p className="text-xl text-secondary mb-8 leading-relaxed font-light max-w-3xl mx-auto">
                 These problems are exactly why we created{" "}
-                <span className="text-white font-semibold">Code Craft Space</span>.
+                <span className="text-charcoal font-semibold">Code Craft Space</span>.
                 We&#39;ve helped{" "}
                 <span className="text-3xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">200+</span>{" "}
                 businesses break free from these limitations.
@@ -188,7 +188,7 @@ export default function ProblemSolution() {
                 </a>
                 <a
                   href="#services"
-                  className="btn bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:border-accent hover:bg-accent/10 px-8 py-4 text-lg font-semibold transition-all duration-300"
+                  className="btn bg-white text-charcoal border-2 border-pink-200 hover:border-accent hover:bg-pink-50 px-8 py-4 text-lg font-semibold transition-all duration-300"
                 >
                   See How We Help
                 </a>

@@ -8,7 +8,7 @@ export default function Navbar() {
   const isMinimal = pathname === "/contact" || pathname === "/privacy" || pathname === "/terms";
 
   return (
-    <header className="sticky top-0 z-50 bg-charcoal/95 backdrop-blur supports-[backdrop-filter]:bg-charcoal/80 text-white">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 text-charcoal border-b border-pink-200/60">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <WrenchScrewdriverIcon className="size-6 text-accent" aria-hidden />

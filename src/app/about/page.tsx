@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="min-h-screen bg-charcoal">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         {/* Background elements */}
@@ -14,7 +14,7 @@ export default function About() {
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern id="about-grid" width="20" height="20" patternUnits="userspaceOnUse">
-                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-white/10" />
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-charcoal/10" />
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#about-grid)" />
@@ -33,11 +33,11 @@ export default function About() {
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-charcoal mb-6 tracking-tight leading-tight">
               Who <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">We Are</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
-            <p className="text-xl text-light max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
               We help small businesses grow with pragmatic, well-crafted software.
             </p>
           </div>
@@ -47,10 +47,10 @@ export default function About() {
       {/* Content */}
       <section className="relative py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 md:p-12">
-            <div className="prose prose-invert prose-lg max-w-none">
-              <h2 className="text-3xl font-extrabold text-white mb-6">About Code Craft Space</h2>
-              <div className="space-y-6 text-light leading-relaxed">
+          <div className="bg-pink-50/60 backdrop-blur-sm rounded-2xl border border-pink-200 p-8 md:p-12">
+            <div className="prose prose-lg max-w-none">
+              <h2 className="text-3xl font-extrabold text-charcoal mb-6">About Code Craft Space</h2>
+              <div className="space-y-6 text-secondary leading-relaxed">
                 <p>I&#39;m a software engineer with 4+ years of professional experience building production systems that scale. Code Craft Space exists because I&#39;ve seen how broken most website solutions are for small business owners—overpriced, overcomplicated, and abandoned after launch.</p>
                 <p>I bring three disciplines to every project: the technical rigor of a software engineer, the systematic thinking of a researcher, and the accountability of a project manager. That means you get custom-built solutions that are maintainable, performant, and actually solve your problems.</p>
                 <p>My mission is straightforward: help ambitious small business owners escape the constraints of templates and platforms, and build online presences that work as hard as they do. I focus on three things—clarity about what you need, reliability in execution, and measurable outcomes that matter to your bottom line.</p>
@@ -61,25 +61,25 @@ export default function About() {
               <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto my-10"></div>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="rounded-xl border border-white/10 bg-white/5 p-5">
-                  <h4 className="text-white font-semibold mb-2">Clarity</h4>
-                  <p className="text-sm text-white/80">Clear scope and strategy before design or code begins.</p>
+                <div className="rounded-xl border border-pink-200 bg-white p-5">
+                  <h4 className="text-charcoal font-semibold mb-2">Clarity</h4>
+                  <p className="text-sm text-secondary">Clear scope and strategy before design or code begins.</p>
                 </div>
-                <div className="rounded-xl border border-white/10 bg-white/5 p-5">
-                  <h4 className="text-white font-semibold mb-2">Reliability</h4>
-                  <p className="text-sm text-white/80">Solid engineering and predictable delivery you can trust.</p>
+                <div className="rounded-xl border border-pink-200 bg-white p-5">
+                  <h4 className="text-charcoal font-semibold mb-2">Reliability</h4>
+                  <p className="text-sm text-secondary">Solid engineering and predictable delivery you can trust.</p>
                 </div>
-                <div className="rounded-xl border border-white/10 bg-white/5 p-5">
-                  <h4 className="text-white font-semibold mb-2">Outcomes</h4>
-                  <p className="text-sm text-white/80">Focus on measurable results that move your business.</p>
+                <div className="rounded-xl border border-pink-200 bg-white p-5">
+                  <h4 className="text-charcoal font-semibold mb-2">Outcomes</h4>
+                  <p className="text-sm text-secondary">Focus on measurable results that move your business.</p>
                 </div>
               </div>
 
-              <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div className="mt-10 rounded-2xl border border-pink-200 bg-white p-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
-                    <h3 className="text-xl font-bold text-white">Ready to connect?</h3>
-                    <p className="text-white/80 text-sm">Reach out on LinkedIn or send an email.</p>
+                    <h3 className="text-xl font-bold text-charcoal">Ready to connect?</h3>
+                    <p className="text-secondary text-sm">Reach out on LinkedIn or send an email.</p>
                   </div>
                   <div className="flex flex-wrap items-center gap-3">
                     <a
@@ -92,7 +92,7 @@ export default function About() {
                     </a>
                     <a
                       href="mailto:hello@codecraftspace.com"
-                      className="inline-flex items-center rounded-md border border-white/20 px-4 py-2 text-white hover:bg-white/10 transition-colors"
+                      className="inline-flex items-center rounded-md border border-pink-200 px-4 py-2 text-charcoal hover:bg-pink-50 transition-colors"
                     >
                       hello@codecraftspace.com
                     </a>

@@ -47,32 +47,32 @@ const idealClients = [
     title: "Photographers",
     description:
       "Showcase your best shots with a stunning, fast-loading portfolio. We build galleries that highlight your creativity and help you book more clients.",
-    gradient: "from-purple-500 to-pink-600"
+    gradient: "from-accent to-primary"
   },
   {
     title: "Real Estate Agents",
     description:
       "Stand out in a crowded market with a professional site. Feature your listings, capture leads, and build trust with homebuyers and sellers.",
-    gradient: "from-blue-500 to-cyan-500"
+    gradient: "from-pink-500 to-primary"
   },
   {
     title: "Local Services (Plumbers/Electricians)",
     description:
       "Get found by locals who need your help. We create simple, effective sites that turn visitors into phone calls and scheduled appointments.",
-    gradient: "from-orange-500 to-red-500"
+    gradient: "from-primary to-accent"
   },
   {
     title: "Coaches & Consultants",
     description:
       "Establish authority and grow your practice. We build platforms that share your expertise, collect leads, and help you sell your services or courses.",
-    gradient: "from-emerald-500 to-teal-600"
+    gradient: "from-accent to-pink-500"
   }
 ];
 
 
 export default function WhoWeHelp() {
   return (
-    <section id="about" className="relative py-24 bg-charcoal overflow-hidden">
+    <section id="about" className="relative py-24 bg-white overflow-hidden">
       {/* Background elements - consistent with hero/problems sections */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
@@ -84,7 +84,7 @@ export default function WhoWeHelp() {
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="who-we-help-grid" width="20" height="20" patternUnits="userspaceOnUse">
-                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-white/10" />
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-charcoal/10" />
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#who-we-help-grid)" />
@@ -102,11 +102,11 @@ export default function WhoWeHelp() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-charcoal mb-6 tracking-tight leading-tight">
             Who We <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Help</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
-          <p className="text-xl text-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
             Our Ideal Clients
           </p>
         </div>
@@ -116,7 +116,7 @@ export default function WhoWeHelp() {
           {idealClients.map((client, index) => (
             <div
               key={index}
-              className="group flex items-start gap-6 p-6 hover:bg-white/5 rounded-xl transition-all duration-300"
+              className="group flex items-start gap-6 p-6 hover:bg-pink-50 rounded-xl transition-all duration-300 border border-transparent hover:border-pink-200"
             >
               {/* Check icon */}
               <div className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br ${client.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500`}>
@@ -125,10 +125,10 @@ export default function WhoWeHelp() {
 
               {/* Content */}
               <div className="flex-1">
-                <h3 className="text-2xl font-extrabold text-blue-200 group-hover:text-blue-100 transition-colors duration-300 leading-tight tracking-tight mb-3">
+                <h3 className="text-2xl font-extrabold text-charcoal transition-colors duration-300 leading-tight tracking-tight mb-3">
                   {client.title}
                 </h3>
-                <p className="text-light leading-relaxed group-hover:text-white/90 transition-colors duration-300 text-lg">
+                <p className="text-secondary leading-relaxed transition-colors duration-300 text-lg">
                   {client.description}
                 </p>
               </div>
@@ -138,8 +138,8 @@ export default function WhoWeHelp() {
 
         {/* Call to action */}
         <div className="text-center mt-16">
-          <div className="inline-block p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-            <p className="text-lg text-light mb-4">
+          <div className="inline-block p-6 bg-pink-50/60 backdrop-blur-sm rounded-2xl border border-pink-200">
+            <p className="text-lg text-secondary mb-4">
               Do you see yourself in one of these profiles?
             </p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-accent to-primary mx-auto"></div>

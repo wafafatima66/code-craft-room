@@ -1,34 +1,13 @@
 'use client';
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  const pathname = usePathname();
-  // const isMinimal = pathname === "/contact" || pathname === "/privacy" || pathname === "/terms";
-
-  // if (isMinimal) {
-  //   return (
-  //     <footer className="bg-charcoal text-white">
-  //       <div className="mx-auto max-w-7xl px-6 py-12 flex items-center justify-between">
-  //         <div>
-  //           <h3 className="text-lg font-bold">Code Craft Space</h3>
-  //         </div>
-  //         <div className="text-sm">
-        
-                  
-
-  //         </div>
-  //       </div>
-  //     </footer>
-  //   );
-  // }
-
   return (
-    <footer className="bg-charcoal text-white">
+    <footer className="bg-white text-charcoal border-t border-pink-200/60">
       <div className="mx-auto max-w-7xl px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-lg font-bold">Code Craft Space</h3>
-          <p className="mt-2 text-sm text-white/80">
+          <p className="mt-2 text-sm text-secondary">
             Hand-Crafted Websites, Built for Your Success.
           </p>
           {/* <p className="mt-4 text-sm text-white/70">Texas, USA</p> */}
@@ -43,7 +22,7 @@ export default function Footer() {
           <Link href="/about" className="hover:text-accent">About</Link>
           <Link href="/contact" className="hover:text-accent">Contact</Link>
         </div>
-        <div className="text-sm text-white/70">
+        <div className="text-sm text-secondary">
           <p>© {new Date().getFullYear()} Code Craft Space</p>
           <div className="mt-2 flex gap-4">
             <Link href="/privacy" className="hover:text-accent">Privacy</Link>

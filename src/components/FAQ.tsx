@@ -112,7 +112,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="relative py-24 bg-charcoal overflow-hidden">
+    <section className="relative py-24 bg-white overflow-hidden">
       {/* Simplified background elements */}
       <div className="absolute inset-0">
         {/* Single gradient orb */}
@@ -122,7 +122,7 @@ export default function FAQ() {
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-charcoal mb-6 tracking-tight leading-tight">
             Frequently Asked{" "}
             <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
               Questions
@@ -144,19 +144,19 @@ export default function FAQ() {
                 key={faq.id}
                 layout
                 transition={{ layout: { duration: 0.1, ease: "easeOut" } }}
-                className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-accent/30 overflow-hidden hover:shadow-lg hover:shadow-accent/10"
+                className="group bg-pink-50/60 backdrop-blur-sm rounded-xl border border-pink-200 hover:border-accent/40 overflow-hidden hover:shadow-lg hover:shadow-accent/10"
               >
                 {/* Question Header */}
                 <button
                   onClick={() => toggleItem(faq.id)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors duration-150"
+                  className="w-full flex items-center justify-between p-6 text-left hover:bg-pink-50 transition-colors duration-150"
                 >
                   <div className="flex items-center gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-lg">
                       <QuestionMarkCircleIcon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-lg md:text-xl font-bold text-blue-200 group-hover:text-blue-100 leading-tight">
+                    <h3 className="text-lg md:text-xl font-bold text-charcoal group-hover:text-accent leading-tight">
                       {faq.question}
                     </h3>
                   </div>
@@ -183,7 +183,7 @@ export default function FAQ() {
                     >
                       <div className="px-6 pl-20 pt-2 pb-6">
                         <div className="w-full h-px bg-gradient-to-r from-accent/30 to-primary/30 mb-4" />
-                        <p className="text-light leading-relaxed text-lg">
+                        <p className="text-secondary leading-relaxed text-lg">
                           {faq.answer}
                         </p>
                       </div>
@@ -197,8 +197,8 @@ export default function FAQ() {
 
         {/* Call to action */}
         <div className="text-center mt-16">
-          <div className="inline-block p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-            <p className="text-lg text-light mb-4">
+          <div className="inline-block p-6 bg-pink-50/60 backdrop-blur-sm rounded-2xl border border-pink-200">
+            <p className="text-lg text-secondary mb-4">
               Still have questions? We&apos;re here to help!
             </p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-accent to-primary mx-auto mb-4"></div>
