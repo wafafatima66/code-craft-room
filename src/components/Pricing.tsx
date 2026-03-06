@@ -212,7 +212,7 @@ export default function Pricing() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <div className="inline-block bg-gradient-to-r from-blue-500/10 to-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20">
             <p className="text-xl text-blue-200 mb-6 font-semibold">
               Interested in acquiring CodeCraftSpace?
@@ -233,7 +233,7 @@ export default function Pricing() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>
