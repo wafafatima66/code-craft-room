@@ -20,7 +20,7 @@ const packages = [
       "Event planners",
       "Real estate agents"
     ],
-    isPopular: false
+    isPopular: true
   },
   {
     name: "Portfolio Website",
@@ -98,6 +98,9 @@ export default function Pricing() {
           </h2>
           <p className="text-2xl text-secondary font-semibold tracking-wide mb-6">
             Simple One-Time Investment
+          </p>
+          <p className="text-lg text-accent font-medium mb-6">
+            Pricing is negotiable based on scope and timeline.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto"></div>
         </div>
@@ -199,7 +202,12 @@ export default function Pricing() {
                 {[
                   "Updates/Edits",
                   "Security Monitoring",
-                  "Content Changes"
+                  "Content Changes",
+                  "Performance Checks",
+                  "Weekly Backups",
+                  "Uptime Monitoring",
+                  "Bug Fix Support",
+                  "Dependency Updates"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center justify-center md:justify-start gap-2 bg-white/70 rounded-lg p-3 border border-pink-200/80">
                     <CheckIcon className="w-5 h-5 text-accent" />
