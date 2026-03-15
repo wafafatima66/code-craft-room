@@ -30,41 +30,36 @@ export default function Hero() {
             {/* Trust badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-accent/30">
               <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-white">Trusted by 200+ businesses</span>
+              <span className="text-sm font-medium text-white">Trusted by 200+ business owners</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-              Fully custom, {" "}
+              Done-for-you,{" "}
               <span className="relative">
                 <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-pulse">
-                  Hassle-Free Websites
+                  Website Care & Improvements
                 </span>
                 <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                   <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="3" className="text-accent/60" />
                 </svg>
               </span>{" "}
-              for Your Businesses
+              for Your Business
             </h1>
 
             {/* Enhanced subheading */}
             <div className="mt-8 space-y-4">
               <p className="text-xl sm:text-2xl text-lightgray leading-relaxed font-light">
-                No templates. No page builders.
-                <span className="text-white font-semibold"> 100% coded, optimized </span> {" "}
-                <span className="text-white font-semibold">by developers</span> {" "}
-                {/* <span className="text-white font-semibold">domain and hosting managment</span> {" "} */}
-                <span className="text-white ">that load faster, rank higher, and convert better</span>.
+                We maintain, improve, and evolve your existing website.
+                <span className="text-white font-semibold"> Fix issues, add content, improve performance</span>,{" "}
+                and do the <span className="text-white font-semibold">vibe coding</span> for you so you can focus on business.
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-primary"></div>
                 <p className="text-lg text-accent font-bold tracking-wide">
-                  Start at $0 down
+                  Only $89/month for website maintenance
                 </p>
                 <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-accent"></div>
               </div>
-              <p className="text-sm sm:text-base text-blue-200/80">
-                Website maintenance for any site: <span className="text-white font-semibold">$100/month</span>
-              </p>
             </div>
 
             {/* CTA buttons */}
@@ -93,7 +88,7 @@ export default function Hero() {
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center group hover:scale-105 transition-transform duration-300">
                   <div className="text-3xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">200+</div>
-                  <div className="text-sm text-lightgray font-medium">Websites Built</div>
+                  <div className="text-sm text-lightgray font-medium">Sites Supported</div>
                   <div className="w-8 h-0.5 bg-accent/50 mx-auto mt-2 group-hover:bg-accent transition-colors"></div>
                 </div>
                 <div className="text-center group hover:scale-105 transition-transform duration-300">
@@ -103,7 +98,7 @@ export default function Hero() {
                 </div>
                 <div className="text-center group hover:scale-105 transition-transform duration-300">
                   <div className="text-3xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">$2M+</div>
-                  <div className="text-sm text-lightgray font-medium">Sales Generated</div>
+                  <div className="text-sm text-lightgray font-medium">Revenue Impact</div>
                   <div className="w-8 h-0.5 bg-accent/50 mx-auto mt-2 group-hover:bg-accent transition-colors"></div>
                 </div>
               </div>

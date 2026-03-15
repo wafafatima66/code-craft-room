@@ -8,95 +8,64 @@ import Link from "next/link";
 const faqData = [
   {
     id: 1,
-    question: "Why custom code instead of using AI website builders?",
-    answer: "AI builders create generic templates that can't handle real e-commerce needs. They lack proper Stripe integration, custom database management for products, professional blog systems, and personalized features specific to your business. Custom code gives you a real online store, not just a pretty template."
+    question: "What is this service exactly?",
+    answer: "We take care of your existing website: fixing issues, improving performance, updating content, and making practical structure improvements so it works better for customers."
   },
-  // {
-  //   id: 2,
-  //   question: "Why $0 down instead of charging upfront?",
-  //   answer: "We believe your business deserves a chance to succeed without massive upfront costs. Our monthly model lets you invest in inventory, marketing, and growth instead of a huge website bill."
-  // },
   {
     id: 3,
-    question: "What if I need changes after launch?",
-    answer: "Unlimited edits are included! Need to update text,  change images, or modify anything? Just tell us and we'll do it within 24-48 hours."
+    question: "Do you build new websites from scratch?",
+    answer: "Right now we focus on maintaining and improving existing websites. We build on top of what you already have to make it faster, clearer, and more effective."
   },
-  // {
-  //   id: 4,
-  //   question: "How do you handle product and blog uploads?",
-  //   answer: "Just send us your content via email or our client portal. We'll format it, optimize images, add it to your website, and let you know when it's live. No learning curve for you."
-  // },
   {
     id: 5,
-    question: "Do I own the website?",
-    answer: "While we maintain the code and hosting during your subscription, you own all your content, images, and data. If you ever want to move to self-hosting, we can discuss options."
+    question: "What do I get for $89/month?",
+    answer: "A single monthly plan that covers ongoing fixes, content updates, performance improvements, and practical suggestions to help your website attract and convert more customers."
   },
   {
     id: 6,
-    question: "How long does it take to build?",
-    answer: "Most websites are live within 3-4 weeks. Need it faster? We offer rush service for an additional fee."
+    question: "How fast do you handle requests?",
+    answer: "Most small fixes and content updates are handled within 24–48 hours. Bigger improvements are scheduled and delivered in clear steps."
   },
   {
     id: 7,
-    question: "What if I'm not happy with the design?",
-    answer: "We include two rounds of revisions during the design phase. If after that you're still not satisfied, we'll refund any payments and part ways—no hard feelings."
+    question: "Will you add pages and upload content for me?",
+    answer: "Yes. We can add new pages, update copy, upload products or customer data, and keep the site fresh so you don't have to spend time doing it yourself."
   },
-  // {
-  //   id: 8,
-  //   question: "Can I cancel anytime?",
-  //   answer: "After your initial 3-month commitment, you can cancel anytime with 30 days' notice."
-  // },
   {
     id: 9,
-    question: "What happens if I cancel?",
-    answer: "Your website will remain live for 30 days, giving you time to migrate elsewhere if desired. We'll provide you with all your content and data."
+    question: "Do you work with any kind of website?",
+    answer: "Yes. We can support most websites and stacks. If we need access or there are platform limits, we’ll tell you upfront and propose the best path."
   },
-  // {
-  //   id: 10,
-  //   question: "Can you integrate with my Etsy shop?",
-  //   answer: "Yes! We can display your Etsy products on your website, or help you transition completely away from Etsy."
-  // },
   {
     id: 11,
-    question: "How is this different from Shopify?",
-    answer: "Shopify charges monthly fees + transaction fees + expensive app costs, uses templates, and limits customization. We charge one flat monthly fee, no transaction fees, build everything custom, and include all features—no expensive apps needed."
+    question: "Do you help with traffic and growth?",
+    answer: "Yes. We monitor traffic, share improvement suggestions, and implement changes that help you reach more audience and convert more visitors."
   },
   {
     id: 12,
-    question: "Can I switch plans later?",
-    answer: "Absolutely! If your business grows or your needs change, we can adjust your subscription plan without downtime."
+    question: "What do you need from me to get started?",
+    answer: "Just share your website link and what you want improved. We'll review it, confirm what’s included, and start working on fixes and improvements."
   },
   {
     id: 13,
-    question: "Do you provide ongoing SEO support?",
-    answer: "Yes! All websites are Basic SEO-ready to help you rank higher on Google."
+    question: "Will you break my site while making changes?",
+    answer: "No. We make changes carefully, prioritize stability, and verify updates before they go live. The goal is to improve without disruption."
   },
   {
     id: 14,
-    question: "Will my website be mobile-friendly?",
-    answer: "100%! Every site is built mobile-first to ensure a smooth experience on phones and tablets."
+    question: "Can you handle urgent issues?",
+    answer: "Yes. If something is broken or stopping customers from contacting you or buying, we prioritize it as urgent."
   },
   {
     id: 15,
-    question: "Can I integrate other tools like Mailchimp or Google Analytics?",
-    answer: "Yes! We can integrate most third-party tools to streamline marketing, analytics, and customer engagement, with additional cost."
+    question: "Is there a contract?",
+    answer: "No long-term contracts. You can continue month-to-month as long as the service is valuable to you."
   },
-  // {
-  //   id: 16,
-  //   question: "Can I create my own discount codes or promotions?",
-  //   answer: "Absolutely! Just tell us what kind of discounts or promotions you want to offer—percentage off, buy-one-get-one, seasonal deals, or special bundles—and we'll set everything up and manage it for you. No technical work required on your end."
-  // },
-    {
+  {
     id: 17,
-    question: "What happens after I submit my project request?",
-    answer: "Once you contact us, we’ll review your message and reach out to discuss your project in detail. We’ll go back and forth to understand your goals, requirements, and preferences. After that, we’ll prepare a personalized quote and send you an invoice. Once payment is confirmed, we’ll begin working on your custom-coded website."
-  },
-    {
-    id: 18,
-    question: "Do I need to buy a domain, hosting, or email separately?",
-    answer: "No — all of that is included in your package!. Also, will be under your business name"
+    question: "What happens after I contact you?",
+    answer: "We review your site, clarify what you want improved, and confirm the $89/month plan. Then we start implementing fixes, updates, and improvements."
   }
-
 ];
 
 

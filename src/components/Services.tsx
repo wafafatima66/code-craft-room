@@ -1,91 +1,74 @@
 import {
-  CheckIcon,
-  ShoppingCartIcon,
-  // CircleStackIcon,
-  // DocumentTextIcon,
-  DevicePhoneMobileIcon,
-  TagIcon,
   CogIcon,
-  ReceiptPercentIcon,
-  ShieldCheckIcon,
+  CircleStackIcon,
+  ChartBarIcon,
+  DocumentTextIcon,
   PencilSquareIcon,
+  ShieldCheckIcon,
   BoltIcon
 } from "@heroicons/react/24/outline";
 
 const serviceFeatures = [
   {
-    title: "100% Coded Websites",
+    title: "Database Backups",
+    description: "Regular backups of products, customers, and critical data.",
+    icon: CircleStackIcon,
+    highlight: "Always recoverable"
+  },
+  {
+    title: "Maintenance & Updates",
+    description: "Routine maintenance to keep everything stable and smooth.",
     icon: CogIcon,
-    highlight: "Built from Scratch"
+    highlight: "Stay up-to-date"
   },
   {
-    title: "Managing Hosting , Domain & Emails ",
+    title: "Error Fixing",
+    description: "Fix broken pages, forms, UI issues, and unexpected bugs.",
     icon: ShieldCheckIcon,
-    highlight: "Hands-Free Support"
-  },
-  // {
-  //   title: "E-commerce functionality with payment integration",
-  //   icon: ShoppingCartIcon,
-  //   highlight: "Full E-Commerce"
-  // },
-  // {
-  //   title: "Custom Database & Product Management",
-  //   icon: CircleStackIcon,
-  //   highlight: "Smart Organization"
-  // },
-  // {
-  //   title: "Built-In Blog System",
-  //   icon: DocumentTextIcon,
-  //   highlight: "SEO-Ready Content"
-  // },
-  {
-    title: "Responsive Design for All Devices",
-    icon: DevicePhoneMobileIcon,
-    highlight: "Optimized for Every Device"
-  },
-  // {
-  //   title: "Unlimited Products and Blogs Uploads",
-  //   icon: TagIcon,
-  //   highlight: "Flexible Structure"
-  // },
-  // {
-  //   title: "Tailored Features for Your Business",
-  //   icon: CogIcon,
-  //   highlight: "Made Just for You"
-  // },
-  // {
-  //   title: "Managing Coupons, Sales & Promotions",
-  //   icon: ReceiptPercentIcon,
-  //   highlight: "Built-In Marketing Tools"
-  // },
-
-  {
-    title: "Unlimited Features Updates & Revisions",
-    icon: PencilSquareIcon,
-    highlight: "Evolving with You"
+    highlight: "Fast support"
   },
   {
-    title: "Cache-Friendly and Fast Loading Websites",
+    title: "Traffic Monitoring",
+    description: "Track traffic patterns and spot issues early.",
+    icon: ChartBarIcon,
+    highlight: "Know what works"
+  },
+  {
+    title: "Performance Checks",
+    description: "Speed checks, Core Web Vitals review, and bottleneck fixes.",
     icon: BoltIcon,
-    highlight: "Ultra Performance"
+    highlight: "Faster experience"
   },
   {
-    title: "Advanced Analytics & Reporting",
-    icon: CheckIcon,
-    highlight: "Data-Driven Insights"
+    title: "Growth Suggestions",
+    description: "Actionable improvements to reach more audience and increase traffic.",
+    icon: DocumentTextIcon,
+    highlight: "More visibility"
   },
-  // {
-  //   title: "Business Email Setup",
-  //   icon: BoltIcon, // Heroicons envelope icon
-  //   highlight: "Connect & Engage"
-  // }
-
+  {
+    title: "Content & Pages",
+    description: "Add pages, upload content, and keep the site fresh.",
+    icon: PencilSquareIcon,
+    highlight: "Always current"
+  },
+  {
+    title: "Data Uploads",
+    description: "Upload products, customer info, and structured content safely.",
+    icon: CircleStackIcon,
+    highlight: "Clean data"
+  },
+  {
+    title: "Security Monitoring",
+    description: "Basic monitoring and best-practice hardening where possible.",
+    icon: ShieldCheckIcon,
+    highlight: "Peace of mind"
+  },
 ];
 
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 bg-charcoal overflow-hidden">
+    <section id="services" className="relative py-12 bg-charcoal overflow-hidden">
       {/* Background elements - consistent with WhoWeHelp section */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
@@ -116,32 +99,40 @@ export default function Services() {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
-            Services We <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Provide</span>
+            Services You <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Get</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
-          {/* <p className="text-xl text-light max-w-3xl mx-auto leading-relaxed">
-            Professional e-commerce features that work together seamlessly
-          </p> */}
+          <p className="text-xl text-lightgray max-w-3xl mx-auto leading-relaxed">
+            We improve your existing website so you can focus on your business.
+          </p>
         </div>
 
         {/* Services List - Clean Layout with Check Icons */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {serviceFeatures.map((service, index) => (
               <div
                 key={index}
-                className="group flex items-start gap-4 p-6 hover:bg-white/5 rounded-xl transition-all duration-500 ease-out"
+                className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 hover:bg-white/10 hover:border-accent/40 transition-all duration-500 ease-out"
               >
-                {/* Check icon */}
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-500 ease-out">
-                  {/* <CheckIcon className="w-5 h-5 text-white" /> */} <span>{index + 1}</span>
-                </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-white/10 flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-500 ease-out">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
 
-                {/* Content */}
-                <div className="flex-1">
-                  <h3 className="text-xl md:text-xl font-black text-transparent bg-gradient-to-r from-blue-200 via-white to-blue-100 bg-clip-text group-hover:from-accent group-hover:via-primary group-hover:to-accent transition-all duration-500 ease-out leading-tight tracking-tight">
-                    {service.title}
-                  </h3>
+                  <div className="flex-1">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-xl font-extrabold text-white leading-tight tracking-tight">
+                        {service.title}
+                      </h3>
+                      <span className="hidden sm:inline-flex text-xs font-bold text-accent bg-accent/10 border border-accent/20 rounded-full px-3 py-1 whitespace-nowrap">
+                        {service.highlight}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-blue-200/80 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -149,22 +140,22 @@ export default function Services() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="inline-block p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Get All These Features?
+              Ready to keep your site running perfectly?
             </h3>
-            <p className="text-light mb-6 text-lg">
-              Stop settling for basic templates. Get a professional e-commerce website that actually works.
+            <p className="text-lightgray mb-6 text-lg">
+              For $89/month, we handle fixes, content, performance, and improvements.
             </p>
             <a
               href="/contact"
               className="btn btn-primary px-8 py-4 text-lg font-semibold hover:scale-105 transition-transform duration-300"
             >
-              Start Your Project Today
+              Start Website Care
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
