@@ -62,6 +62,9 @@ export default function Hero() {
                 </p>
                 <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-accent"></div>
               </div>
+              <p className="text-sm sm:text-base text-blue-200/80">
+                Website maintenance for any site: <span className="text-white font-semibold">$100/month</span>
+              </p>
             </div>
 
             {/* CTA buttons */}

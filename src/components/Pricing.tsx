@@ -189,7 +189,7 @@ export default function Pricing() {
                 <p className="text-blue-200">Keep your site secure and up-to-date.</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-accent mb-1">$50<span className="text-lg text-blue-300 font-normal">/month</span></div>
+                <div className="text-4xl font-bold text-accent mb-1">$99<span className="text-lg text-blue-300 font-normal">/month</span></div>
                 <div className="text-sm text-blue-300/80">(Optional)</div>
               </div>
             </div>
@@ -197,9 +197,18 @@ export default function Pricing() {
             <div className="mt-8 pt-8 border-t border-slate-600/30">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
-                  "Updates/Edits",
-                  "Security Monitoring",
-                  "Content Changes"
+                  "Database backups",
+                  "Website maintenance",
+                  "Error fixing",
+                  "Traffic monitoring",
+                  "Performance checks",
+                  "Security monitoring",
+                  "Improvement suggestions",
+                  "SEO basics for more audience",
+                  "Content updates",
+                  "Add new pages",
+                  "Product/customer data uploads",
+                  "Monthly health report"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center justify-center md:justify-start gap-2 bg-slate-700/30 rounded-lg p-3">
                     <CheckIcon className="w-5 h-5 text-green-400" />
