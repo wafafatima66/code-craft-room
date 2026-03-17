@@ -132,11 +132,14 @@ export default function Contact() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
-              Let&apos;s Build Your <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Dream Website</span>
+              Let&apos;s Talk About{" "}
+              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                Your Website
+              </span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
             <p className="text-xl text-light max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your business with a custom website? Get in touch and let&apos;s discuss your project.
+              Whether you need ongoing care, a quick fix, or a brand new website — fill out the form and we&apos;ll get back to you within 24 hours. No commitment required.
             </p>
           </div>
         </div>
@@ -185,7 +188,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Location</h3>
-                    <p className="text-light">Texas, USA</p>
+                    <p className="text-light">Serving clients worldwide</p>
                   </div>
                 </div>
 
@@ -210,6 +213,13 @@ export default function Contact() {
                   <p className="text-green-300">Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.</p>
                 </div>
               )}
+
+              <a
+                href="#book-call"
+                className="inline-flex items-center justify-center w-full mb-6 rounded-lg border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white hover:bg-white/10 hover:border-accent/30 transition-colors"
+              >
+                Or book a free 15-minute call →
+              </a>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -277,6 +287,7 @@ export default function Contact() {
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                   >
                     <option value="" className="bg-charcoal text-white">Select a package</option>
+                    <option value="website-care" className="bg-charcoal text-white">Website Care ($89/month)</option>
                     <option value="landing-page" className="bg-charcoal text-white">Landing Page ($200)</option>
                     <option value="portfolio" className="bg-charcoal text-white">Portfolio Website ($500)</option>
                     <option value="small-business" className="bg-charcoal text-white">Small Business Website ($800)</option>
@@ -343,6 +354,9 @@ export default function Contact() {
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
+                <p className="text-center text-xs text-white/70">
+                  No commitment needed. We&apos;ll answer all your questions before you decide anything.
+                </p>
               </form>
             </div>
           </div>

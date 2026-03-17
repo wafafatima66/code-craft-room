@@ -34,24 +34,22 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-              Done-for-you,{" "}
+              Your website,{" "}
               <span className="relative">
                 <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-pulse">
-                  Website Care & Improvements
+                  taken care of.
                 </span>
                 <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                   <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="3" className="text-accent/60" />
                 </svg>
               </span>{" "}
-              for Your Business
+              Finally.
             </h1>
 
             {/* Enhanced subheading */}
             <div className="mt-8 space-y-4">
               <p className="text-xl sm:text-2xl text-lightgray leading-relaxed font-light">
-                We maintain, improve, and evolve your existing website.
-                <span className="text-white font-semibold"> Fix issues, add content, improve performance</span>,{" "}
-                and do the <span className="text-white font-semibold">vibe coding</span> for you so you can focus on business.
+                We maintain, fix, and improve your existing website every month — so you can stop worrying and focus on your business. Starting at $89/month.
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-primary"></div>

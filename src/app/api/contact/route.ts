@@ -1,13 +1,8 @@
 import { NextResponse } from 'next/server';
 // import Resend from 'resend';
 import { Resend } from 'resend';
-import { createClient } from '@supabase/supabase-js';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const supabase = createClient(
-  process.env.SUPABASE_URL || '',
-  process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-);
 
 export async function POST(req: Request) {
   try {
@@ -30,29 +25,6 @@ Message:
 ${message}
       `,
     });
-
-    // Insert contact into Supabase emails table
-    try {
-      if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
-        const { error: dbError } = await supabase.from('emails').insert({
-          email,
-          name,
-          phone,
-          company,
-          project_type: projectType || null,
-          timeline: timeline || null,
-          message,
-          source: 'contact_form',
-        });
-        if (dbError) {
-          console.warn('Supabase insert failed:', dbError.message);
-        }
-      } else {
-        console.warn('Supabase env vars missing; skipping contact persistence');
-      }
-    } catch (dbErr) {
-      console.warn('Supabase insert exception:', dbErr);
-    }
 
     // Save contact to Resend audience (contacts)
     try {

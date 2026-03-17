@@ -1,5 +1,3 @@
-import { CheckIcon } from "@heroicons/react/24/outline";
-
 export default function Pricing() {
   return (
     <section id="pricing" className="relative py-28 bg-charcoal overflow-hidden">
@@ -64,45 +62,11 @@ export default function Pricing() {
                 <div className="text-base text-blue-200/90 font-semibold">
                   One plan. No surprises.
                 </div>
+                <div className="mt-2 text-sm text-white/70">
+                  No contracts. Cancel anytime. First month includes a free website audit.
+                </div>
               </div>
             </div>
-
-            {/* <div className="relative mt-10 pt-10 border-t border-slate-600/30">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {[
-                  {
-                    title: "Fix issues fast",
-                    desc: "Broken sections, bugs, layout issues, forms, errors.",
-                  },
-                  {
-                    title: "Improve performance",
-                    desc: "Speed, UX polish, structure improvements to convert better.",
-                  },
-                  {
-                    title: "Keep content updated",
-                    desc: "Add pages, update content, upload products/data, optimize.",
-                  },
-                ].map((item) => (
-                  <div
-                    key={item.title}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 hover:border-accent/30 transition-colors"
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-white/10 flex items-center justify-center">
-                        <CheckIcon className="w-5 h-5 text-accent" />
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-extrabold text-white">{item.title}</h4>
-                        <p className="mt-1 text-blue-200/80 leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8 text-center text-blue-200/80 text-sm">
-                You focus on business — we handle the website.
-              </p>
-            </div> */}
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <a
