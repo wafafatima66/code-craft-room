@@ -19,19 +19,55 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <Link href="/" className="hover:text-accent transition-colors">Home</Link>
             <Link href="/#services" className="hover:text-accent transition-colors">Services</Link>
-            <Link href="/#pricing" className="hover:text-accent transition-colors">Pricing</Link>
-            <Link href="/#testimonials" className="hover:text-accent transition-colors">Testimonials</Link>
             <Link href="/blog" className="hover:text-accent transition-colors">Blog</Link>
             <Link href="/about" className="hover:text-accent transition-colors">About</Link>
+            <div className="relative group">
+              <button
+                type="button"
+                className="hover:text-accent transition-colors"
+              >
+                Tools
+              </button>
+              <div className="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="min-w-64 rounded-xl border border-white/10 bg-charcoal/95 p-2 shadow-2xl backdrop-blur">
+                  <a
+                    href="https://bistro-mail.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block rounded-lg px-4 py-3 text-white hover:bg-white/10 hover:text-accent transition-colors"
+                  >
+                    Restaurant Newsletter Generator
+                  </a>
+                </div>
+              </div>
+            </div>
             <Link href="/contact" className="btn btn-primary px-4 py-2">Get a Quote</Link>
           </nav>
         ) : (
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <Link href="/#services" className="hover:text-accent transition-colors">Services</Link>
-            <Link href="/#pricing" className="hover:text-accent transition-colors">Pricing</Link>
-            <Link href="/#testimonials" className="hover:text-accent transition-colors">Testimonials</Link>
             <Link href="/blog" className="hover:text-accent transition-colors">Blog</Link>
-            <Link href="/about" className="hover:text-accent transition-colors">About</Link>
+            {/* <Link href="/about" className="hover:text-accent transition-colors">About</Link> */}
+            <div className="relative group">
+              <button
+                type="button"
+                className="hover:text-accent transition-colors"
+              >
+                Tools
+              </button>
+              <div className="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="min-w-64 rounded-xl border border-white/10 bg-charcoal/95 p-2 shadow-2xl backdrop-blur">
+                  <a
+                    href="https://bistro-mail.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block rounded-lg px-4 py-3 text-white hover:bg-white/10 hover:text-accent transition-colors"
+                  >
+                    Restaurant Newsletter Generator
+                  </a>
+                </div>
+              </div>
+            </div>
             <Link href="/contact" className="btn btn-primary px-4 py-2">Get a Quote</Link>
           </nav>
         )}

@@ -62,6 +62,16 @@ const faqData = [
     answer: "No long-term contracts. You can continue month-to-month as long as the service is valuable to you."
   },
   {
+    id: 16,
+    question: "Where are you located?",
+    answer: "I'm based and operate as a US-registered business (Texas). I work remotely with clients across the US."
+  },
+  {
+    id: 18,
+    question: "How do I pay?",
+    answer: "I accept payment via Stripe, PayPal, or bank transfer. I take 50% upfront and 50% on delivery."
+  },
+  {
     id: 17,
     question: "What happens after I contact you?",
     answer: "We review your site, clarify what you want improved, and confirm the $89/month plan. Then we start implementing fixes, updates, and improvements."
@@ -88,7 +98,7 @@ export default function FAQ() {
         <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
@@ -104,7 +114,7 @@ export default function FAQ() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
           {faqData.map((faq) => {
             const isOpen = openItems.includes(faq.id);
 
@@ -113,7 +123,7 @@ export default function FAQ() {
                 key={faq.id}
                 layout
                 transition={{ layout: { duration: 0.1, ease: "easeOut" } }}
-                className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-accent/30 overflow-hidden hover:shadow-lg hover:shadow-accent/10"
+                className="group overflow-hidden rounded-none bg-white/5 backdrop-blur-sm shadow-[0_22px_70px_rgba(0,0,0,0.34)] transition-all hover:shadow-[0_28px_80px_rgba(0,0,0,0.42)]"
               >
                 {/* Question Header */}
                 <button
@@ -166,7 +176,7 @@ export default function FAQ() {
 
         {/* Call to action */}
         <div className="text-center mt-16">
-          <div className="inline-block p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+          <div className="inline-block rounded-none bg-white/5 p-6 shadow-[0_22px_70px_rgba(0,0,0,0.34)] backdrop-blur-sm">
             <p className="text-lg text-light mb-4">
               Still have questions? We&apos;re here to help!
             </p>

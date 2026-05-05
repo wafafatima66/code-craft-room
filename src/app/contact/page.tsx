@@ -8,7 +8,6 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     company: '',
     package: '',
     projectType: '',
@@ -17,12 +16,14 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'partial' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [name]: value
     }));
   };
 
@@ -70,6 +71,8 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setSubmitMessage('');
 
     try {
       const res = await fetch('/api/contact', {
@@ -77,23 +80,27 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+      const data = await res.json();
 
-      if (res.ok) setSubmitStatus('success');
-      else setSubmitStatus('error');
-
-      // Clear form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        package: '',
-        projectType: '',
-        message: '',
-        timeline: ''
-      });
+      if (data.success) {
+        setSubmitStatus(data.partial ? 'partial' : 'success');
+        setSubmitMessage('The form has been submitted successfully.');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          package: '',
+          projectType: '',
+          message: '',
+          timeline: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        setSubmitMessage(data.message || data.error || 'Something went wrong while sending your message.');
+      }
     } catch {
       setSubmitStatus('error');
+      setSubmitMessage('Something went wrong while sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -210,7 +217,19 @@ export default function Contact() {
 
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
-                  <p className="text-green-300">Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.</p>
+                  <p className="text-green-300">{submitMessage}</p>
+                </div>
+              )}
+
+              {submitStatus === 'partial' && (
+                <div className="mb-6 p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
+                  <p className="text-yellow-200">{submitMessage}</p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                  <p className="text-red-300">{submitMessage}</p>
                 </div>
               )}
 
@@ -250,31 +269,17 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-white font-medium mb-2">Phone</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                      placeholder="(555) 123-4567"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="company" className="block text-white font-medium mb-2">Company</label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                      placeholder="Your company name"
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="company" className="block text-white font-medium mb-2">Company</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                    placeholder="Your company name"
+                  />
                 </div>
 
                 <div>
@@ -287,11 +292,9 @@ export default function Contact() {
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                   >
                     <option value="" className="bg-charcoal text-white">Select a package</option>
-                    <option value="website-care" className="bg-charcoal text-white">Website Care ($89/month)</option>
                     <option value="landing-page" className="bg-charcoal text-white">Landing Page ($200)</option>
-                    <option value="portfolio" className="bg-charcoal text-white">Portfolio Website ($500)</option>
-                    <option value="small-business" className="bg-charcoal text-white">Small Business Website ($800)</option>
-                    <option value="custom" className="bg-charcoal text-white">Custom / Not Sure</option>
+                    <option value="small-business-website" className="bg-charcoal text-white">Small Business Website ($500)</option>
+                    <option value="custom-build" className="bg-charcoal text-white">Custom Build (Let&apos;s discuss)</option>
                   </select>
                 </div>
 
@@ -307,8 +310,6 @@ export default function Contact() {
                     <option value="" className="bg-charcoal text-white">Select project type</option>
                     {/* <option value="ecommerce" className="bg-charcoal text-white">E-commerce Website</option> */}
                     <option value="business" className="bg-charcoal text-white">Business Website</option>
-                    <option value="portfolio" className="bg-charcoal text-white">Portfolio Website</option>
-                    <option value="blog" className="bg-charcoal text-white">Blog/Content Site</option>
                     <option value="custom" className="bg-charcoal text-white">Custom Application</option>
                     <option value="redesign" className="bg-charcoal text-white">Website Redesign</option>
                     <option value="other" className="bg-charcoal text-white">Other</option>

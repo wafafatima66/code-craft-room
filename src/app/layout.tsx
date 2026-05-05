@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cabin, Instrument_Serif, Inter, Manrope } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next"
 import Script from 'next/script'
@@ -8,14 +8,25 @@ import Footer from "@/components/Footer";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const cabin = Cabin({
+  variable: "--font-cabin",
+  subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -63,7 +74,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-background text-foreground`}
+      <body className={`${manrope.variable} ${inter.variable} ${cabin.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground font-body`}
       >
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-Q7TVEL5XEE" strategy="afterInteractive" />
         <Script id="ga-init" strategy="afterInteractive">

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 type Project = {
@@ -7,7 +6,7 @@ type Project = {
   tags?: string[];
   year?: string;
   href?: string;
-  image?: string; // If omitted and href is external, auto-generate screenshot thumbnail
+  image?: string;
 };
 
 function isExternalUrl(url?: string): boolean {
@@ -22,50 +21,59 @@ function isExternalUrl(url?: string): boolean {
 
 
 const defaultProjects: Project[] = [
-{
-    title: "Blueberry IT Sky - Digital Agency",
+  {
+    title: "Batter Up Cake Shop",
     summary:
-      "Comprehensive digital agency website showcasing web/mobile development, cloud infrastructure, AI automation, and managed services.",
-    tags: ["Digital Agency", "Services", "Web Development"],
-    year: "2024",
-    image: "/project/1.png",
-    href: "https://www.bberrysky.com/",
+      "Custom celebration cake website with bold branding, featured products, and a polished bakery experience.",
+    tags: ["Bakery", "Demo Site", "Custom Website"],
+    year: "2025",
+    image: "/project/recent-work-bakery-brown.jpg",
+    href: "https://bakery-website-brown-demo.netlify.app/",
   },
   {
-    title: "Loud Spectrum",
+    title: "Coffee U Frisco",
     summary:
-      "E-commerce Website with all the important features like product listing, cart, checkout, and user authentication.",
-    tags: ["E-commerce", "Product Listing", "Cart", "Checkout"],
-    year: "2023",
-    image: "/project/2.png",
-    href: "https://stag.loudspectrum.com/",
+      "Neighborhood coffee shop website with a warm local feel, product highlights, and loyalty-driven messaging.",
+    tags: ["Coffee Shop", "Demo Site", "Custom Website"],
+    year: "2025",
+    image: "/project/recent-work-coffee-brown.jpg",
+    href: "https://coffee-website-brown-demo.netlify.app/",
   },
   {
-    title: "Fatima Amir Portfolio",
+    title: "Blush Oven Bakehouse",
     summary:
-      "Personal portfolio showcasing design and development projects.",
-    tags: ["Portfolio", "Design", "Development"],
-    year: "2023",
-    image: "/project/3.png",
-    href: "https://fatima-amir.vercel.app/",
+      "Elegant bakery website with soft visual styling, featured specials, and strong product storytelling.",
+    tags: ["Bakery", "Demo Site", "Custom Website"],
+    year: "2025",
+    image: "/project/recent-work-bakery-pink.jpg",
+    href: "https://bakery-website-pink-demo.netlify.app/",
+  },
+  {
+    title: "Spice & Crumbs",
+    summary:
+      "Fusion restaurant website with vibrant branding, menu-focused sections, and an inviting local-business layout.",
+    tags: ["Restaurant", "Demo Site", "Custom Website"],
+    year: "2025",
+    image: "/project/recent-work-restaurant-green.jpg",
+    href: "https://restaurant-green-demo.netlify.app/",
   },
 ];
 
 export default function PreviousWork({ projects = defaultProjects }: { projects?: Project[] }) {
   return (
-    <section id="previous-work" className="relative py-20">
+    <section id="previous-work" className="relative py-20 bg-charcoal/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Previous <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Work</span>
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+            Recent <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Work</span>
           </h2>
-          <p className="mt-4 text-light max-w-2xl mx-auto">
-            Recent projects that reflect pragmatic, well-crafted results.
+          <p className="mt-4 max-w-2xl mx-auto text-light font-body">
+            A few recent demo sites showing the kind of custom work I can build for small businesses.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mt-6"></div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {projects.map((p) => {
             const external = isExternalUrl(p.href);
             const imageSrc = p.image;
@@ -78,17 +86,16 @@ export default function PreviousWork({ projects = defaultProjects }: { projects?
             return (
               <div
                 key={p.title}
-                className="group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-accent/40 transition-colors"
+                className="group bg-white/5 overflow-hidden rounded-none shadow-[0_24px_70px_rgba(0,0,0,0.35)] transition-all hover:shadow-[0_28px_85px_rgba(0,0,0,0.45)]"
               >
-                <div className="relative h-55">
+                <CardLink {...linkProps} className="block relative h-80 md:h-150">
                   {imageSrc ? (
-                    <Image
+                    <img
                       src={imageSrc}
                       alt={p.title}
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      priority={false}
+                      className="absolute inset-0 h-full w-full object-cover"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-charcoal/60 text-white/80">
@@ -101,7 +108,7 @@ export default function PreviousWork({ projects = defaultProjects }: { projects?
                       {p.tags.map((t) => (
                         <span
                           key={t}
-                          className="inline-flex items-center rounded-md bg-accent/90 text-charcoal px-2 py-1 text-xs font-semibold shadow-sm"
+                          className="font-accent inline-flex items-center rounded-md bg-accent/90 text-charcoal px-2 py-1 text-xs font-semibold shadow-sm"
                         >
                           {t}
                         </span>
@@ -113,18 +120,18 @@ export default function PreviousWork({ projects = defaultProjects }: { projects?
                       {p.year}
                     </span>
                   )}
-                </div>
+                </CardLink>
 
                 <div className="p-5">
-                  <h3 className="text-lg font-bold text-white group-hover:text-accent transition-colors">{p.title}</h3>
-                  <p className="mt-2 text-sm text-white/80">{p.summary}</p>
+                  <h3 className="font-display text-lg font-bold text-white group-hover:text-accent transition-colors">{p.title}</h3>
+                  <p className="font-body mt-2 text-sm text-white/80">{p.summary}</p>
 
                   {p.href && (
                     <div className="mt-4">
 
                       <CardLink
                         {...linkProps}
-                        className="inline-flex items-center gap-2 rounded-md border border-white/20 px-3 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+                        className="font-accent inline-flex items-center gap-2 rounded-md border border-white/20 px-3 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
                       >
                         View Project
                         <svg

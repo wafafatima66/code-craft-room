@@ -27,79 +27,40 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left column - Main content */}
           <div className="relative z-10">
-            {/* Trust badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-accent/30">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-white">Trusted by 200+ business owners</span>
-            </div>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-              Your website,{" "}
+              Custom websites{" "}
               <span className="relative">
                 <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-pulse">
-                  taken care of.
+                  for small businesses that are ready to grow.
                 </span>
                 <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                   <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="3" className="text-accent/60" />
                 </svg>
-              </span>{" "}
-              Finally.
+              </span>
             </h1>
 
             {/* Enhanced subheading */}
-            <div className="mt-8 space-y-4">
+            <div className="mt-8">
               <p className="text-xl sm:text-2xl text-lightgray leading-relaxed font-light">
-                We maintain, fix, and improve your existing website every month — so you can stop worrying and focus on your business. Starting at $89/month.
+                I design and build hand-crafted websites for US small business owners — no templates, no agencies, no disappearing after launch. Just a site that works.
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-primary"></div>
-                <p className="text-lg text-accent font-bold tracking-wide">
-                  Only $89/month for website maintenance
-                </p>
-                <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-accent"></div>
-              </div>
             </div>
 
             {/* CTA buttons */}
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link
-                href="/contact"
-                className="group btn btn-primary px-8 py-4 text-lg font-bold shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
-              >
-                Get Your Free Consultation
-                <CursorArrowRaysIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
                 href="#previous-work"
                 className="btn bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:border-accent hover:bg-accent/10 px-8 py-4 text-lg font-semibold transition-all duration-300"
               >
-                View Our Work
+                See My Work
               </Link>
-            </div>
-
-            {/* Enhanced social proof stats */}
-            <div className="mt-16 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-              <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-white mb-2">Proven Results That Matter</h3>
-                <div className="w-16 h-0.5 bg-gradient-to-r from-accent to-primary mx-auto"></div>
-              </div>
-              <div className="grid grid-cols-3 gap-6">
-                <div className="text-center group hover:scale-105 transition-transform duration-300">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">200+</div>
-                  <div className="text-sm text-lightgray font-medium">Sites Supported</div>
-                  <div className="w-8 h-0.5 bg-accent/50 mx-auto mt-2 group-hover:bg-accent transition-colors"></div>
-                </div>
-                <div className="text-center group hover:scale-105 transition-transform duration-300">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">98%</div>
-                  <div className="text-sm text-lightgray font-medium">Client Satisfaction</div>
-                  <div className="w-8 h-0.5 bg-primary/50 mx-auto mt-2 group-hover:bg-primary transition-colors"></div>
-                </div>
-                <div className="text-center group hover:scale-105 transition-transform duration-300">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">$2M+</div>
-                  <div className="text-sm text-lightgray font-medium">Revenue Impact</div>
-                  <div className="w-8 h-0.5 bg-accent/50 mx-auto mt-2 group-hover:bg-accent transition-colors"></div>
-                </div>
-              </div>
+              <Link
+                href="/contact"
+                className="group btn btn-primary px-8 py-4 text-lg font-bold shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+              >
+                Get a Free Quote
+                <CursorArrowRaysIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
 
@@ -107,7 +68,7 @@ export default function Hero() {
           <div className="relative lg:block hidden">
             <div className="relative">
               {/* Main visual card */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/20 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div className="rounded-none bg-white/10 p-8 shadow-[0_30px_90px_rgba(0,0,0,0.42)] backdrop-blur-sm transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="space-y-6">
                   {/* Mock website preview */}
                   <div className="bg-gradient-to-r from-accent to-primary h-4 rounded-full shadow-lg"></div>

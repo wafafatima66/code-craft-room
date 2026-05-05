@@ -35,24 +35,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-## Supabase Debug Endpoint
+## Contact Form Storage
 
-Use the local debug endpoint to confirm Supabase connectivity and data availability:
+Contact form submissions are saved to Google Sheets through a Google Apps Script web app.
 
-- Endpoint: `http://localhost:3000/api/debug-supabase`
-- Purpose: Verifies environment variables and attempts a read from the `blog_posts` table.
-- Response fields:
-  - `ok`: boolean indicating success
-  - `message`/`code`: present if an error occurs
-  - `env.urlPresent` and `env.keyPresent`: whether `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are set
-  - `count`: number of rows returned
-  - `sample`: up to 5 posts (subset of columns)
-
-If `ok` is false or `count` is 0:
-
-- Ensure `.env.local` includes:
-  - `NEXT_PUBLIC_SUPABASE_URL=https://YOUR-PROJECT-REF.supabase.co`
-  - `NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR-ANON-KEY`
-- Restart the dev server after editing env vars.
-- Confirm table name and columns match: `blog_posts(slug,title,description,keywords,author,ogImage,date,readTime,content)`.
-- Check Row Level Security (RLS) policies allow `SELECT` for the anonymous role.
+- Configure `.env.local` with:
+  - `GOOGLE_APPS_SCRIPT_URL=https://script.google.com/macros/s/your-web-app-id/exec`
+- Deploy the Apps Script as a web app:
+  - `Execute as: Me`
+  - `Who has access: Anyone`
+- The project includes the script template at `google-apps-script/contact-form.gs`.
