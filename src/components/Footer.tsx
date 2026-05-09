@@ -11,9 +11,9 @@ export default function Footer() {
           <p className="mt-2 text-sm text-white/80">
             Hand-Crafted Websites, Built for Your Success.
           </p>
-          {/* <p className="mt-4 text-sm text-white/70">Texas, USA</p> */}
+         
 
-          <a href="mailto:hello@codecraftspace.com" className="mt-1 inline-block text-sm text-accent">hello@codecraftspace.com</a>
+          <a href="mailto:fatima.amir.dev@gmail.com" className="mt-1 inline-block text-sm text-accent">fatima.amir.dev@gmail.com</a>
         </div>
         <div className="text-sm flex flex-col gap-2">
           <Link href="/#services" className="hover:text-accent">Services</Link>
@@ -56,15 +56,15 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <p className="mt-4">
-            Built by Fatima Amir ·{" "}
+           <p className="mt-4">
+            {/* Built by Fatima Amir ·{" "} */}
             <a
               href="https://fatima-amir.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
+              className="hover:text-accent transition-colors mt-4"
             >
-              fatima-amir.vercel.app
+              {/* fatima-amir.vercel.app */}  Built by Fatima Amir
             </a>
           </p>
           <div className="mt-2 flex gap-4">

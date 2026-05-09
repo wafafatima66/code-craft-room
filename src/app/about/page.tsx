@@ -91,10 +91,10 @@ export default function About() {
                       LinkedIn
                     </a>
                     <a
-                      href="mailto:hello@codecraftspace.com"
+                      href="mailto:fatima.amir.dev@gmail.com"
                       className="inline-flex items-center rounded-md border border-white/20 px-4 py-2 text-white hover:bg-white/10 transition-colors"
                     >
-                      hello@codecraftspace.com
+                      fatima.amir.dev@gmail.com
                     </a>
                   </div>
                 </div>

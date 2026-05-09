@@ -18,7 +18,7 @@ export default function AboutFatimaSection() {
               Hi, I&apos;m Fatima 👋
             </h2>
             <p className="font-body mt-4 text-lightgray text-lg leading-relaxed">
-              I&apos;m Fatima — a web developer with 4+ years of experience building real production websites. I started Code Craft Space because I kept seeing small business owners struggle with websites that were broken, slow, or abandoned after launch. I&apos;m here to make that easier — no jargon, no agencies, just straightforward help.
+              I&apos;m Fatima — a Software Engineer with 4+ years of experience building real production websites. I started Code Craft Space because I kept seeing small business owners struggle with websites that were broken, slow, or abandoned after launch. I&apos;m here to make that easier — no jargon, no agencies, just straightforward help.
             </p>
             <p className="font-body mt-4 text-lightgray text-lg leading-relaxed">
               I also build my own tools — like BistroMail, an email tool for restaurants and food businesses.

@@ -32,7 +32,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: "Code Craft Space — Hand-Crafted Websites, Built for Your Success",
   description:
-    "Code Craft Space builds custom e-commerce websites for Texas small businesses and Etsy sellers — professional, approachable, and results-focused.",
+    "Code Craft Space builds custom e-commerce websites for small businesses and Etsy sellers — professional, approachable, and results-focused.",
 };
 
 export default function RootLayout({

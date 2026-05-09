@@ -151,10 +151,7 @@ export default function Terms() {
                 <p>Neither party shall be liable for any failure or delay in performance due to circumstances beyond their reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, or government actions.</p>
               </div>
 
-              <h2 className="text-3xl font-extrabold text-white mb-6">11. Governing Law</h2>
-              <div className="text-light space-y-4 mb-8">
-                <p>These terms shall be governed by and construed in accordance with the laws of the State of Texas, United States, without regard to its conflict of law provisions.</p>
-              </div>
+          
 
               <h2 className="text-3xl font-extrabold text-white mb-6">12. Changes to Terms</h2>
               <div className="text-light space-y-4 mb-8">
@@ -165,8 +162,8 @@ export default function Terms() {
               <div className="text-light space-y-4">
                 <p>If you have any questions about these Terms of Service, please contact us:</p>
                 <div className="bg-white/10 rounded-lg p-6 mt-6">
-                  <p><strong>Email:</strong> hello@codecraftspace.com</p>
-                  <p><strong>Address:</strong> Texas, USA</p>
+                  <p><strong>Email:</strong>fatima.amir.dev@gmail.com</p>
+                  <p><strong>Address:</strong> USA</p>
                 </div>
               </div>
 

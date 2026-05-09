@@ -1,95 +1,98 @@
 'use client';
 
-import { useState } from 'react';
-import { ChevronDownIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
-import { motion, AnimatePresence } from 'framer-motion';
+import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const faqData = [
   {
     id: 1,
-    question: "What is this service exactly?",
-    answer: "We take care of your existing website: fixing issues, improving performance, updating content, and making practical structure improvements so it works better for customers."
+    question: "What exactly are your website services?",
+    answer: "I build professional websites for businesses based on your needs — whether it’s a simple landing page, a small business website, or a fully custom-built website. This is a one-time project fee (not monthly maintenance), and your website is fully deployed to your domain with all core technical setup included."
+  },
+  {
+    id: 2,
+    question: "Do you build websites from scratch?",
+    answer: "Yes. Every website is built from the ground up based on your business goals, brand, and required features — from landing pages to complete custom websites."
   },
   {
     id: 3,
-    question: "Do you build new websites from scratch?",
-    answer: "Right now we focus on maintaining and improving existing websites. We build on top of what you already have to make it faster, clearer, and more effective."
+    question: "What website packages do you offer?",
+    answer: "We currently offer 3 website options: Landing Page Website, Small Business Website, and Custom Built Website. Each package is designed based on your business size and goals."
+  },
+  {
+    id: 4,
+    question: "Is this a monthly service?",
+    answer: "No. This is a one-time payment for your website build. There are no required monthly maintenance fees."
   },
   {
     id: 5,
-    question: "What do I get for $89/month?",
-    answer: "A single monthly plan that covers ongoing fixes, content updates, performance improvements, and practical suggestions to help your website attract and convert more customers."
+    question: "What’s included in the one-time fee?",
+    answer: "Your project includes website design and development, deployment to your domain, technical setup, essential website fixes, and 3 months of support after launch."
   },
   {
     id: 6,
-    question: "How fast do you handle requests?",
-    answer: "Most small fixes and content updates are handled within 24–48 hours. Bigger improvements are scheduled and delivered in clear steps."
+    question: "Do you provide website maintenance?",
+    answer: "Ongoing maintenance is not included as a monthly subscription. However, you receive 3 months of post-launch support for technical issues, fixes, and guidance related to the website."
   },
   {
     id: 7,
-    question: "Will you add pages and upload content for me?",
-    answer: "Yes. We can add new pages, update copy, upload products or customer data, and keep the site fresh so you don't have to spend time doing it yourself."
+    question: "How long does it take to build my website?",
+    answer: "Project timelines depend on the package and complexity, but most websites are completed in clear stages with regular updates throughout the process."
+  },
+  {
+    id: 8,
+    question: "Will you connect my domain and launch the website for me?",
+    answer: "Yes. I handle deployment to your domain and ensure the website is properly set up and live."
   },
   {
     id: 9,
-    question: "Do you work with any kind of website?",
-    answer: "Yes. We can support most websites and stacks. If we need access or there are platform limits, we’ll tell you upfront and propose the best path."
+    question: "Can you help with technical website issues?",
+    answer: "Yes. I handle technical setup related to the website, including deployment, structure setup, and core functionality issues."
+  },
+  {
+    id: 10,
+    question: "Will you upload my content, products, or pages?",
+    answer: "Yes. Depending on your package, I can add pages, upload content, products, or business information as part of the build."
   },
   {
     id: 11,
-    question: "Do you help with traffic and growth?",
-    answer: "Yes. We monitor traffic, share improvement suggestions, and implement changes that help you reach more audience and convert more visitors."
+    question: "Do you work with all business types?",
+    answer: "Yes. Websites can be built for most industries, including local businesses, personal brands, service providers, restaurants, and custom projects."
   },
   {
     id: 12,
-    question: "What do you need from me to get started?",
-    answer: "Just share your website link and what you want improved. We'll review it, confirm what’s included, and start working on fixes and improvements."
+    question: "What happens after my website is completed?",
+    answer: "Once your website is live, you’ll receive 3 months of support for technical fixes and website-related issues."
   },
   {
     id: 13,
-    question: "Will you break my site while making changes?",
-    answer: "No. We make changes carefully, prioritize stability, and verify updates before they go live. The goal is to improve without disruption."
+    question: "Will my website be mobile-friendly?",
+    answer: "Yes. All websites are designed to work across desktop, tablet, and mobile devices."
   },
   {
     id: 14,
-    question: "Can you handle urgent issues?",
-    answer: "Yes. If something is broken or stopping customers from contacting you or buying, we prioritize it as urgent."
+    question: "Do you offer custom features?",
+    answer: "Yes. Custom website builds can include advanced features depending on your business needs."
   },
   {
     id: 15,
-    question: "Is there a contract?",
-    answer: "No long-term contracts. You can continue month-to-month as long as the service is valuable to you."
+    question: "How do I get started?",
+    answer: "Simply share your business details, goals, and the type of website you need (Landing Page, Small Business, or Custom Build), and we’ll plan the best option for you."
   },
   {
     id: 16,
-    question: "Where are you located?",
-    answer: "I'm based and operate as a US-registered business (Texas). I work remotely with clients across the US."
-  },
-  {
-    id: 18,
-    question: "How do I pay?",
-    answer: "I accept payment via Stripe, PayPal, or bank transfer. I take 50% upfront and 50% on delivery."
+    question: "How do payments work?",
+    answer: "Payment is typically structured as 50% upfront and 50% upon project completion, unless otherwise agreed."
   },
   {
     id: 17,
-    question: "What happens after I contact you?",
-    answer: "We review your site, clarify what you want improved, and confirm the $89/month plan. Then we start implementing fixes, updates, and improvements."
+    question: "Where do you work?",
+    answer: "I work remotely and can build websites for clients anywhere in the US or internationally."
   }
 ];
 
 
 export default function FAQ() {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (id: number) => {
-    setOpenItems(prev =>
-      prev.includes(id)
-        ? prev.filter(item => item !== id)
-        : [...prev, id]
-    );
-  };
-
   return (
     <section className="relative py-24 bg-charcoal overflow-hidden">
       {/* Simplified background elements */}
@@ -115,63 +118,29 @@ export default function FAQ() {
 
         {/* FAQ Accordion */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-          {faqData.map((faq) => {
-            const isOpen = openItems.includes(faq.id);
-
-            return (
-              <motion.div
-                key={faq.id}
-                layout
-                transition={{ layout: { duration: 0.1, ease: "easeOut" } }}
-                className="group overflow-hidden rounded-none bg-white/5 backdrop-blur-sm shadow-[0_22px_70px_rgba(0,0,0,0.34)] transition-all hover:shadow-[0_28px_80px_rgba(0,0,0,0.42)]"
-              >
-                {/* Question Header */}
-                <button
-                  onClick={() => toggleItem(faq.id)}
-                  aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors duration-150"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-lg">
-                      <QuestionMarkCircleIcon className="w-6 h-6 text-white" />
-                    </div>
+          {faqData.map((faq) => (
+            <div
+              key={faq.id}
+              className="group overflow-hidden rounded-none bg-white/5 backdrop-blur-sm shadow-[0_22px_70px_rgba(0,0,0,0.34)] transition-all hover:shadow-[0_28px_80px_rgba(0,0,0,0.42)]"
+            >
+              <div className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-lg">
+                    <QuestionMarkCircleIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
                     <h3 className="text-lg md:text-xl font-bold text-blue-200 group-hover:text-blue-100 leading-tight">
                       {faq.question}
                     </h3>
+                    <div className="w-full h-px bg-gradient-to-r from-accent/30 to-primary/30 my-4" />
+                    <p className="text-light leading-relaxed text-lg">
+                      {faq.answer}
+                    </p>
                   </div>
-
-                  <motion.span
-                    className="flex-shrink-0 ml-4"
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ duration: 0.1, ease: "easeOut" }}
-                  >
-                    <ChevronDownIcon className="w-6 h-6 text-accent" />
-                  </motion.span>
-                </button>
-
-                {/* Answer Content */}
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      key="content"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.12, ease: "easeOut" }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-6 pl-20 pt-2 pb-6">
-                        <div className="w-full h-px bg-gradient-to-r from-accent/30 to-primary/30 mb-4" />
-                        <p className="text-light leading-relaxed text-lg">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Call to action */}

@@ -142,8 +142,8 @@ export default function Privacy() {
               <div className="text-light space-y-4">
                 <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us:</p>
                 <div className="bg-white/10 rounded-lg p-6 mt-6">
-                  <p><strong>Email:</strong> hello@codecraftspace.com</p>
-                  <p><strong>Address:</strong> Texas, USA</p>
+                  <p><strong>Email:</strong>fatima.amir.dev@gmail.com</p>
+                  <p><strong>Address:</strong>USA</p>
                 </div>
               </div>
 

@@ -175,7 +175,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Email</h3>
-                    <p className="text-light">hello@codecraftspace.com</p>
+                    <p className="text-light">fatima.amir.dev@gmail.com</p>
                   </div>
                 </div>
 

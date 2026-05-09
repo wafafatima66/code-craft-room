@@ -55,7 +55,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-manrope), sans-serif;
 }
 
 /* Heading rhythm and typography polish */
@@ -69,22 +69,25 @@ h6 {
 }
 h1 { font-weight: 400; letter-spacing: -0.02em; }
 h2 { font-weight: 400; letter-spacing: -0.01em; }
-h3 { font-weight: 600; }
+h3 { 
+   font-family: var(--font-inter), sans-serif;
+  font-weight: 600;
+ }
 
 .font-ui {
-  font-family: var(--font-manrope), sans-serif;
+  /* font-family: var(--font-manrope), sans-serif; */
 }
 
 .font-body {
-  font-family: var(--font-inter), sans-serif;
+  /* font-family: var(--font-inter), sans-serif; */
 }
 
 .font-display {
-  font-family: var(--font-instrument-serif), serif;
+  /* font-family: var(--font-instrument-serif), serif; */
 }
 
 .font-accent {
-  font-family: var(--font-cabin), sans-serif;
+  /* font-family: var(--font-cabin), sans-serif; */
 }
 
 p,
@@ -94,14 +97,14 @@ small,
 input,
 textarea,
 select {
-  font-family: var(--font-inter), sans-serif;
+  /* font-family: var(--font-instrument-serif), sans-serif; */
 }
 
 header,
 nav,
 nav a,
 label {
-  font-family: var(--font-manrope), sans-serif;
+  /* font-family: var(--font-instrument-serif), sans-serif; */
 }
 
 /* Card baseline */
@@ -118,7 +121,7 @@ label {
   justify-content: center;
   border-radius: 10px;
   font-weight: 600;
-  font-family: var(--font-cabin), sans-serif;
+  /* font-family: var(--font-cabin), sans-serif; */
 }
 .btn-primary { background: var(--ccr-orange); color: white; }
 .btn-primary:hover { filter: brightness(0.95); }
