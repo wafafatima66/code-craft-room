@@ -14,6 +14,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <Link href="/" className="hover:text-accent transition-colors">Home</Link>
           <Link href="/#services" className="hover:text-accent transition-colors">Services</Link>
+          <Link href="/automation-dashboard" className="hover:text-accent transition-colors">Automation</Link>
           <Link href="/blog" className="hover:text-accent transition-colors">Blog</Link>
           {/* <Link href="/about" className="hover:text-accent transition-colors">About</Link> */}
           <div className="relative group">

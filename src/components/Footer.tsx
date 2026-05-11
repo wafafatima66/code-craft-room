@@ -17,6 +17,7 @@ export default function Footer() {
         </div>
         <div className="text-sm flex flex-col gap-2">
           <Link href="/#services" className="hover:text-accent">Services</Link>
+          <Link href="/automation-dashboard" className="hover:text-accent">Automation &amp; Dashboards</Link>
           <Link href="/blog" className="hover:text-accent">Blog</Link>
           <Link href="/about" className="hover:text-accent">About</Link>
           <Link href="/contact" className="hover:text-accent">Contact</Link>
