@@ -6,88 +6,83 @@ import Link from "next/link";
 const faqData = [
   {
     id: 1,
-    question: "What exactly are your website services?",
-    answer: "I build professional websites for businesses based on your needs — whether it’s a simple landing page, a small business website, or a fully custom-built website. This is a one-time project fee (not monthly maintenance), and your website is fully deployed to your domain with all core technical setup included."
+    question: "What exactly are your services?",
+    answer: "I build complete business systems — including custom websites, business dashboards, and smart automation — designed around how your business operates. Whether you need a professional online presence, a system to manage operations, or automation to save time, each service is built specifically for your business needs."
   },
   {
     id: 2,
-    question: "Do you build websites from scratch?",
-    answer: "Yes. Every website is built from the ground up based on your business goals, brand, and required features — from landing pages to complete custom websites."
+    question: "Do you only build websites?",
+    answer: "No. Beyond websites, I also create custom dashboards to manage your business and automation systems that handle repetitive tasks like bookings, lead follow-ups, customer communication, and workflow processes."
   },
   {
     id: 3,
-    question: "What website packages do you offer?",
-    answer: "I currently offer 3 core packages: Custom Website, Business Dashboard, and Smart Automation. Each one is designed to help your business build its presence, manage operations, or save time through automation."
+    question: "What services do you offer?",
+    answer: "I currently offer 3 core services: Custom Website, Business Dashboard, and Smart Automation. Each can work independently or together as a full business growth system."
   },
   {
     id: 4,
     question: "Is this a monthly service?",
-    answer: "No. This is a one-time payment for your website build. There are no required monthly maintenance fees."
+    answer: "No. These are one-time build services with upfront project pricing. There are no required monthly fees unless you request additional upgrades or future support."
   },
   {
     id: 5,
     question: "What’s included in the one-time fee?",
-    answer: "Your project includes website design and development, deployment to your domain, technical setup, essential website fixes, and 3 months of support after launch."
+    answer: "Your project may include design, development, technical setup, deployment, dashboard creation, automation workflows, and post-launch support depending on the service selected."
   },
   {
     id: 6,
-    question: "Do you provide website maintenance?",
-    answer: "Ongoing maintenance is not included as a monthly subscription. However, you receive 3 months of post-launch support for technical issues, fixes, and guidance related to the website."
+    question: "Do you build everything from scratch?",
+    answer: "Yes. Every website, dashboard, and automation system is custom-built around your business goals, workflow, and operational needs."
   },
   {
     id: 7,
-    question: "How long does it take to build my website?",
-    answer: "Project timelines depend on the package and complexity, but most websites are completed in clear stages with regular updates throughout the process."
+    question: "Can you automate my business tasks?",
+    answer: "Yes. I can automate bookings, customer follow-ups, lead capture, email/SMS notifications, review requests, scheduling, and other repetitive processes to save you time."
   },
   {
     id: 8,
-    question: "Will you connect my domain and launch the website for me?",
-    answer: "Yes. I handle deployment to your domain and ensure the website is properly set up and live."
+    question: "What does a business dashboard do?",
+    answer: "A dashboard gives you one place to manage your business — including leads, bookings, customers, analytics, reports, sales, or operations — depending on your industry."
   },
   {
     id: 9,
-    question: "Can you help with technical website issues?",
-    answer: "Yes. I handle technical setup related to the website, including deployment, structure setup, and core functionality issues."
+    question: "How long does it take?",
+    answer: "Timelines depend on complexity, but most projects are delivered in clear stages with updates throughout the process."
   },
   {
     id: 10,
-    question: "Will you upload my content, products, or pages?",
-    answer: "Yes. Depending on your package, I can add pages, upload content, products, or business information as part of the build."
+    question: "Will you launch and set everything up for me?",
+    answer: "Yes. I handle setup, deployment, and implementation so your system is ready to use."
   },
   {
     id: 11,
-    question: "Do you work with all business types?",
-    answer: "Yes. Websites can be built for most industries, including local businesses, personal brands, service providers, restaurants, and custom projects."
+    question: "Do you offer support after launch?",
+    answer: "Yes. Post-launch support is included to ensure your website, dashboard, or automation runs smoothly."
   },
   {
     id: 12,
-    question: "What happens after my website is completed?",
-    answer: "Once your website is live, you’ll receive 3 months of support for technical fixes and website-related issues."
+    question: "Can this work for my type of business?",
+    answer: "Yes. These systems can be customized for restaurants, photographers, salons, lawn care, service businesses, eCommerce, personal brands, and more."
   },
   {
     id: 13,
-    question: "Will my website be mobile-friendly?",
-    answer: "Yes. All websites are designed to work across desktop, tablet, and mobile devices."
+    question: "Can I start with one service and upgrade later?",
+    answer: "Yes. You can start with a website, dashboard, or automation first and expand into a complete business system over time."
   },
   {
     id: 14,
-    question: "Do you offer custom features?",
-    answer: "Yes. Custom website builds can include advanced features depending on your business needs."
+    question: "How do I get started?",
+    answer: "Simply reach out with your business type, goals, and what you need help with — website, dashboard, automation, or all three — and I’ll help build the right solution."
   },
   {
     id: 15,
-    question: "How do I get started?",
-    answer: "Simply share your business details, goals, and the package you need, whether that is a Custom Website, Business Dashboard, or Smart Automation setup, and we will plan the best option for you."
+    question: "How do payments work?",
+    answer: "Most projects are structured with an upfront payment and final payment upon completion, depending on project scope."
   },
   {
     id: 16,
-    question: "How do payments work?",
-    answer: "Payment is typically structured as 50% upfront and 50% upon project completion, unless otherwise agreed."
-  },
-  {
-    id: 17,
     question: "Where do you work?",
-    answer: "I work remotely and can build websites for clients anywhere in the US or internationally."
+    answer: "I work remotely and can build for businesses in the US or internationally."
   }
 ];
 

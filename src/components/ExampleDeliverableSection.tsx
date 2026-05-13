@@ -129,6 +129,8 @@ export default function ExampleDeliverableSection() {
               Example of what you&apos;ll get
             </p>
 
+
+
             <div className="mt-8">
               <h2 className="text-2xl font-extrabold text-white md:text-3xl">
                 Automation Ideas:
@@ -146,6 +148,7 @@ export default function ExampleDeliverableSection() {
               </div>
             </div>
 
+
             <div className="mt-10">
               <h2 className="text-2xl font-extrabold text-white md:text-3xl">
                 Custom Dashboard:
@@ -162,6 +165,8 @@ export default function ExampleDeliverableSection() {
                 ))}
               </div>
             </div>
+
+
           </div>
         </div>
 
@@ -180,6 +185,21 @@ export default function ExampleDeliverableSection() {
             />
           </div>
         </div> */}
+
+        <div className="md:px-4">
+          <div className="mt-12 overflow-hidden rounded-3xl bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.28)] border border-white/10">
+            <video
+              src="/video/2.mp4"
+              controls
+              autoPlay
+              muted
+              loop
+              className="w-full aspect-video bg-black object-contain"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </div>
     </section>
   );
