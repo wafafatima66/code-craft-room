@@ -10,9 +10,8 @@ export default function Contact() {
     email: '',
     company: '',
     package: '',
-    projectType: '',
-    message: '',
-    timeline: ''
+    timeline: '',
+    message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -70,6 +69,13 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formData.email || !formData.message) {
+      setSubmitStatus('error');
+      setSubmitMessage('Email and message are required.');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus('idle');
     setSubmitMessage('');
@@ -90,7 +96,6 @@ export default function Contact() {
           email: '',
           company: '',
           package: '',
-          projectType: '',
           message: '',
           timeline: ''
         });
@@ -233,13 +238,6 @@ export default function Contact() {
                 </div>
               )}
 
-              <a
-                href="#book-call"
-                className="inline-flex items-center justify-center w-full mb-6 rounded-lg border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white hover:bg-white/10 hover:border-accent/30 transition-colors"
-              >
-                Or book a free 15-minute call →
-              </a>
-
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -292,27 +290,11 @@ export default function Contact() {
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                   >
                     <option value="" className="bg-charcoal text-white">Select a package</option>
-                    <option value="landing-page" className="bg-charcoal text-white">Landing Page ($200)</option>
-                    <option value="small-business-website" className="bg-charcoal text-white">Small Business Website ($500)</option>
-                    <option value="custom-build" className="bg-charcoal text-white">Custom Build (Let&apos;s discuss)</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="projectType" className="block text-white font-medium mb-2">Project Type</label>
-                  <select
-                    id="projectType"
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                  >
-                    <option value="" className="bg-charcoal text-white">Select project type</option>
-                    {/* <option value="ecommerce" className="bg-charcoal text-white">E-commerce Website</option> */}
-                    <option value="business" className="bg-charcoal text-white">Business Website</option>
-                    <option value="custom" className="bg-charcoal text-white">Custom Application</option>
-                    <option value="redesign" className="bg-charcoal text-white">Website Redesign</option>
-                    <option value="other" className="bg-charcoal text-white">Other</option>
+                    <option value="custom-website" className="bg-charcoal text-white">Custom Website</option>
+                    <option value="dashboard" className="bg-charcoal text-white">Dashboard</option>
+                    <option value="automation" className="bg-charcoal text-white">Automation</option>
+                    <option value="dashboard-automation" className="bg-charcoal text-white">Dashboard + Automation</option>
+                    <option value="all-in-one" className="bg-charcoal text-white">All in One</option>
                   </select>
                 </div>
 
@@ -362,8 +344,8 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
-    </div>
+    </div >
   );
 }

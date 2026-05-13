@@ -3,23 +3,23 @@ import { ChatBubbleLeftRightIcon, WrenchScrewdriverIcon, SparklesIcon } from "@h
 const HOW_IT_WORKS_STEPS = [
   {
     number: "1",
-    title: "Tell me about your business",
+    title: "Contact me & choose your style",
     description:
-      "Fill out a short form. No jargon needed. I'll understand what you need and what you don't.",
+      "Reach out, tell me about your business, and select a design/theme that fits your brand.",
     Icon: ChatBubbleLeftRightIcon,
   },
   {
     number: "2",
-    title: "I design and build it",
+    title: "Fill out your business & automation form",
     description:
-      "You get a live preview link within days. We refine until it's right.",
+      "Complete a simple form so I can understand your workflow, goals, and the automation your business actually needs.",
     Icon: WrenchScrewdriverIcon,
   },
   {
     number: "3",
-    title: "You go live — and stay supported",
+    title: "I build your full business system",
     description:
-      "I handle launch, domain setup, and stick around for 30 days if anything needs fixing.",
+      "I design and develop your custom website, dashboard, and automation setup - built to help your business run smarter, faster, and grow.",
     Icon: SparklesIcon,
   },
 ];
@@ -53,19 +53,19 @@ export default function HowItWorksSection() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
           <p className="text-xl text-lightgray max-w-3xl mx-auto leading-relaxed">
-            A simple process that keeps your website improving every month.
+            A simple process to build your business website, dashboard, and automation system - tailored to how you work.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="space-y-5">
           {HOW_IT_WORKS_STEPS.map((step) => (
             <div
               key={step.number}
-              className="group rounded-none bg-white/5 backdrop-blur-sm p-8 shadow-[0_22px_70px_rgba(0,0,0,0.34)] transition-all hover:bg-white/10 hover:shadow-[0_28px_80px_rgba(0,0,0,0.42)]"
+              className="group rounded-none bg-white/5 p-8 transition-all hover:bg-white/10"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-white/10 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
                     <span className="text-white font-extrabold">{step.number}</span>
                   </div>
                 </div>

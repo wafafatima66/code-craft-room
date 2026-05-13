@@ -5,14 +5,14 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-charcoal/95">
       {/* Animated background elements */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="grain absolute inset-0 opacity-20"></div>
-      </div>
+      </div> */}
 
       {/* Geometric pattern overlay */}
-      <div className="absolute inset-0 opacity-10">
+      {/* <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <defs>
             <pattern id="grid" width="10" height="10" patternUnits="userspaceOnUse">
@@ -21,17 +21,17 @@ export default function Hero() {
           </defs>
           <rect width="100" height="100" fill="url(#grid)" className="text-white/20" />
         </svg>
-      </div>
+      </div> */}
 
       <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left column - Main content */}
           <div className="relative z-10">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-              Custom websites{" "}
+              Websites, dashboards, and{" "}
               <span className="relative">
-                <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-pulse">
-                  for small businesses that are ready to grow.
+                <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+                  automation built to help your business scale.
                 </span>
                 <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                   <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="3" className="text-accent/60" />
@@ -42,7 +42,7 @@ export default function Hero() {
             {/* Enhanced subheading */}
             <div className="mt-8">
               <p className="text-xl sm:text-2xl text-lightgray leading-relaxed font-light">
-                I design and build hand-crafted websites for US small business owners — no templates, no agencies, no disappearing after launch. Just a site that works.
+                Custom digital systems for growing businesses. No templates, no agency bloat, just tailored tools that help you run smarter.
               </p>
             </div>
 

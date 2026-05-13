@@ -1,4 +1,6 @@
 import Hero from "@/components/Hero";
+import ExampleDeliverableSection from "@/components/ExampleDeliverableSection";
+import WhyNeedThisSection from "@/components/WhyNeedThisSection";
 // import ProblemSolution from "@/components/ProblemSolution";
 // import WhyChoose from "@/components/WhyChoose";
 // import WhoWeHelp from "@/components/WhoWeHelp";
@@ -15,16 +17,22 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <main>
         <Hero />
+        <WhyNeedThisSection />
+        <Services />
+        
+        
+
+        <ExampleDeliverableSection />
         {/* <ProblemSolution /> */}
         {/* <WhyChoose /> */}
         {/* Uncomment to include comparison
         <CustomCodeComparison />
         */}
         {/* <WhoWeHelp /> */}
+        <HowItWorksSection />
         <PreviousWork />
 
-        <Services />
-        <HowItWorksSection />
+        
         <AboutFatimaSection />
         <FAQ />
         {/* <Testimonials /> */}

@@ -62,18 +62,18 @@ const defaultProjects: Project[] = [
 export default function PreviousWork({ projects = defaultProjects }: { projects?: Project[] }) {
   return (
     <section id="previous-work" className="relative py-20 bg-charcoal/95">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Recent <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Work</span>
+            <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Themes</span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-light font-body">
-            A few recent demo sites showing the kind of custom work I can build for small businesses.
+            A few sample themes showing the kind of custom design direction I can build for small businesses.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mt-6"></div>
         </div>
 
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((p) => {
             const external = isExternalUrl(p.href);
             const imageSrc = p.image;

@@ -17,7 +17,7 @@ const faqData = [
   {
     id: 3,
     question: "What website packages do you offer?",
-    answer: "We currently offer 3 website options: Landing Page Website, Small Business Website, and Custom Built Website. Each package is designed based on your business size and goals."
+    answer: "I currently offer 3 core packages: Custom Website, Business Dashboard, and Smart Automation. Each one is designed to help your business build its presence, manage operations, or save time through automation."
   },
   {
     id: 4,
@@ -77,7 +77,7 @@ const faqData = [
   {
     id: 15,
     question: "How do I get started?",
-    answer: "Simply share your business details, goals, and the type of website you need (Landing Page, Small Business, or Custom Build), and we’ll plan the best option for you."
+    answer: "Simply share your business details, goals, and the package you need, whether that is a Custom Website, Business Dashboard, or Smart Automation setup, and we will plan the best option for you."
   },
   {
     id: 16,

@@ -7,7 +7,6 @@ type ContactPayload = {
   phone?: string;
   company?: string;
   package?: string;
-  projectType?: string;
   message?: string;
   timeline?: string;
 };
@@ -36,16 +35,35 @@ function sanitizePhone(value?: string) {
     .slice(0, 20);
 }
 
+async function parseContactPayload(req: Request): Promise<ContactPayload> {
+  const contentType = req.headers.get('content-type') || '';
+
+  if (contentType.includes('application/json')) {
+    return (await req.json()) as ContactPayload;
+  }
+
+  const formData = await req.formData();
+
+  return {
+    name: String(formData.get('name') || ''),
+    email: String(formData.get('email') || ''),
+    phone: String(formData.get('phone') || ''),
+    company: String(formData.get('company') || ''),
+    package: String(formData.get('package') || ''),
+    message: String(formData.get('message') || ''),
+    timeline: String(formData.get('timeline') || ''),
+  };
+}
+
 export async function POST(req: Request) {
   try {
-    const payload = (await req.json()) as ContactPayload;
+    const payload = await parseContactPayload(req);
     const {
       name = '',
       email = '',
       phone = '',
       company = '',
       package: selectedPackage = '',
-      projectType = '',
       message = '',
       timeline = '',
     } = payload;
@@ -76,7 +94,6 @@ export async function POST(req: Request) {
             phone: sanitizedPhone,
             company,
             package: selectedPackage,
-            projectType,
             message,
             timeline,
             source: 'codecraftspace-contact-form',
@@ -118,14 +135,13 @@ export async function POST(req: Request) {
         await resend.emails.send({
           from: 'Code Craft Space <onboarding@resend.dev>',
           to: 'fatima.amir.dev@gmail.com',
-          subject: `New client from code craft space about ${projectType || ''}`,
+          subject: `New client from code craft space about ${selectedPackage || company || 'inquiry'}`,
           text: `
 Name: ${name}
 Email: ${email}
 Phone: ${sanitizedPhone || 'N/A'}
 Company: ${company || 'N/A'}
 Package: ${selectedPackage || 'N/A'}
-Project Type: ${projectType || 'N/A'}
 Timeline: ${timeline || 'N/A'}
 
 Message:

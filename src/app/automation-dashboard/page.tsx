@@ -228,14 +228,18 @@ export default function AutomationDashboardPage() {
                         <h2 className="mt-4 text-3xl font-extrabold md:text-4xl">A simple 3-step process</h2>
                     </div>
 
-                    <div className="mt-12 grid gap-6 lg:grid-cols-3">
+                    <div className="mt-12 space-y-4">
                         {processSteps.map((item) => (
-                            <article key={item.step} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-                                    Step {item.step}
-                                </span>
-                                <h3 className="mt-4 text-2xl font-bold text-white">{item.title}</h3>
-                                <p className="mt-4 text-base leading-7 text-white/80">{item.description}</p>
+                            <article key={item.step} className="rounded-2xl bg-white/5 p-8">
+                                <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
+                                    <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent md:min-w-24">
+                                        Step {item.step}
+                                    </span>
+                                    <div>
+                                        <h3 className="text-2xl font-bold text-white">{item.title}</h3>
+                                        <p className="mt-4 text-base leading-7 text-white/80">{item.description}</p>
+                                    </div>
+                                </div>
                             </article>
                         ))}
                     </div>

@@ -2,6 +2,15 @@ export default function AboutFatimaSection() {
   return (
     <section className="relative py-20 bg-charcoal/95">
       <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-16 text-center">
+          <h2 className="font-display text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+            Why Choose{" "}
+            <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+              Me to Build This
+            </span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mt-6"></div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center rounded-none bg-white/5 backdrop-blur-sm p-8 md:p-12 shadow-[0_28px_90px_rgba(0,0,0,0.4)]">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.28)]">
             <img
@@ -14,9 +23,9 @@ export default function AboutFatimaSection() {
           </div>
 
           <div>
-            <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+            <h3 className="font-display text-3xl md:text-4xl font-extrabold text-white tracking-tight">
               Hi, I&apos;m Fatima 👋
-            </h2>
+            </h3>
             <p className="font-body mt-4 text-lightgray text-lg leading-relaxed">
               I&apos;m Fatima — a Software Engineer with 4+ years of experience building real production websites. I started Code Craft Space because I kept seeing small business owners struggle with websites that were broken, slow, or abandoned after launch. I&apos;m here to make that easier — no jargon, no agencies, just straightforward help.
             </p>

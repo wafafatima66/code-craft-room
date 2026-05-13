@@ -1,39 +1,27 @@
 const packages = [
   {
     label: "Price",
-    landingPage: "$200",
-    smallBusiness: "$500-$800",
-    customBuild: "Let's talk",
+    customWebsite: "Free",
+    businessDashboard: "$300",
+    smartAutomation: "$300",
   },
   {
-    label: "Pages",
-    landingPage: "1",
-    smallBusiness: "Up to 5",
-    customBuild: "Unlimited",
+    label: "Purpose",
+    customWebsite: "A professional website to establish your online presence and attract customers",
+    businessDashboard: "A custom dashboard to manage your business, leads, bookings, or operations in one place",
+    smartAutomation: "Automation systems that save time, reduce manual tasks, and help your business scale",
   },
   {
-    label: "Mobile Ready",
-    landingPage: "Yes",
-    smallBusiness: "Yes",
-    customBuild: "Yes",
-  },
-  {
-    label: "Contact Form",
-    landingPage: "Yes",
-    smallBusiness: "Yes",
-    customBuild: "Yes",
-  },
-  {
-    label: "Custom Design",
-    landingPage: "Yes",
-    smallBusiness: "Yes",
-    customBuild: "Yes",
+    label: "Features",
+    customWebsite: "Custom design, mobile-ready, contact forms, brand-focused layout",
+    businessDashboard: "Lead tracking, analytics, bookings, reports, customer management",
+    smartAutomation: "Auto follow-ups, booking workflows, lead capture, email/SMS automation",
   },
   {
     label: "Delivery",
-    landingPage: "3-5 days",
-    smallBusiness: "1-2 weeks",
-    customBuild: "Scoped together",
+    customWebsite: "3-7 days",
+    businessDashboard: "1-2 weeks",
+    smartAutomation: "1-2 weeks",
   },
 ];
 
@@ -75,7 +63,7 @@ export default function Services() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
           <p className="text-xl text-lightgray max-w-3xl mx-auto leading-relaxed">
-            Clear website packages for small businesses that want something custom, fast, and built to last.
+            Clear pricing for websites, dashboards, and automation systems built for growing businesses.
           </p>
         </div>
 
@@ -89,13 +77,13 @@ export default function Services() {
                       Package
                     </th>
                     <th className="px-6 py-5 text-left text-xl font-extrabold text-white">
-                      Landing Page
+                      Custom Website
                     </th>
                     <th className="px-6 py-5 text-left text-xl font-extrabold text-white">
-                      Small Business Site
+                      Business Dashboard
                     </th>
                     <th className="px-6 py-5 text-left text-xl font-extrabold text-white">
-                      Custom Build
+                      Smart Automation
                     </th>
                   </tr>
                 </thead>
@@ -105,9 +93,9 @@ export default function Services() {
                       <td className="px-6 py-5 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
                         {item.label}
                       </td>
-                      <td className="px-6 py-5 text-base text-white">{item.landingPage}</td>
-                      <td className="px-6 py-5 text-base text-white">{item.smallBusiness}</td>
-                      <td className="px-6 py-5 text-base text-white">{item.customBuild}</td>
+                      <td className="px-6 py-5 text-base text-white">{item.customWebsite}</td>
+                      <td className="px-6 py-5 text-base text-white">{item.businessDashboard}</td>
+                      <td className="px-6 py-5 text-base text-white">{item.smartAutomation}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -116,7 +104,7 @@ export default function Services() {
           </div>
 
           <p className="mt-6 text-center text-base text-lightgray">
-            All sites include 2 rounds of revisions and 30 days of free support after launch.
+            Every package is custom-built around your business goals and workflow.
           </p>
         </div>
       </div>
