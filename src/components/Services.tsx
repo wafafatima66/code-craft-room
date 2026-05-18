@@ -1,7 +1,7 @@
 const packages = [
   {
     label: "Price",
-    customWebsite: "Free",
+    customWebsite: "$200",
     businessDashboard: "$300",
     smartAutomation: "$300",
   },
