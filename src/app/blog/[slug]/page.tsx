@@ -1,8 +1,11 @@
 import Link from "next/link"
+import Image from "next/image"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import BlogShareBar from "@/components/BlogShareBar"
 import blogData from "@/data/blog-posts.json"
+
+const DEFAULT_FEATURED_IMAGE = "/blog/seo-guide.jpg"
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -79,16 +82,22 @@ export default async function BlogPost({ params }: PageProps) {
           </div>
         </header>
 
-        <div className="mb-12 rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
-          <div className="h-[400px] bg-white/10 flex items-center justify-center">
-            <span className="text-white/60 font-semibold">Featured Image</span>
+        <div className="mb-12 rounded-2xl border border-white/10 overflow-hidden">
+          <div className="relative h-[400px] w-full">
+            <Image
+              src={("image" in post && post.image) ? String(post.image) : DEFAULT_FEATURED_IMAGE}
+              alt={post.title}
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,720px)_minmax(0,320px)] gap-10 items-start">
           <div className="min-w-0">
             <div
-              className="prose prose-invert max-w-none text-base leading-[1.8] prose-p:leading-[1.8] prose-h2:border-l-4 prose-h2:border-accent/70 prose-h2:pl-4 prose-h2:mt-12 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-a:text-accent hover:prose-a:text-accent/80 prose-blockquote:border-l-4 prose-blockquote:border-white/20 prose-blockquote:bg-white/5 prose-blockquote:px-4 prose-blockquote:py-2 prose-code:bg-white/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded"
+              className="prose prose-invert prose-lg max-w-none text-lg leading-[1.85] prose-p:text-lg prose-p:leading-[1.85] prose-li:text-lg prose-li:leading-[1.75] prose-h2:text-3xl prose-h2:font-extrabold prose-h2:border-l-4 prose-h2:border-accent/70 prose-h2:pl-4 prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-2xl prose-h3:font-bold prose-h3:mt-8 prose-h3:mb-3 prose-a:text-accent hover:prose-a:text-accent/80 prose-blockquote:text-xl prose-blockquote:border-l-4 prose-blockquote:border-white/20 prose-blockquote:bg-white/5 prose-blockquote:px-4 prose-blockquote:py-2 prose-code:bg-white/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
