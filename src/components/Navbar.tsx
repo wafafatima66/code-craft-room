@@ -25,14 +25,18 @@ export default function Navbar() {
             </button>
             <div className="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div className="min-w-64 rounded-xl border border-white/10 bg-charcoal/95 p-2 shadow-2xl backdrop-blur">
-                <a
-                  href="https://bistro-mail.netlify.app/"
-                  target="_blank"
-                  rel="noreferrer"
+                {/* <Link
+                  href="/bistromail"
                   className="block rounded-lg px-4 py-3 text-white hover:bg-white/10 hover:text-accent transition-colors"
                 >
                   Restaurant Newsletter Generator
-                </a>
+                </Link> */}
+                <Link
+                  href="/restaurant-chatbot"
+                  className="block rounded-lg px-4 py-3 text-white hover:bg-white/10 hover:text-accent transition-colors"
+                >
+                  Restaurant AI Chatbot
+                </Link>
               </div>
             </div>
           </div>
