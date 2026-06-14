@@ -21,6 +21,7 @@
   --color-foreground: var(--foreground);
   --color-charcoal: var(--ccr-charcoal);
   --color-accent: var(--ccr-orange);
+  --color-primary: #6366f1;
   --color-lightgray: var(--ccr-light-gray);
   --color-secondary: var(--ccr-medium-gray);
   --color-cream: var(--ccr-cream);

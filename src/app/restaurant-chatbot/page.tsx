@@ -10,6 +10,7 @@ import {
   DevicePhoneMobileIcon,
   ChartBarIcon,
   SparklesIcon,
+  CheckCircleIcon,
 } from '@heroicons/react/24/outline';
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -54,83 +55,62 @@ const FEATURES = [
   {
     icon: CalendarDaysIcon,
     title: '24/7 Reservations',
-    desc: 'Takes bookings at 2 AM or 2 PM — never misses a table request, even when the restaurant is closed.',
+    desc: 'Takes bookings at 2 AM or 2 PM — never misses a table request, even when your doors are closed.',
   },
   {
     icon: ChatBubbleLeftRightIcon,
     title: 'Menu & FAQ Answers',
-    desc: "Instantly answers questions about the menu, allergens, specials, and pricing from your restaurant's own data.",
+    desc: "Answers questions about your menu, allergens, specials, and hours instantly — using your own information.",
   },
   {
     icon: BoltIcon,
-    title: 'Lead Capture',
-    desc: 'Collects contact details for catering and event inquiries, then notifies you instantly so no lead goes cold.',
+    title: 'Catering & Event Leads',
+    desc: 'Collects contact info for catering and event inquiries, then notifies you right away — no lead goes cold.',
   },
   {
     icon: ClockIcon,
-    title: 'Auto Confirmations',
-    desc: 'Sends booking confirmation texts or emails automatically — no staff involvement needed.',
+    title: 'Instant Confirmations',
+    desc: 'Sends booking confirmation texts or emails automatically the moment a reservation is made.',
   },
   {
     icon: DevicePhoneMobileIcon,
-    title: 'Works Everywhere',
-    desc: 'Embeds on your website, integrates with Instagram DMs, WhatsApp, and SMS for maximum reach.',
+    title: 'Works on Any Channel',
+    desc: 'Sits on your website, connects to Instagram DMs, WhatsApp, and SMS — wherever your guests reach out.',
   },
   {
     icon: ChartBarIcon,
-    title: 'Tracks What Guests Ask',
-    desc: 'Logs every conversation so you can see what customers ask most — powerful data for your menu and marketing.',
+    title: 'See What Guests Ask Most',
+    desc: 'Every conversation is logged so you know what your customers want — useful for your menu and marketing.',
   },
 ];
 
-const APPROACHES = [
-  {
-    badge: 'No-Code',
-    badgeColor: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
-    title: 'Plug-and-play widgets',
-    desc: 'Tools like Tidio, Intercom, and Chatbase let you embed a chatbot in minutes. You train it by pasting your menu URL or uploading a PDF.',
-    pros: ['Quick setup (hours not weeks)', 'Restaurant templates built-in', 'Monthly fee (~$30–$100/mo)'],
-    con: 'Limited customization, generic feel',
-  },
-  {
-    badge: 'Social Bots',
-    badgeColor: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
-    title: 'Instagram & WhatsApp',
-    desc: "Tools like ManyChat connect your Instagram or WhatsApp to a chatbot. When a customer DMs 'reserve', the bot walks them through booking automatically.",
-    pros: ['Meets customers where they are', 'High engagement on social', 'Great for reservations'],
-    con: 'Only works within those platforms',
-  },
-  {
-    badge: 'Custom AI',
-    badgeColor: 'bg-accent/20 text-accent border-accent/30',
-    title: 'Claude / OpenAI API',
-    desc: "A fully custom chatbot trained on your exact menu, tone, and policies. Integrates with your booking system and sends SMS alerts via Twilio.",
-    pros: ['Fully personalized to your brand', 'No monthly platform fees', 'Unlimited customization'],
-    con: 'Requires a developer to build',
-  },
-];
-
-const BUILD_STEPS = [
+const HOW_IT_WORKS = [
   {
     num: '1',
-    title: 'Train it on your restaurant',
-    desc: "Your menu, hours, location, policies, and FAQs are fed into the AI so it knows your business inside out — no generic answers.",
+    title: 'We learn your restaurant',
+    desc: 'Your menu, hours, policies, and FAQs get fed into the AI. It learns your business so every answer sounds like it came from your own team.',
   },
   {
     num: '2',
-    title: 'Connect your booking system',
-    desc: 'Hooks into OpenTable, Resy, Google Calendar, or a simple spreadsheet to check availability and log reservations in real time.',
+    title: 'We connect it to your bookings',
+    desc: 'The chatbot links to your existing booking setup — Google Calendar, OpenTable, Resy, or a simple spreadsheet — and logs reservations in real time.',
   },
   {
     num: '3',
-    title: 'Embed it on your website',
-    desc: 'A small chat widget is added to your existing site. No redesign needed — it sits in the corner and activates when a guest needs help.',
+    title: 'We add it to your website',
+    desc: 'A small chat widget goes on your site. No redesign needed. It sits in the corner and steps in whenever a guest needs help.',
   },
   {
     num: '4',
-    title: 'Notify you on every lead',
-    desc: "Every reservation and catering inquiry triggers an instant SMS or email to you, so you always know what's coming in.",
+    title: 'You get an alert for every booking',
+    desc: 'Every reservation and catering inquiry triggers an instant text or email to you. You always know what\'s coming in — without checking anything.',
   },
+];
+
+const PAIN_POINTS = [
+  { emoji: '📵', text: 'Guests call after hours and get voicemail — then book somewhere else' },
+  { emoji: '💸', text: 'Catering inquiries sit in your DMs for days and go cold' },
+  { emoji: '😩', text: 'Staff spends time answering "what are your hours?" instead of serving tables' },
 ];
 
 // ── Component ──────────────────────────────────────────────────────────────
@@ -266,20 +246,62 @@ export default function RestaurantChatbotPage() {
           <div className="absolute top-20 left-10 w-72 h-72 bg-accent/15 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-6 text-center">
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-6">
             <SparklesIcon className="w-4 h-4 text-accent" />
-            <span className="text-accent text-sm font-semibold">AI-Powered Chatbot — Live Demo</span>
+            <span className="text-accent text-sm font-semibold">AI Chatbot for Restaurants — Live Demo Inside</span>
           </div>
+
           <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
-            Your Restaurant&apos;s{' '}
+            Stop losing reservations{' '}
             <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-              Digital Employee
+              after hours
             </span>
           </h1>
+
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8" />
-          <p className="text-xl text-lightgray max-w-3xl mx-auto leading-relaxed">
-            An AI chatbot that handles reservations, answers menu questions, and captures catering leads — 24/7, on autopilot. Try the live demo below.
+
+          <p className="text-xl text-lightgray max-w-2xl mx-auto leading-relaxed mb-4">
+            60% of restaurant bookings happen outside business hours — when no one is there to answer.
+            This AI chatbot takes reservations, answers questions, and captures catering leads for you,{' '}
+            <strong className="text-white">24/7, on autopilot.</strong>
+          </p>
+
+          <p className="text-accent font-semibold text-base mb-10">
+            👇 Try the live demo below — it works exactly like the real thing
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="btn btn-primary px-7 py-3.5 text-base font-bold shadow-2xl hover:shadow-accent/25 transition-all duration-300 hover:-translate-y-0.5 inline-flex items-center gap-2"
+            >
+              Get This for My Restaurant
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <span className="text-white/40 text-sm">Free quote · No commitment</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Pain Points Strip ── */}
+      <section className="bg-white/5 border-y border-white/10 py-8">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="text-center text-white/50 text-sm font-semibold uppercase tracking-widest mb-6">
+            Sound familiar?
+          </p>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {PAIN_POINTS.map(({ emoji, text }) => (
+              <div key={text} className="flex items-start gap-3 text-white/70 text-sm leading-relaxed">
+                <span className="text-2xl flex-shrink-0 mt-0.5">{emoji}</span>
+                <span>{text}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-white/40 text-sm mt-6">
+            A chatbot handles all of this — automatically, while you focus on the food.
           </p>
         </div>
       </section>
@@ -291,6 +313,13 @@ export default function RestaurantChatbotPage() {
 
             {/* Chat Demo */}
             <div className="lg:sticky lg:top-24">
+              <div className="mb-4 text-center lg:text-left">
+                <span className="inline-flex items-center gap-2 text-accent text-sm font-bold">
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse inline-block" />
+                  Interactive Demo — click a button to start
+                </span>
+              </div>
+
               <div className="rounded-2xl overflow-hidden shadow-[0_28px_90px_rgba(0,0,0,0.5)] border border-white/10">
 
                 {/* Chat header */}
@@ -383,7 +412,7 @@ export default function RestaurantChatbotPage() {
                 </div>
               </div>
               <p className="text-center text-white/30 text-xs mt-3">
-                * Demo uses scripted responses. Real version uses live AI.
+                * Demo uses scripted responses. The real version uses live AI trained on your restaurant.
               </p>
             </div>
 
@@ -391,11 +420,11 @@ export default function RestaurantChatbotPage() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-3">
-                  What the chatbot{' '}
-                  <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">handles</span>
+                  Everything it{' '}
+                  <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">handles for you</span>
                 </h2>
                 <p className="text-lightgray text-lg leading-relaxed">
-                  60% of restaurant bookings happen outside business hours. Every unanswered message is a missed table — this AI catches all of them.
+                  It&apos;s not just a chatbot — it&apos;s like having a front-of-house team member available around the clock, never off sick, never on break.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -417,92 +446,57 @@ export default function RestaurantChatbotPage() {
         </div>
       </section>
 
-      {/* ── How it's built ── */}
+      {/* ── How It Works ── */}
       <section className="relative py-20 bg-charcoal/95 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-20 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative max-w-5xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
-              How people are{' '}
-              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">building this</span>
+              How it works for{' '}
+              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">your restaurant</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-6" />
-            <p className="text-lightgray text-lg max-w-2xl mx-auto">
-              There are a few ways to build a restaurant chatbot. Here&apos;s what&apos;s actually working in 2025.
+            <p className="text-lightgray text-lg max-w-xl mx-auto">
+              You don&apos;t need to do anything technical. We handle the entire setup — you just start getting bookings.
             </p>
           </div>
 
-          {/* Approach cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {APPROACHES.map(a => (
-              <div
-                key={a.title}
-                className="rounded-xl bg-white/5 border border-white/10 p-6 flex flex-col"
-              >
-                <span className={`inline-flex self-start text-xs font-bold px-2.5 py-1 rounded-full border mb-4 ${a.badgeColor}`}>
-                  {a.badge}
-                </span>
-                <h3 className="text-white font-extrabold text-lg mb-2">{a.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-4 flex-1">{a.desc}</p>
-                <ul className="space-y-1.5 mb-3">
-                  {a.pros.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-sm text-green-300">
-                      <span className="mt-0.5 flex-shrink-0">✓</span>
-                      <span>{p}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-sm text-white/40 flex items-start gap-1.5">
-                  <span className="flex-shrink-0">⚠</span>
-                  <span>{a.con}</span>
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Build steps */}
-          <h3 className="text-2xl font-extrabold text-white mb-6 text-center">
-            For the custom AI build — here&apos;s the process:
-          </h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            {BUILD_STEPS.map(s => (
+          <div className="grid md:grid-cols-2 gap-5">
+            {HOW_IT_WORKS.map(s => (
               <div
                 key={s.num}
-                className="rounded-xl bg-white/5 border border-white/10 p-6 flex gap-4"
+                className="rounded-xl bg-white/5 border border-white/10 p-6 flex gap-4 hover:bg-white/8 transition-all duration-200"
               >
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-extrabold">{s.num}</span>
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-1">{s.title}</h4>
+                  <h4 className="text-white font-bold mb-1.5">{s.title}</h4>
                   <p className="text-white/60 text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Tech stack note */}
-          <div className="mt-10 rounded-xl bg-white/5 border border-white/10 p-6">
-            <p className="text-white font-bold mb-3">Typical tech stack for a custom restaurant chatbot:</p>
-            <div className="flex flex-wrap gap-2">
+          {/* What's included */}
+          <div className="mt-10 rounded-xl bg-accent/5 border border-accent/20 p-6">
+            <p className="text-white font-bold mb-4 text-center">What&apos;s included in every build:</p>
+            <div className="grid sm:grid-cols-2 gap-3">
               {[
-                'Claude / OpenAI API',
-                'Next.js frontend',
-                'Vercel deployment',
-                'Twilio SMS alerts',
-                'Google Sheets / Airtable',
-                'Resend for email',
-                'OpenTable API (optional)',
-              ].map(t => (
-                <span
-                  key={t}
-                  className="text-xs bg-white/10 border border-white/10 text-white/70 px-3 py-1 rounded-full"
-                >
-                  {t}
-                </span>
+                'AI trained on your menu, hours & FAQs',
+                'Reservation flow with booking confirmation',
+                'Catering & event lead capture',
+                'Instant SMS or email alerts to you',
+                'Embedded widget on your website',
+                '30 days of support after launch',
+              ].map(item => (
+                <div key={item} className="flex items-center gap-2.5 text-sm text-white/80">
+                  <CheckCircleIcon className="w-4 h-4 text-accent flex-shrink-0" />
+                  <span>{item}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -515,27 +509,38 @@ export default function RestaurantChatbotPage() {
           <div className="absolute top-10 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
-        <div className="relative max-w-3xl mx-auto px-6 text-center">
+        <div className="relative max-w-2xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
-            Want this for{' '}
+            Ready to stop{' '}
             <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-              your restaurant?
+              missing bookings?
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-6" />
-          <p className="text-lightgray text-lg mb-8 leading-relaxed">
-            I build custom restaurant chatbots that handle bookings, answer FAQs, and capture leads — so you stop losing customers to missed messages.
+          <p className="text-lightgray text-lg mb-3 leading-relaxed">
+            I build custom AI chatbots for restaurants — trained on your menu, connected to your bookings, and running on your site within days.
           </p>
-          <Link
-            href="/contact"
-            className="group btn btn-primary px-8 py-4 text-lg font-bold shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 inline-flex items-center gap-2"
-          >
-            Get a Free Quote
-            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-          <p className="mt-4 text-white/40 text-sm">No commitment. I&apos;ll reply within 24 hours.</p>
+          <p className="text-white/50 text-base mb-10">
+            No tech knowledge needed. No monthly platform fees. Just more bookings.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="group btn btn-primary px-8 py-4 text-lg font-bold shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 inline-flex items-center gap-2"
+            >
+              Get a Free Quote
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-2 text-sm text-white/40">
+            <span>✓ Free quote, no commitment</span>
+            <span>✓ Reply within 24 hours</span>
+            <span>✓ Built specifically for your restaurant</span>
+          </div>
         </div>
       </section>
     </div>
