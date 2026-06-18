@@ -4,6 +4,7 @@ Auto-maintained by the codecraftspace-content-publisher skill. Do not edit manua
 
 | Date | Slug | Title | Primary keyword |
 |------|------|-------|----------------|
+| 2026-06-18 | restaurant-compete-chains-ai | Chain Restaurants Have AI. Here's How to Keep Up. | competing with chain restaurants AI |
 | 2026-06-16 | restaurant-email-sms-automation | Win Back Lost Customers With Restaurant Email & SMS Automation | restaurant email marketing automation |
 | 2026-06-15 | restaurant-direct-online-ordering | 67% of Diners Prefer to Order Direct. Is Your Website Ready? | restaurant direct online ordering |
 | 2026-06-14 | restaurant-missed-calls-ai-phone | Your Restaurant Misses 43% of Phone Calls. Here's the Cost. | restaurant missed calls AI phone answering |
