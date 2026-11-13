@@ -267,7 +267,7 @@ export default function Home() {
               </div>
               <div className="p-4 space-y-3 bg-gray-50">
                 <div className="bg-rp/15 rounded-2xl rounded-tl-sm p-3 max-w-[78%] text-sm text-ink">
-                  Hi! I'd like to book a table for 4 on Saturday at 7pm 🍽️
+                  Hi! I&apos;d like to book a table for 4 on Saturday at 7pm 🍽️
                 </div>
                 <div className="bg-rp text-rcream rounded-2xl rounded-tr-sm p-3 max-w-[78%] ml-auto text-sm">
                   Great choice! We have a table available at 7pm this Saturday for 4. Can I get your name and phone number to confirm?
@@ -294,7 +294,7 @@ export default function Home() {
           </h2>
           <p className="text-ink/60 text-lg mb-16 max-w-2xl">
             Most restaurants get 10% of their customers to leave a review.
-            With automation, that becomes 30–40%. Here's how it works.
+            With automation, that becomes 30–40%. Here&apos;s how it works.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-16">
@@ -603,7 +603,7 @@ export default function Home() {
             <Link href="/contact" className="text-rb underline underline-offset-2">
               Book a free 30-min call
             </Link>{" "}
-            and we'll recommend the right fit.
+            and we&apos;ll recommend the right fit.
           </p>
         </div>
       </section>
@@ -646,7 +646,7 @@ export default function Home() {
           </h2>
           <p className="text-rcream/70 text-xl mb-10 max-w-xl mx-auto">
             Most restaurants see results in the first week.
-            Let's talk about what automation makes sense for yours.
+            Let&apos;s talk about what automation makes sense for yours.
           </p>
           <Link
             href="/contact"
