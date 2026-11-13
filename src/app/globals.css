@@ -26,6 +26,16 @@
   --color-secondary: var(--ccr-medium-gray);
   --color-cream: var(--ccr-cream);
 
+  /* Restaurant automation bold palette */
+  --color-ry: #F5C31D;
+  --color-rb: #2563EB;
+  --color-ro: #EA580C;
+  --color-rg: #16A34A;
+  --color-rp: #7C3AED;
+  --color-rr: #DC2626;
+  --color-rcream: #F8F6F2;
+  --color-ink: #111111;
+
   --font-sans: var(--font-inter);
 }
 

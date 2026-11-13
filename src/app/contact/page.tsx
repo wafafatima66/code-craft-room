@@ -112,148 +112,114 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-charcoal">
+    <div className="min-h-screen bg-rcream">
 
-      <section className="relative py-24 bg-charcoal overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0">
-          {/* Animated gradient orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-primary/15 to-accent/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* ─── HERO ─── */}
+      <section className="bg-ink py-20 relative overflow-hidden">
+        {/* Decorative blocks */}
+        <div className="absolute top-8 right-16 w-12 h-12 bg-ry opacity-70 hidden md:block" />
+        <div className="absolute bottom-8 right-40 w-8 h-8 bg-rg opacity-70 hidden md:block" />
+        <div className="absolute top-16 left-8 w-6 h-6 bg-rb opacity-60 hidden md:block" />
 
-          {/* Geometric pattern */}
-          <div className="absolute inset-0 opacity-3">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="contact-grid" width="20" height="20" patternUnits="userspaceOnUse">
-                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-white/10" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#contact-grid)" />
-            </svg>
-          </div>
-
-          {/* Grain texture */}
-          <div className="absolute inset-0 opacity-20 mix-blend-overlay"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-            }}>
-          </div>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
-              Let&apos;s Talk About{" "}
-              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                Your Website
-              </span>
-            </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto mb-8"></div>
-            <p className="text-xl text-light max-w-3xl mx-auto leading-relaxed">
-              Whether you need ongoing care, a quick fix, or a brand new website — fill out the form and we&apos;ll get back to you within 24 hours. No commitment required.
-            </p>
-          </div>
+        <div className="relative max-w-7xl mx-auto px-6">
+          <div className="text-xs font-bold tracking-widest text-rcream/40 mb-4 uppercase">Free Demo</div>
+          <h1 className="text-5xl md:text-7xl font-black text-rcream tracking-tighter leading-[0.9] mb-6">
+            Let&apos;s talk about<br />
+            <span className="text-rb">your restaurant.</span>
+          </h1>
+          <p className="text-rcream/60 text-xl max-w-xl leading-relaxed">
+            Fill out the form and we&apos;ll get back to you within 24 hours.
+            No commitment, no credit card — just a conversation.
+          </p>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="relative py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
+      {/* ─── FORM SECTION ─── */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-extrabold text-white mb-6">Get In Touch</h2>
-                <p className="text-light text-lg leading-relaxed mb-8">
-                  Ready to start your project?  We&apos;ll discuss your project requirements back and forth to understand your needs clearly.
-                  Once everything is finalized, we&apos;ll set up a personalized price for you and send an invoice before starting the project.
-                </p>
+            {/* Left — info */}
+            <div className="space-y-6">
+              <h2 className="text-3xl font-black text-ink tracking-tighter">What happens next</h2>
+              <p className="text-ink/60 leading-relaxed">
+                We&apos;ll review your message, check your restaurant&apos;s current setup,
+                and come to the call with a clear recommendation — which plan makes sense,
+                what channels to start with, and what results to expect in the first 30 days.
+              </p>
+
+              {/* Steps */}
+              <div className="space-y-4 mt-8">
+                {[
+                  { num: "01", bg: "bg-rb", text: "text-rcream", title: "You fill out the form", desc: "Takes 2 minutes. Tell us about your restaurant and what you're trying to fix." },
+                  { num: "02", bg: "bg-ry", text: "text-ink", title: "We review and prepare", desc: "Within 24 hours we review your info and prepare a specific recommendation for your restaurant." },
+                  { num: "03", bg: "bg-rg", text: "text-rcream", title: "30-min call — zero pressure", desc: "We show you exactly what we'd build and what results to expect. You decide if it's a fit." },
+                ].map(({ num, bg, text, title, desc }) => (
+                  <div key={num} className="flex gap-4 items-start">
+                    <div className={`${bg} ${text} w-10 h-10 rounded-xl flex items-center justify-center font-black text-sm flex-shrink-0`}>
+                      {num}
+                    </div>
+                    <div>
+                      <div className="font-bold text-ink text-sm">{title}</div>
+                      <div className="text-ink/55 text-sm mt-0.5 leading-relaxed">{desc}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
 
-              {/* Contact Details */}
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
-                    <EnvelopeIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold">Email</h3>
-                    <p className="text-light">fatima.amir.dev@gmail.com</p>
-                  </div>
+              {/* Contact details */}
+              <div className="mt-10 space-y-3 pt-8 border-t border-ink/10">
+                <div className="flex items-center gap-3 text-sm">
+                  <EnvelopeIcon className="w-5 h-5 text-rb flex-shrink-0" />
+                  <span className="text-ink/70">fatima.amir.dev@gmail.com</span>
                 </div>
-
-                {/* <div className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                    <PhoneIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold">Phone</h3>
-                    <p className="text-light">+1 (555) 123-4567</p>
-                  </div>
-                </div> */}
-
-                <div className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
-                    <MapPinIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold">Location</h3>
-                    <p className="text-light">Serving clients worldwide</p>
-                  </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <MapPinIcon className="w-5 h-5 text-rg flex-shrink-0" />
+                  <span className="text-ink/70">Serving restaurants worldwide</span>
                 </div>
-
-                <div className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                    <ClockIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold">Response Time</h3>
-                    <p className="text-light">Within 24 hours</p>
-                  </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <ClockIcon className="w-5 h-5 text-ry flex-shrink-0" />
+                  <span className="text-ink/70">Response within 24 hours</span>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
-              <h3 className="text-2xl font-extrabold text-white mb-6">Send us a message</h3>
+            {/* Right — form */}
+            <div className="bg-white rounded-3xl border border-ink/10 p-8 shadow-sm">
+              <h3 className="text-2xl font-black text-ink mb-6 tracking-tight">Book your free demo</h3>
 
               {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
-                  <p className="text-green-300">{submitMessage}</p>
+                <div className="mb-6 p-4 bg-rg/10 border border-rg/30 rounded-2xl">
+                  <p className="text-rg font-semibold text-sm">{submitMessage}</p>
                 </div>
               )}
-
               {submitStatus === 'partial' && (
-                <div className="mb-6 p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
-                  <p className="text-yellow-200">{submitMessage}</p>
+                <div className="mb-6 p-4 bg-ry/20 border border-ry/40 rounded-2xl">
+                  <p className="text-ink/70 text-sm">{submitMessage}</p>
                 </div>
               )}
-
               {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
-                  <p className="text-red-300">{submitMessage}</p>
+                <div className="mb-6 p-4 bg-rr/10 border border-rr/30 rounded-2xl">
+                  <p className="text-rr font-semibold text-sm">{submitMessage}</p>
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid md:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="name" className="block text-white font-medium mb-2">Name</label>
+                    <label htmlFor="name" className="block text-ink font-semibold text-sm mb-1.5">Your name</label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                      placeholder="Your full name"
+                      className="w-full px-4 py-3 bg-rcream border border-ink/15 rounded-xl text-ink placeholder-ink/40 focus:outline-none focus:ring-2 focus:ring-rb focus:border-transparent transition-all"
+                      placeholder="Jane Smith"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-white font-medium mb-2">Email *</label>
+                    <label htmlFor="email" className="block text-ink font-semibold text-sm mb-1.5">Email address *</label>
                     <input
                       type="email"
                       id="email"
@@ -261,91 +227,89 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                      placeholder="your@email.com"
+                      className="w-full px-4 py-3 bg-rcream border border-ink/15 rounded-xl text-ink placeholder-ink/40 focus:outline-none focus:ring-2 focus:ring-rb focus:border-transparent transition-all"
+                      placeholder="jane@bellacafe.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">Company</label>
+                  <label htmlFor="company" className="block text-ink font-semibold text-sm mb-1.5">Restaurant name</label>
                   <input
                     type="text"
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                    placeholder="Your company name"
+                    className="w-full px-4 py-3 bg-rcream border border-ink/15 rounded-xl text-ink placeholder-ink/40 focus:outline-none focus:ring-2 focus:ring-rb focus:border-transparent transition-all"
+                    placeholder="Bella Cafe & Bistro"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="package" className="block text-white font-medium mb-2">Interested Package</label>
+                  <label htmlFor="package" className="block text-ink font-semibold text-sm mb-1.5">Which plan interests you?</label>
                   <select
                     id="package"
                     name="package"
                     value={formData.package}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-rcream border border-ink/15 rounded-xl text-ink focus:outline-none focus:ring-2 focus:ring-rb focus:border-transparent transition-all"
                   >
-                    <option value="" className="bg-charcoal text-white">Select a package</option>
-                    <option value="custom-website" className="bg-charcoal text-white">Custom Website</option>
-                    <option value="dashboard" className="bg-charcoal text-white">Dashboard</option>
-                    <option value="automation" className="bg-charcoal text-white">Automation</option>
-                    <option value="dashboard-automation" className="bg-charcoal text-white">Dashboard + Automation</option>
-                    <option value="all-in-one" className="bg-charcoal text-white">All in One</option>
+                    <option value="">Not sure yet — help me decide</option>
+                    <option value="starter">Starter — $97/mo (AI Chatbot)</option>
+                    <option value="growth">Growth — $197/mo (Chatbot + Reviews + Reservations)</option>
+                    <option value="full-stack">Full Stack — $297/mo (Everything)</option>
+                    <option value="custom">Custom / multiple locations</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="timeline" className="block text-white font-medium mb-2">Timeline</label>
+                  <label htmlFor="timeline" className="block text-ink font-semibold text-sm mb-1.5">When do you want to get started?</label>
                   <select
                     id="timeline"
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-rcream border border-ink/15 rounded-xl text-ink focus:outline-none focus:ring-2 focus:ring-rb focus:border-transparent transition-all"
                   >
-                    <option value="" className="bg-charcoal text-white">Select timeline</option>
-                    <option value="asap" className="bg-charcoal text-white">ASAP</option>
-                    <option value="1-month" className="bg-charcoal text-white">Within 1 month</option>
-                    <option value="2-3-months" className="bg-charcoal text-white">2-3 months</option>
-                    <option value="3-6-months" className="bg-charcoal text-white">3-6 months</option>
-                    <option value="flexible" className="bg-charcoal text-white">Flexible</option>
+                    <option value="">Select timeline</option>
+                    <option value="asap">ASAP — this week</option>
+                    <option value="1-month">Within this month</option>
+                    <option value="2-3-months">2–3 months</option>
+                    <option value="flexible">Just exploring for now</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white font-medium mb-2">Message *</label>
+                  <label htmlFor="message" className="block text-ink font-semibold text-sm mb-1.5">Tell us about your restaurant *</label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Tell us about your project, goals, and any specific requirements..."
+                    rows={5}
+                    className="w-full px-4 py-3 bg-rcream border border-ink/15 rounded-xl text-ink placeholder-ink/40 focus:outline-none focus:ring-2 focus:ring-rb focus:border-transparent transition-all resize-none"
+                    placeholder="What type of restaurant? What's your biggest challenge right now — missed calls, bad reviews, lost bookings?"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-accent to-primary text-white font-bold py-4 px-8 rounded-lg hover:from-accent/90 hover:to-primary/90 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full bg-ink text-rcream font-black py-4 px-8 rounded-full hover:bg-rb transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-base"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? 'Sending...' : 'Book Free Demo →'}
                 </button>
-                <p className="text-center text-xs text-white/70">
-                  No commitment needed. We&apos;ll answer all your questions before you decide anything.
+                <p className="text-center text-xs text-ink/40">
+                  No credit card. No commitment. We reply within 24 hours.
                 </p>
               </form>
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
-    </div >
+    </div>
   );
 }

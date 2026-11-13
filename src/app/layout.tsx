@@ -30,9 +30,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Code Craft Space — Hand-Crafted Websites, Built for Your Success",
+  title: "Code Craft Space — Restaurant Automation Agency",
   description:
-    "Code Craft Space builds custom e-commerce websites for small businesses and Etsy sellers — professional, approachable, and results-focused.",
+    "AI chatbot, review automation, and reservation tools built specifically for restaurants. 24/7 automation that runs while you focus on the food.",
 };
 
 export default function RootLayout({
