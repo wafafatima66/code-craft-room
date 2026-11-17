@@ -1,11 +1,8 @@
 import Link from "next/link"
-import Image from "next/image"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import BlogShareBar from "@/components/BlogShareBar"
 import blogData from "@/data/blog-posts.json"
-
-const DEFAULT_FEATURED_IMAGE = "/blog/seo-guide.jpg"
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -98,98 +95,99 @@ export default async function BlogPost({ params }: PageProps) {
   }
 
   return (
-    <article className="min-h-screen bg-charcoal text-white">
+    <article className="min-h-screen bg-rcream">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <Link href="/blog" className="text-accent hover:text-accent/80 mb-6 inline-block font-semibold">
-          ← Back to blog
-        </Link>
 
-        <header className="mb-10">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+      {/* ─── HERO ─── */}
+      <section className="bg-ink py-16 relative overflow-hidden">
+        <div className="absolute top-6 right-16 w-10 h-10 bg-ry opacity-60 hidden md:block" />
+        <div className="absolute bottom-6 right-36 w-6 h-6 bg-rg opacity-60 hidden md:block" />
+        <div className="max-w-7xl mx-auto px-6">
+          <Link href="/blog" className="text-rcream/50 hover:text-rcream text-sm font-semibold transition-colors mb-6 inline-block">
+            ← All posts
+          </Link>
+          <div className="flex flex-wrap items-center gap-3 mb-5">
+            <span className="text-xs font-bold tracking-widest text-rcream/40 uppercase">{post.category}</span>
+            <span className="text-rcream/20">·</span>
+            <span className="text-xs text-rcream/40">{post.date}</span>
+            <span className="text-rcream/20">·</span>
+            <span className="text-xs text-rcream/40">{post.readTime} read</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-black text-rcream tracking-tighter leading-[0.95] max-w-4xl">
             {post.title}
           </h1>
-          <div className="mt-5 flex flex-wrap items-center gap-3 text-white/70">
-            <span className="font-semibold text-white/80">{post.author}</span>
-            <span>•</span>
-            <span>{post.date}</span>
-            <span>•</span>
-            <span>{post.readTime} read</span>
-            <span className="ml-0 sm:ml-2 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/80">
-              {post.category}
-            </span>
-          </div>
-        </header>
-
-        <div className="mb-12 rounded-2xl border border-white/10 overflow-hidden">
-          <div className="relative h-[400px] w-full">
-            <Image
-              src={("image" in post && post.image) ? String(post.image) : DEFAULT_FEATURED_IMAGE}
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          <p className="mt-5 text-rcream/55 text-lg max-w-2xl leading-relaxed">{post.description}</p>
+          <p className="mt-4 text-rcream/40 text-sm font-semibold">By {post.author}</p>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,720px)_minmax(0,320px)] gap-10 items-start">
-          <div className="min-w-0">
-            <div
-              className="prose prose-invert prose-lg max-w-none text-lg leading-[1.85] prose-p:text-lg prose-p:leading-[1.85] prose-li:text-lg prose-li:leading-[1.75] prose-h2:text-3xl prose-h2:font-extrabold prose-h2:border-l-4 prose-h2:border-accent/70 prose-h2:pl-4 prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-2xl prose-h3:font-bold prose-h3:mt-8 prose-h3:mb-3 prose-a:text-accent hover:prose-a:text-accent/80 prose-blockquote:text-xl prose-blockquote:border-l-4 prose-blockquote:border-white/20 prose-blockquote:bg-white/5 prose-blockquote:px-4 prose-blockquote:py-2 prose-code:bg-white/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
+      {/* ─── CONTENT ─── */}
+      <section className="py-14">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,740px)_minmax(0,300px)] gap-12 items-start">
 
-            <div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-2xl font-extrabold mb-3">Want us to handle your website?</h3>
-              <p className="text-white/80 leading-relaxed mb-6">
-                We build websites, dashboards, and automation systems for small businesses. One-time cost, built for you.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-accent text-charcoal px-6 py-3 font-semibold hover:bg-accent/90 transition"
-              >
-                Get a free quote →
-              </Link>
-            </div>
+            <div className="min-w-0">
+              <div
+                className="prose prose-lg max-w-none text-ink prose-p:text-ink/80 prose-p:leading-[1.9] prose-li:text-ink/80 prose-li:leading-[1.8] prose-h2:text-3xl prose-h2:font-black prose-h2:text-ink prose-h2:tracking-tight prose-h2:border-l-4 prose-h2:border-rb prose-h2:pl-4 prose-h2:mt-14 prose-h2:mb-5 prose-h3:text-xl prose-h3:font-black prose-h3:text-ink prose-h3:mt-8 prose-h3:mb-3 prose-strong:text-ink prose-a:text-rb hover:prose-a:text-ink prose-a:no-underline hover:prose-a:underline prose-ul:space-y-2 prose-ol:space-y-2"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
 
-            <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-white/10 pt-8">
-              <BlogShareBar url={shareUrl} title={post.title} />
-              <Link href="/blog" className="text-white/70 hover:text-accent transition-colors font-semibold">
-                Back to blog →
-              </Link>
-            </div>
-          </div>
-
-          <aside className="hidden lg:block">
-            <div className="space-y-6 sticky top-24">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h3 className="text-lg font-extrabold mb-4">About the author</h3>
-                <p className="text-white font-semibold">Fatima Amir</p>
-                <p className="text-white/70 text-sm">Software Engineer & Founder</p>
-                <p className="mt-3 text-white/80 text-sm leading-relaxed">
-                  I help small business owners keep their websites fast, reliable, and up-to-date — without the stress.
+              {/* CTA card */}
+              <div className="mt-14 bg-ink rounded-3xl p-10">
+                <div className="text-xs font-bold tracking-widest text-rcream/40 uppercase mb-3">Free Demo</div>
+                <h3 className="text-3xl font-black text-rcream tracking-tight mb-3">
+                  Ready to automate your restaurant?
+                </h3>
+                <p className="text-rcream/60 leading-relaxed mb-7 max-w-lg">
+                  We build AI chatbots, review automation, and reservation tools for independent restaurants. Book a free 30-min call.
                 </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-full bg-rcream text-ink px-8 py-3.5 font-black hover:bg-ry transition-colors text-sm"
+                >
+                  Book Free Demo →
+                </Link>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h3 className="text-lg font-extrabold mb-4">Related posts</h3>
-                <div className="space-y-3">
-                  {relatedPosts.map((p) => (
-                    <Link
-                      key={p.slug}
-                      href={`/blog/${p.slug}`}
-                      className="block text-white/80 text-sm hover:text-accent transition-colors"
-                    >
-                      {p.title}
-                    </Link>
-                  ))}
+              <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-ink/10 pt-8">
+                <BlogShareBar url={shareUrl} title={post.title} />
+                <Link href="/blog" className="text-ink/50 hover:text-rb transition-colors font-semibold text-sm">
+                  ← Back to blog
+                </Link>
+              </div>
+            </div>
+
+            <aside className="hidden lg:block">
+              <div className="space-y-6 sticky top-24">
+                <div className="rounded-3xl border border-ink/10 bg-white p-6">
+                  <h3 className="text-base font-black text-ink mb-4 tracking-tight">About the author</h3>
+                  <p className="font-black text-ink">Fatima Amir</p>
+                  <p className="text-ink/50 text-sm">Founder, Code Craft Space</p>
+                  <p className="mt-3 text-ink/60 text-sm leading-relaxed">
+                    Building AI automation and websites for independent restaurant owners.
+                  </p>
+                </div>
+
+                <div className="rounded-3xl border border-ink/10 bg-white p-6">
+                  <h3 className="text-base font-black text-ink mb-4 tracking-tight">More posts</h3>
+                  <div className="space-y-3">
+                    {relatedPosts.map((p) => (
+                      <Link
+                        key={p.slug}
+                        href={`/blog/${p.slug}`}
+                        className="block text-ink/70 text-sm hover:text-rb transition-colors leading-snug"
+                      >
+                        {p.title}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </aside>
+            </aside>
+
+          </div>
         </div>
-      </div>
+      </section>
     </article>
   )
 }

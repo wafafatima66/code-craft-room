@@ -17,6 +17,7 @@ export default function Navbar() {
           <a href="#how-it-works" className="hover:text-rb transition-colors">How It Works</a>
           <a href="#pricing" className="hover:text-rb transition-colors">Pricing</a>
           <a href="#faq" className="hover:text-rb transition-colors">FAQ</a>
+          <Link href="/blog" className="hover:text-rb transition-colors">Blog</Link>
           <Link
             href="/contact"
             className="bg-ink text-rcream px-5 py-2.5 font-semibold text-sm rounded-full hover:bg-rb transition-colors"
@@ -42,6 +43,7 @@ export default function Navbar() {
           <a href="#how-it-works" onClick={() => setMenuOpen(false)} className="text-sm font-semibold">How It Works</a>
           <a href="#pricing" onClick={() => setMenuOpen(false)} className="text-sm font-semibold">Pricing</a>
           <a href="#faq" onClick={() => setMenuOpen(false)} className="text-sm font-semibold">FAQ</a>
+          <Link href="/blog" onClick={() => setMenuOpen(false)} className="text-sm font-semibold">Blog</Link>
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
