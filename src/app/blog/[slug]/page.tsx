@@ -59,8 +59,47 @@ export default async function BlogPost({ params }: PageProps) {
     .filter((p) => p.slug !== slug)
     .slice(0, 3)
 
+  // Build JSON-LD schema
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.description,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: { "@type": "Person", name: "Fatima Amir" },
+        publisher: { "@type": "Organization", name: "Code Craft Space", url: "https://codecraftspace.com" },
+        mainEntityOfPage: `${baseUrl}/blog/${slug}`,
+        url: `${baseUrl}/blog/${slug}`,
+        ...((post as Record<string, unknown>).keywords ? { keywords: (post as Record<string, unknown>).keywords } : {}),
+        inLanguage: "en-US",
+      },
+      ...((post as Record<string, unknown>).faq
+        ? [{
+            "@type": "FAQPage",
+            mainEntity: ((post as Record<string, unknown>).faq as Array<{ q: string; a: string }>).map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: { "@type": "Answer", text: item.a },
+            })),
+          }]
+        : []),
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` },
+          { "@type": "ListItem", position: 3, name: post.title, item: `${baseUrl}/blog/${slug}` },
+        ],
+      },
+    ],
+  }
+
   return (
     <article className="min-h-screen bg-charcoal text-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link href="/blog" className="text-accent hover:text-accent/80 mb-6 inline-block font-semibold">
           ← Back to blog
