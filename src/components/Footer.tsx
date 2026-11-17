@@ -4,14 +4,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-rcream border-t border-ink/10 overflow-hidden">
-      {/* Big wordmark — units.gr inspired */}
-      <div className="max-w-7xl mx-auto px-6 pt-16 pb-6">
-        <div className="text-[13vw] font-black tracking-tighter text-ink leading-none select-none opacity-6">
-          CodeCraftSpace.
-        </div>
-      </div>
-
-      {/* Links + info */}
       <div className="border-t border-ink/10">
         <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">

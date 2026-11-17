@@ -9,7 +9,6 @@ export default function Contact() {
     name: '',
     email: '',
     company: '',
-    package: '',
     timeline: '',
     message: ''
   });
@@ -95,7 +94,6 @@ export default function Contact() {
           name: '',
           email: '',
           company: '',
-          package: '',
           message: '',
           timeline: ''
         });
@@ -244,23 +242,6 @@ export default function Contact() {
                     className="w-full px-4 py-3 bg-rcream border border-ink/15 rounded-xl text-ink placeholder-ink/40 focus:outline-none focus:ring-2 focus:ring-rb focus:border-transparent transition-all"
                     placeholder="Bella Cafe & Bistro"
                   />
-                </div>
-
-                <div>
-                  <label htmlFor="package" className="block text-ink font-semibold text-sm mb-1.5">Which plan interests you?</label>
-                  <select
-                    id="package"
-                    name="package"
-                    value={formData.package}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-rcream border border-ink/15 rounded-xl text-ink focus:outline-none focus:ring-2 focus:ring-rb focus:border-transparent transition-all"
-                  >
-                    <option value="">Not sure yet — help me decide</option>
-                    <option value="starter">Starter — $97/mo (AI Chatbot)</option>
-                    <option value="growth">Growth — $197/mo (Chatbot + Reviews + Reservations)</option>
-                    <option value="full-stack">Full Stack — $297/mo (Everything)</option>
-                    <option value="custom">Custom / multiple locations</option>
-                  </select>
                 </div>
 
                 <div>
